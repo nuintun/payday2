@@ -1,0 +1,19 @@
+{
+  "name": "简体中文模组",
+  "author": "PDLG汉化组",
+  "version": "0.0.1",
+  "description": "收获日2简体中文汉化模组",
+  "updates": [
+    {
+      "revision": 12,
+      "identifier": "goonmod",
+    },
+    {
+      "revision": 10,
+      "identifier": "goonmodwepcust",
+      "install_dir": "assets/mod_overrides/",
+      "install_folder": "GoonModWeaponCustomizer",
+      "display_name": "GoonMod Weapon Customizer"
+    }
+  ]
+}
