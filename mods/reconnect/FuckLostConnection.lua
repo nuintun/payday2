@@ -2,7 +2,6 @@ _G.Reconnect = _G.Reconnect or {}
 Reconnect._data_path = SavePath .. "Reconnect.txt"
 Reconnect.options = {}
 keybinds_menu_id = "base_keybinds_menu"
-LuaModManager.Constants._keybinds_menu_id = keybinds_menu_id;
 
 function Reconnect:Save()
   local file = io.open(self._data_path, "w+")
@@ -24,6 +23,21 @@ function Reconnect:Load()
 end
 
 Reconnect:Load()
+
+if LuaModManager:GetNumberOfJsonKeybinds() == 0 then
+  Hooks:Add("MenuManager_Base_BuildModOptionsMenu", "ReconnectOptionsBuild", function(menu_manager, nodes)
+    nodes[keybinds_menu_id] = MenuHelper:BuildMenu(keybinds_menu_id)
+
+    MenuHelper:AddMenuItem(
+      nodes.options,
+      keybinds_menu_id,
+      "base_options_menu_keybinds",
+      "base_options_menu_keybinds_desc",
+      "lua_mod_options_menu",
+      "after"
+    )
+  end)
+end
 
 Hooks:Add("MenuManager_Base_SetupModOptionsMenu", "ReconnectOptions", function(menu_manager, nodes)
   MenuHelper:NewMenu(keybinds_menu_id)
