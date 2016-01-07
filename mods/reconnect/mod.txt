@@ -2,7 +2,7 @@
   "name": "断线重连",
   "description": "断线重连",
   "author": "Luffy",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "hooks": [
     {
       "hook_id": "lib/managers/menumanager",
