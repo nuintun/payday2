@@ -7,7 +7,7 @@ LuaModManager._languages = {
   "id",
   "cn"
 }
-LuaModManager.Constants.default_language = "en"
+LuaModManager.Constants.default_language = "cn"
 LuaModManager.Constants.language_key = "language"
 
 function LuaModManager:GetIndexOfDefaultLanguage()

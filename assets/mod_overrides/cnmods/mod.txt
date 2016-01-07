@@ -1,0 +1,6 @@
+{
+  "name": "简体中文模组",
+  "author": "PDLG汉化组",
+  "version": "0.0.1",
+  "description": "收获日2简体中文汉化模组"
+}
