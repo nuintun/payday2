@@ -1,8 +1,8 @@
 _G.Reconnect = _G.Reconnect or {}
 Reconnect._data_path = SavePath .. "Reconnect.txt"
 Reconnect.options = {}
-LuaModManager.Constants._keybinds_menu_id = "base_keybinds_menu"
-keybinds_menu_id = LuaModManager.Constants._keybinds_menu_id
+keybinds_menu_id = "base_keybinds_menu"
+LuaModManager.Constants._keybinds_menu_id = keybinds_menu_id;
 
 function Reconnect:Save()
   local file = io.open(self._data_path, "w+")
