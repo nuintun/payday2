@@ -24,19 +24,6 @@ end
 
 Reconnect:Load()
 
-Hooks:Add("MenuManager_Base_BuildModOptionsMenu", "ReconnectOptionsBuild", function(menu_manager, nodes)
-  nodes[keybinds_menu_id] = MenuHelper:BuildMenu(keybinds_menu_id)
-
-  MenuHelper:AddMenuItem(
-    nodes.options,
-    keybinds_menu_id,
-    "base_options_menu_keybinds",
-    "base_options_menu_keybinds_desc",
-    "lua_mod_options_menu",
-    "after"
-  )
-end)
-
 Hooks:Add("MenuManager_Base_SetupModOptionsMenu", "ReconnectOptions", function(menu_manager, nodes)
   MenuHelper:NewMenu(keybinds_menu_id)
 end)
@@ -182,4 +169,19 @@ if RequiredScript == "lib/network/matchmaking/networkmatchmakingsteam" then
       f()
     end
   end
+end
+
+if LuaModManager:GetNumberOfJsonKeybinds() == 0 then
+  Hooks:Add("MenuManager_Base_BuildModOptionsMenu", "ReconnectOptionsBuild", function(menu_manager, nodes)
+    nodes[keybinds_menu_id] = MenuHelper:BuildMenu(keybinds_menu_id)
+
+    MenuHelper:AddMenuItem(
+      nodes.options,
+      keybinds_menu_id,
+      "base_options_menu_keybinds",
+      "base_options_menu_keybinds_desc",
+      "lua_mod_options_menu",
+      "after"
+    )
+  end)
 end
