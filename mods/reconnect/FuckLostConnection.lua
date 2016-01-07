@@ -1,7 +1,7 @@
 _G.Reconnect = _G.Reconnect or {}
 Reconnect._data_path = SavePath .. "Reconnect.txt"
 Reconnect.options = {}
-keybinds_menu_id = "base_keybinds_menu"
+keybinds_menu_id = "reconnect_keybinds_menu"
 
 function Reconnect:Save()
   local file = io.open(self._data_path, "w+")
