@@ -72,6 +72,7 @@ if RequiredScript == "lib/managers/crimenetmanager" then
 
     if k == Idstring(key) and self._panel:child("reconnect_button") then
       Reconnect:Load()
+      
       if Reconnect.options.room_id then
         managers.network.matchmake:join_server(Reconnect.options.room_id)
       else
@@ -131,7 +132,7 @@ if RequiredScript == "lib/network/matchmaking/networkmatchmakingsteam" then
           print("Wrong version!!")
           managers.system_menu:close("join_server")
           managers.menu:show_failed_joining_dialog()
-          
+
           return
         end
       end
