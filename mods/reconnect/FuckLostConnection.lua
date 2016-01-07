@@ -81,7 +81,12 @@ if RequiredScript == "lib/managers/crimenetmanager" then
       if Reconnect.options.room_id then
         managers.network.matchmake:join_server(Reconnect.options.room_id)
       else
-        QuickMenu:new("错误！", "未找到可以连接的服务器。", { [1] = { text = "确认" } }):show()
+        QuickMenu:new("错误！", "未找到可以连接的服务器。", {
+          [1] = {
+            text = "确认",
+            is_cancel_button = true
+          }
+        }):show()
       end
     end
   end
@@ -110,7 +115,12 @@ if RequiredScript == "lib/managers/crimenetmanager" then
       if Reconnect.options.room_id then
         managers.network.matchmake:join_server(Reconnect.options.room_id)
       else
-        QuickMenu:new("错误！", "未找到可以连接的服务器。", { [1] = { text = "确认" } }):show()
+        QuickMenu:new("错误！", "未找到可以连接的服务器。", {
+          [1] = {
+            text = "确认",
+            is_cancel_button = true
+          }
+        }):show()
       end
       return
     end
