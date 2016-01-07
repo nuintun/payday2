@@ -77,6 +77,6 @@
   "base_language_fr": "法语",
   "base_language_ru": "俄语",
   "base_language_tr": "土耳其语",
-  "base_language_id": "印度尼西亚语",
+  "base_language_id": "印尼语",
   "base_language_cn": "简体中文"
 }
