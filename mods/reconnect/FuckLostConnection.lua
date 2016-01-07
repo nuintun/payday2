@@ -44,14 +44,12 @@ Hooks:Add("MenuManager_Base_PopulateModOptionsMenu", "ReconnectOptions", functio
 end)
 
 Hooks:Add("MenuManager_Base_BuildModOptionsMenu", "ReconnectOptionsBuild", function(menu_manager, nodes)
+  local keybinds = "base_options_menu_keybinds";
+  local keybinds_desc = "base_options_menu_keybinds_desc"
+
   nodes[keybinds_menu_id] = MenuHelper:BuildMenu(keybinds_menu_id)
 
-  MenuHelper:AddMenuItem(
-    nodes.options,
-    keybinds_menu_id,
-    "base_options_menu_keybinds",
-    "base_options_menu_keybinds_desc"
-  )
+  MenuHelper:AddMenuItem(nodes.options, keybinds_menu_id, keybinds, keybinds_desc)
 end)
 
 if RequiredScript == "lib/managers/crimenetmanager" then
@@ -83,7 +81,7 @@ if RequiredScript == "lib/managers/crimenetmanager" then
       if Reconnect.options.room_id then
         managers.network.matchmake:join_server(Reconnect.options.room_id)
       else
-        QuickMenu:new("错误！", "未找到可以连接的服务器。", {}):show()
+        QuickMenu:new("错误！", "未找到可以连接的服务器。", { [1] = { text = "确认" } }):show()
       end
     end
   end
