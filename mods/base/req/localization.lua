@@ -47,7 +47,6 @@ Hooks:Add("LocalizationManagerPostInit", "Base_LocalizationManagerPostInit", fun
 end)
 
 Hooks:Add("MenuManager_Base_BuildModOptionsMenu", "MenuManager_Base_SetupModOptionsMenu_Localization", function(menu_manager)
-
   local menu_id = LuaModManager.Constants._lua_mod_options_menu_id
 
   MenuCallbackHandler.blt_base_select_language = function(this, item)
@@ -69,12 +68,12 @@ Hooks:Add("MenuManager_Base_BuildModOptionsMenu", "MenuManager_Base_SetupModOpti
     menu_id = menu_id,
     items = items,
     value = LuaModManager:GetLanguageIndex(),
-    priority = 1001,
+    priority = 1001
   })
 
   MenuHelper:AddDivider({
     size = 16,
     menu_id = menu_id,
-    priority = 1000,
+    priority = 1000
   })
 end)
