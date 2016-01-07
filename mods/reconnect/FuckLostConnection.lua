@@ -43,7 +43,7 @@ Hooks:Add("MenuManager_Base_PopulateModOptionsMenu", "ReconnectOptions", functio
     button = key,
     binding = key,
     menu_id = keybinds_menu_id,
-    localized = false,
+    localized = false
   })
 end)
 
@@ -131,7 +131,7 @@ if RequiredScript == "lib/network/matchmaking/networkmatchmakingsteam" then
           print("Wrong version!!")
           managers.system_menu:close("join_server")
           managers.menu:show_failed_joining_dialog()
-
+          
           return
         end
       end
