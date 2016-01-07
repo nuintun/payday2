@@ -1,12 +1,8 @@
 _G.Reconnect = _G.Reconnect or {}
 Reconnect._data_path = SavePath .. "Reconnect.txt"
 Reconnect.options = {}
-
-local C = LuaModManager.Constants
-
 LuaModManager.Constants._keybinds_menu_id = "base_keybinds_menu"
-
-local keybinds_menu_id = C._keybinds_menu_id
+keybinds_menu_id = LuaModManager.Constants._keybinds_menu_id
 
 function Reconnect:Save()
   local file = io.open(self._data_path, "w+")
@@ -39,11 +35,12 @@ Hooks:Add("MenuManager_Base_PopulateModOptionsMenu", "ReconnectOptions", functio
   MenuHelper:AddKeybinding({
     id = "Reconnect_key",
     title = "断线重连",
+    desc = "当你的断线后可以使用快捷键重新连接服务器",
     connection_name = "Reconnect_key",
     button = key,
     binding = key,
     menu_id = keybinds_menu_id,
-    localized = true
+    localized = false
   })
 end)
 
