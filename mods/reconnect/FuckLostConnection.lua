@@ -43,7 +43,7 @@ Hooks:Add("MenuManager_Base_PopulateModOptionsMenu", "ReconnectOptions", functio
     button = key,
     binding = key,
     menu_id = keybinds_menu_id,
-    localized = false
+    localized = true
   })
 end)
 
@@ -72,7 +72,7 @@ if RequiredScript == "lib/managers/crimenetmanager" then
 
     if k == Idstring(key) and self._panel:child("reconnect_button") then
       Reconnect:Load()
-      
+
       if Reconnect.options.room_id then
         managers.network.matchmake:join_server(Reconnect.options.room_id)
       else
