@@ -1,0 +1,7 @@
+{
+  "name": "hd grenade",
+  "description": "高清手雷",
+  "author": "HappyHead",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=12492",
+  "version": "1.0.0"
+}
