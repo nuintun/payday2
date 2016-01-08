@@ -1,0 +1,7 @@
+{
+  "name": "hd meth ingredients",
+  "description": "高清毒品化学原料",
+  "author": "AlexLB",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=14785",
+  "version": "1.0.0"
+}
