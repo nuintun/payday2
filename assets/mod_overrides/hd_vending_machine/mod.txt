@@ -1,0 +1,7 @@
+{
+  "name": "hd vending machine",
+  "description": "高清自动售货机",
+  "author": "Master Indigo",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=12399",
+  "version": "1.0.1"
+}
