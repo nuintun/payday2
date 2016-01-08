@@ -1,0 +1,7 @@
+{
+  "name": "hd blood",
+  "description": "高清血液",
+  "author": "Zom-B",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=12324",
+  "version": "1.0.0"
+}
