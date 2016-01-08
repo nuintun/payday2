@@ -2,7 +2,7 @@
   "name": "reconnect",
   "description": "断线重连",
   "author": "Luffy",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "hooks": [
     {
       "hook_id": "lib/managers/menumanager",
