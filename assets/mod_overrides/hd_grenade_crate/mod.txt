@@ -1,0 +1,7 @@
+{
+  "name": "hd grenade crate",
+  "description": "高清手雷补给箱",
+  "author": "Master Indigo",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=12404",
+  "version": "1.4.0"
+}
