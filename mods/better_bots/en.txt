@@ -38,7 +38,7 @@
   "weaprof_choice_expert": "专家",
   "weaprof_choice_deathwish": "死亡之愿",
   "ak_toggle_title": "AI使用AK系列枪械",
-  "ak_toggle_desc": "如果选择，所有AI队友将使用AKAK系列枪械代替默认枪械",
+  "ak_toggle_desc": "如果选择，所有AI队友将使用AK系列枪械代替默认枪械",
   "path_toggle_title": "AI使用警用线路",
   "path_toggle_desc": "如果选择AI队友使用警用线路，\n在某些地图可能引起错误，慎用！"
 }
