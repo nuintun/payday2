@@ -1,5 +1,5 @@
 {
-  "name": "简体中文模组",
+  "name": "cn mods",
   "author": "PDLG汉化组",
   "version": "1.0.0",
   "description": "收获日2简体中文汉化模组"
