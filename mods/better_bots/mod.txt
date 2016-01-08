@@ -1,0 +1,49 @@
+{
+  "name": "Better Bots",
+  "description": "自定义AI队友",
+  "author": "Schmuddel, Spruebox, TdlQ",
+  "contact": "id/schmuddelzuru",
+  "version": "2.5",
+  "hooks": [
+    {
+      "hook_id": "lib/managers/menumanager",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/tweak_data/charactertweakdata",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/managers/criminalsmanager",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/units/player_team/logics/teamailogicidle",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/units/player_team/teamaimovement",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/managers/mission/elementmissionend",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/units/beings/player/states/playerbleedout",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/units/player_team/logics/teamailogicassault",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/units/enemies/cop/copdamage",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/units/enemies/cop/copbrain",
+      "script_path": "betterbots.lua"
+    }
+  ]
+}
