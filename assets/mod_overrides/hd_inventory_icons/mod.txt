@@ -1,0 +1,6 @@
+{
+  "name": "hd inventory icons ",
+  "author": "Legendary_Majahet",
+  "version": "1.0.0",
+  "description": "高清装备库图标"
+}
