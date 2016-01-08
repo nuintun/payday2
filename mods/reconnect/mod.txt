@@ -1,5 +1,5 @@
 {
-  "name": "Reconnect",
+  "name": "reconnect",
   "description": "断线重连",
   "author": "Luffy",
   "version": "1.0.0",
