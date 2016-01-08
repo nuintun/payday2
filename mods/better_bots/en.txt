@@ -28,7 +28,7 @@
   "move_choice_title": "AI活动",
   "move_choice_desc": "选择AI队友活动模式",
   "move_choice_default": "默认",
-  "move_choice_dodge": "躲闪",
+  "move_choice_dodge": "闪避",
   "move_choice_no_crouching": "无下蹲",
   "weaprof_choice_title": "AI枪法",
   "weaprof_choice_desc": "选择AI队友枪法",
