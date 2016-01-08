@@ -1,0 +1,1 @@
+del "guis\textures\pd2\blackmarket\icons\characters\old_hoxton.texture"
