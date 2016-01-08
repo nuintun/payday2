@@ -1,0 +1,24 @@
+{
+	"name" : "npc weapons customization",
+	"description" : "自定义NPC武器模型",
+	"author" : "I am not a spy... & LASTBULLET_GREAT BIG BUSHY BEARD",
+	"contact" : "iamnotaspy@lastbullet.net or simon@lastbullet.net",
+	"version" : "2.00",
+	"hooks" : [
+		{ "hook_id" : "lib/managers/menumanager", "script_path" : "NPCWeapCore.lua" },
+		{ "hook_id" : "lib/units/weapons/npcraycastweaponbase", "script_path" : "NPCWeapCore.lua" }
+	],
+	"updates" : [
+		{
+			"revision" : 8,
+			"identifier" : "npcweaponcustomization",
+		},
+        {
+            "identifier" : "npcweaponcustomization_override",
+            "revision" : "./assets/mod_overrides/HD NPC Weapons mod/rev.txt",
+            "display_name" : "HD Weapons mod - Mod Override",
+            "install_dir" : "assets/mod_overrides/",
+            "install_folder" : "HD NPC Weapons mod"
+        }
+    ]
+}

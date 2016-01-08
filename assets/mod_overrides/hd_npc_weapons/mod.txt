@@ -1,6 +1,6 @@
 {
   "name": "hd npc weapons",
-  "author": "I am not a spy...",
+  "author": "I am not a spy... & LASTBULLET_GREAT BIG BUSHY BEARD",
   "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=12413",
   "version": "2.0.0",
   "description": "高清NPC武器"
