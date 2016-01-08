@@ -20,8 +20,10 @@ NPCWeap.hook_files = {
 
 if not NPCWeap.setup then
   local files = file.GetFiles(NPCWeap.mod_path .. "Weapons/")
+
   for p, d in pairs(files) do
     local file_path = NPCWeap.mod_path .. "Weapons/" .. d
+
     if io.file_is_readable(file_path) then
       dofile(file_path)
     end
@@ -30,22 +32,24 @@ if not NPCWeap.setup then
   for p, d in pairs(NPCWeap.dofiles) do
     dofile(ModPath .. d)
   end
+
   NPCWeap:Load_options()
   NPCWeap.setup = true
 end
 
 if RequiredScript then
   local requiredScript = RequiredScript:lower()
+
   if NPCWeap.hook_files[requiredScript] then
     dofile(ModPath .. NPCWeap.hook_files[requiredScript])
   end
 end
 
 function NPCWeap:AddMultipleChoice(multi_data)
-
   local data = {
     type = "MenuItemMultiChoiceWithIcon"
   }
+
   for k, v in ipairs(multi_data.items or {}) do
     table.insert(data, { _meta = "option", text_id = v, value = k })
   end
@@ -65,6 +69,7 @@ function NPCWeap:AddMultipleChoice(multi_data)
 
   local menu = multi_data.node
   local item = menu:create_item(data, params)
+
   item:set_value(multi_data.value or 1)
   menu:add_item(item)
 end
@@ -74,7 +79,6 @@ function NPCWeap:setup_weapon(unit, name)
 
   if current_weap then
     local enabled_objects = {}
-
     local barrel_offset = current_weap.barrel_fire_offset or Vector3(0, 0, 0)
     local barrel_len = Vector3(0, 0, 0) --offset in relaton to barrel
     local barrel_fg_len = Vector3(0, 0, 0) --offset in relaton to foregrip (only for mp5)
@@ -119,6 +123,7 @@ function NPCWeap:setup_weapon(unit, name)
         --hope to RNJesus that you roll one of these motherfuckers
         if current_weap.spooci and current_weap.spooci[category] then
           local rngNumber = math.random(1, 10000) / 100.0
+
           for spoociItemKey, spoociItem in pairs(current_weap.spooci[category]) do
             if rngNumber <= spoociItemKey then
               random_object = spoociItem[math.random(#spoociItem)]
@@ -141,6 +146,7 @@ function NPCWeap:setup_weapon(unit, name)
       for _, required_reset_item in pairs(current_weap.required_reset[category]) do
         if required_reset_item ~= object_name then
           local object = unit:get_object(Idstring(required_reset_item))
+
           if object then
             object:set_visibility(false)
           end
@@ -150,6 +156,7 @@ function NPCWeap:setup_weapon(unit, name)
       --enable the required objects (if any)
       if current_weap.required[object_name] then
         local required_table = current_weap.required[object_name]
+
         for _, requiredItems in pairs(required_table) do
           --log(category)
           local object = unit:get_object(Idstring(requiredItems))
@@ -184,6 +191,7 @@ function NPCWeap:setup_weapon(unit, name)
             for _, category_object_name in pairs(current_weap[current_objectKey]) do
               local object_string = string.sub(category_object_name, current_weap.object_sub, string.len(category_object_name))
               local object = unit:get_object(Idstring(object_string))
+
               if object and object:visibility() == true then
                 object:set_local_position(current_object)
                 if current_weap.required[object_string] then
@@ -198,18 +206,23 @@ function NPCWeap:setup_weapon(unit, name)
               end
             end
           end
+
           --adjust spooci
           if current_weap.spooci and current_weap.spooci[current_objectKey] then
             for _, spooci_object_list in pairs(current_weap.spooci[current_objectKey]) do
               for _, spooci_object_name in pairs(spooci_object_list) do
                 local object_string = string.sub(spooci_object_name, current_weap.object_sub, string.len(spooci_object_name))
                 local object = unit:get_object(Idstring(object_string))
+
                 if object and object:visibility() == true then
                   object:set_local_position(current_object)
+
                   if current_weap.required[object_string] then
                     local required_table = current_weap.required[object_string]
+
                     for _, requiredItem in pairs(required_table) do
                       local object_req = unit:get_object(Idstring(requiredItem))
+
                       if object_req then
                         object_req:set_local_position(current_object)
                       end
@@ -229,8 +242,10 @@ function NPCWeap:setup_weapon(unit, name)
     for requiredItemKey, requiredItems in pairs(current_weap.required) do
       for _, reqItem in pairs(requiredItems) do
         local req_object = unit:get_object(Idstring(requiredItemKey))
+
         if req_object and req_object:visibility() == true then
           local object = unit:get_object(Idstring(reqItem))
+
           if object then
             object:set_visibility(true)
           end
@@ -265,7 +280,9 @@ end)
 Hooks:Add("MenuManagerSetupCustomMenus", "Base_SetupNPCWeapMenu", function(menu_manager, nodes)
   MenuHelper:NewMenu(NPCWeap.menu_name)
 end)
+
 math.randomseed(os.time())
+
 function NPCWeap:get_random(current_weap, category, weap_name, unit)
   local value = math.random(#current_weap[category] - 1)
   local random_object = current_weap[category][value]
@@ -341,18 +358,19 @@ function NPCWeap:AddToggle(toggle_data, node)
   if toggle_data.disabled then
     item:set_enabled(not toggle_data.disabled)
   end
+
   return node:add_item(item)
 end
 
 function NPCWeap:update_compatibility_item(node_items, this)
   for nodeKey, nodeItem in pairs(node_items) do
     if nodeItem.item.set_enabled then
-
       if nodeItem.item._parameters.name and NPCWeap.incompat_categories_button[nodeItem.item._parameters.name] and #NPCWeap.incompat_categories_button[nodeItem.item._parameters.name] > 0 then
         node_items[nodeKey].item._parameters.row_item_color = Color.red:with_alpha(0.5)
       else
         node_items[nodeKey].item._parameters.row_item_color = nil
       end
+
       nodeItem.item:set_enabled(true)
       this:refresh_node()
     end
@@ -361,6 +379,7 @@ end
 
 function NPCWeap:update_compatibility(item, this, current_weap, current_value)
   local node_items = item._parameters.gui_node.row_items
+
   NPCWeap:update_compatibility_item(node_items, this)
 end
 
@@ -369,41 +388,41 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
     local unit = managers.menu_scene._item_unit.unit
     local current_weap = NPCWeap.weapons[NPCWeap.current_weapon]
     local current_value = current_weap[item:name()][item:value()]
+
     NPCWeap.incompat_categories = NPCWeap.incompat_categories or {}
+
     local incompatible
+
     if current_weap.incompatible[current_value] then
       local incompat_list = current_weap.incompatible[current_value]
 
       for _, category in pairs(current_weap.categories) do
         for _, incompat_list_item in pairs(incompat_list) do
           if table.contains(current_weap[category], incompat_list_item) then
-
             local value = NPCWeap.loaded_options[NPCWeap.current_weapon][category]
 
             if current_weap[category][value] == incompat_list_item then
               NPCWeap.incompat_categories[item:name()] = NPCWeap.incompat_categories[item:name()] or {}
+
               if not table.contains(NPCWeap.incompat_categories[item:name()], category) then
                 table.insert(NPCWeap.incompat_categories[item:name()], category)
               end
 
               --for self
               if NPCWeap.incompat_categories_button[item:name()] then
-
                 if not table.contains(NPCWeap.incompat_categories_button[item:name()], category) then
                   table.insert(NPCWeap.incompat_categories_button[item:name()], category)
                 end
-
               else
                 NPCWeap.incompat_categories_button[item:name()] = {}
                 table.insert(NPCWeap.incompat_categories_button[item:name()], category)
               end
+
               --for other
               if NPCWeap.incompat_categories_button[category] then
-
                 if not table.contains(NPCWeap.incompat_categories_button[category], item:name()) then
                   table.insert(NPCWeap.incompat_categories_button[category], item:name())
                 end
-
               else
                 NPCWeap.incompat_categories_button[category] = {}
                 table.insert(NPCWeap.incompat_categories_button[category], item:name())
@@ -418,28 +437,26 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
             if object_incompat then
               if object_incompat:visibility() == true then
                 NPCWeap.incompat_categories[item:name()] = NPCWeap.incompat_categories[item:name()] or {}
+
                 if not table.contains(NPCWeap.incompat_categories[item:name()], category) then
                   table.insert(NPCWeap.incompat_categories[item:name()], category)
                 end
 
                 --for self
                 if NPCWeap.incompat_categories_button[item:name()] then
-
                   if not table.contains(NPCWeap.incompat_categories_button[item:name()], category) then
                     table.insert(NPCWeap.incompat_categories_button[item:name()], category)
                   end
-
                 else
                   NPCWeap.incompat_categories_button[item:name()] = {}
                   table.insert(NPCWeap.incompat_categories_button[item:name()], category)
                 end
+
                 --for other
                 if NPCWeap.incompat_categories_button[category] then
-
                   if not table.contains(NPCWeap.incompat_categories_button[category], item:name()) then
                     table.insert(NPCWeap.incompat_categories_button[category], item:name())
                   end
-
                 else
                   NPCWeap.incompat_categories_button[category] = {}
                   table.insert(NPCWeap.incompat_categories_button[category], item:name())
@@ -452,18 +469,18 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
         end
       end
     end
+
     if incompatible then
       local node_items = item._parameters.gui_node.row_items
+
       NPCWeap:update_compatibility_item(node_items, this)
+
       return
     end
 
     if NPCWeap.incompat_categories_button[item:name()] then
-
       for incompat_category_Key, incompat_category_Item in pairs(NPCWeap.incompat_categories_button[item:name()]) do
-
         if NPCWeap.incompat_categories_button[incompat_category_Item] then
-
           for incompat_sub_category_Key, incompat_sub_category_Item in pairs(NPCWeap.incompat_categories_button[incompat_category_Item]) do
             if incompat_sub_category_Item == item:name() then
               table.remove(NPCWeap.incompat_categories_button[incompat_category_Item], incompat_sub_category_Key)
@@ -475,22 +492,27 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
 
       NPCWeap.incompat_categories_button[item:name()] = {}
     end
+
     NPCWeap:update_compatibility(item, this, current_weap, current_value)
     NPCWeap.loaded_options[NPCWeap.current_weapon][item:name()] = item:value()
     NPCWeap:Save()
+
     for p, d in pairs(current_weap[item:name()]) do
       local string = string.sub(d, current_weap.object_sub, string.len(d))
       local object = unit:get_object(Idstring(string))
+
       if object then
         object:set_visibility(false)
       end
     end
+
     NPCWeap:update_category(unit, current_weap, current_value, item:name())
   end
 
   MenuCallbackHandler.reset_buttons = function(this, item)
     nodes.blackmarket_preview_node:clean_items()
     managers.menu:add_back_button(nodes.blackmarket_preview_node)
+
     if alive(NPCWeap._title_text) then
       NPCWeap._title_text:set_visible(false)
     end
@@ -499,13 +521,16 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
   MenuCallbackHandler.reset_buttons = function(this, item)
     nodes.blackmarket_preview_node:clean_items()
     managers.menu:add_back_button(nodes.blackmarket_preview_node)
+
     if alive(NPCWeap._title_text) then
       NPCWeap._title_text:set_visible(false)
     end
   end
   MenuCallbackHandler.npc_weap_toggle_customization = function(this, item)
     NPCWeap.loaded_options[NPCWeap.current_weapon].enabled = item:value() == "on" and true or false
+
     local node_items = item._parameters.gui_node.row_items
+
     for nodeKey, nodeItem in pairs(node_items) do
       if nodeItem.item.set_enabled then
         if nodeItem.item._parameters.name ~= nil then
@@ -516,13 +541,17 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
         end
       end
     end
+
     NPCWeap:Save()
   end
+
   MenuCallbackHandler.refresh_weapon_action = function(this, item)
     NPCWeap:setup_weapon(managers.menu_scene._item_unit.unit, item:name())
   end
+
   MenuCallbackHandler.setup_buttons = function(this, item)
     NPCWeap.current_weapon = item:name()
+
     for p, d in pairs(NPCWeap.weapons[item:name()].categories) do
       NPCWeap:AddMultipleChoice({
         id = d,
@@ -541,7 +570,9 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
       size = 8,
     }
     local new_menu_divider = nodes.blackmarket_preview_node:create_item({ type = "MenuItemDivider" }, divider_params)
+
     nodes.blackmarket_preview_node:add_item(new_menu_divider)
+
     local params = {
       name = item:name(),
       text_id = "Refresh weapon",
@@ -551,12 +582,15 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
       row_item_color = tweak_data.screen_colors.button_stage_3,
     }
     local new_item = nodes.blackmarket_preview_node:create_item({ type = "CoreMenuItem.Item" }, params)
+
     nodes.blackmarket_preview_node:add_item(new_item)
+
     local make_fine_text = function(text)
       local x, y, w, h = text:text_rect()
       text:set_size(w, h)
       text:set_position(math.round(text:x()), math.round(text:y()))
     end
+
     if not NPCWeap._panel and not NPCWeap._title_text then
       NPCWeap._panel = managers.gui_data:create_saferect_workspace():panel()
       NPCWeap._title_text = NPCWeap._panel:text({
@@ -568,16 +602,19 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
         color = tweak_data.screen_colors.button_stage_3
       })
     end
+
     if alive(NPCWeap._title_text) then
       NPCWeap._title_text:set_visible(true)
       NPCWeap._title_text:set_text(string.upper(NPCWeap.weapons[item:name()].display_name))
     end
+
     managers.menu:open_node("blackmarket_preview_node", { { back_callback = callback(MenuCallbackHandler, MenuCallbackHandler, "reset_buttons") } })
     managers.dyn_resource:load(Idstring("unit"), Idstring(NPCWeap.weapons[item:name()].unit), DynamicResourceManager.DYN_RESOURCES_PACKAGE, false)
     managers.menu_scene:_spawn_item(NPCWeap.weapons[item:name()].unit, nil)
     managers.menu_scene._item_yaw = -90
     NPCWeap:setup_weapon(managers.menu_scene._item_unit.unit, item:name())
   end
+
   for p, d in pairs(NPCWeap.weapons) do
     MenuHelper:AddButton({
       id = d.name_id,
@@ -591,31 +628,41 @@ end)
 
 function NPCWeap:update_category(unit, current_weap, current_value, category)
   local object_name
+
   if current_value ~= "random" then
     object_name = string.sub(current_value, current_weap.object_sub, string.len(current_value))
   else
     local random_object = NPCWeap:get_random(current_weap, category, NPCWeap.current_weapon, unit)
+
     object_name = string.sub(random_object, current_weap.object_sub, string.len(random_object))
   end
+
   if object_name ~= "none" then
     local object = unit:get_object(Idstring(object_name))
+
     if object then
       object:set_visibility(true)
     end
   end
+
   if current_weap[object_name] then
     for p, k in pairs(current_weap[object_name]) do
       log(p)
+
       if current_weap[p] then
         for x, y in pairs(current_weap[p]) do
           local object_string = string.sub(y, current_weap.object_sub, string.len(y))
           local object = unit:get_object(Idstring(object_string))
+
           if object and object:visibility() == true then
             object:set_local_position(k)
+
             if current_weap.required[object_string] then
               local required_table = current_weap.required[object_string]
+
               for p, d in pairs(required_table) do
                 local object_req = unit:get_object(Idstring(d))
+
                 if object_req then
                   object_req:set_local_position(k)
                 end
@@ -626,18 +673,22 @@ function NPCWeap:update_category(unit, current_weap, current_value, category)
       end
     end
   end
+
   if current_weap.pos_check and current_weap.pos_check[category] then
     for _, pos_category in pairs(current_weap.pos_check[category]) do
       for _, object_wpre in pairs(current_weap[pos_category]) do
         local object_string = string.sub(object_wpre, current_weap.object_sub, string.len(object_wpre))
         local wpre_object = unit:get_object(Idstring(object_string))
+
         if wpre_object and wpre_object:visibility() == true then
           if current_weap[object_string] then
             for vcategory, vector in pairs(current_weap[object_string]) do
               if vcategory == category then
                 local object = unit:get_object(Idstring(object_name))
+
                 if object and object:visibility() == true then
                   object:set_local_position(vector)
+
                   --if pos_category == "barrel" then
                   --log("fire pos: " .. unit:get_object(Idstring("fire")).position)
 
@@ -645,6 +696,7 @@ function NPCWeap:update_category(unit, current_weap, current_value, category)
                   --end
                   if current_weap.required[object_name] then
                     local required_table = current_weap.required[object_name]
+
                     for p, d in pairs(required_table) do
                       local object_req = unit:get_object(Idstring(d))
                       if object_req then
@@ -663,6 +715,7 @@ function NPCWeap:update_category(unit, current_weap, current_value, category)
 
   for p, d in pairs(current_weap.required_reset[category]) do
     local object = unit:get_object(Idstring(d))
+
     if object then
       object:set_visibility(false)
     end
@@ -672,6 +725,7 @@ function NPCWeap:update_category(unit, current_weap, current_value, category)
     for aroupdKey, aroupdVal in pairs(current_weap.absolute_reset_on_update) do
       for _, aroupdItem in pairs(aroupdVal) do
         local object = unit:get_object(Idstring(aroupdItem))
+
         if object and object:visibility() == true then
           object:set_visibility(false)
           NPCWeap:update_category(unit, current_weap, "random", aroupdKey)
@@ -682,18 +736,23 @@ function NPCWeap:update_category(unit, current_weap, current_value, category)
 
   if current_weap.required[object_name] then
     local required_table = current_weap.required[object_name]
+
     for p, d in pairs(required_table) do
       local object = unit:get_object(Idstring(d))
+
       if object then
         object:set_visibility(true)
       end
     end
   end
+
   for p, d in pairs(current_weap.required) do
     for i, j in pairs(d) do
       local req_object = unit:get_object(Idstring(p))
+
       if req_object and req_object:visibility() == true then
         local object = unit:get_object(Idstring(j))
+
         if object then
           object:set_visibility(true)
         end
