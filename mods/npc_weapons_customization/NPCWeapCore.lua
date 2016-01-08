@@ -260,20 +260,20 @@ Hooks:Add("LocalizationManagerPostInit", "NPCWeap_Localization", function(loc)
     ["NPCWeap_button"] = "自定义NPC武器",
     ["NPCWeap_button_help"] = "自定义NPC武器模型",
     ["barrel_title"] = "枪管",
-    ["body_title"] = "Body",
+    ["body_title"] = "枪身",
     ["barrel_ext_title"] = "枪口配件",
     ["magazine_title"] = "弹夹",
-    ["upper_reciever_title"] = "Upper Reciever",
-    ["stock_title"] = "Stock",
-    ["sight_title"] = "Scopes",
-    ["slide_title"] = "Slide",
-    ["foregrip_title"] = "握把",
-    ["grip_title"] = "Grip",
+    ["upper_reciever_title"] = "上机匣",
+    ["stock_title"] = "枪托",
+    ["sight_title"] = "瞄具",
+    ["slide_title"] = "套筒",
+    ["foregrip_title"] = "前握把",
+    ["grip_title"] = "握把",
     ["attachment_title"] = "附件",
-    ["vertical_grip_title"] = "Vertical Grip",
-    ["lower_receiver_title"] = "Lower Receiver",
-    ["drag_handle_title"] = "Drag Handle",
-    ["rail_title"] = "Rail"
+    ["vertical_grip_title"] = "下握把",
+    ["lower_receiver_title"] = "下机匣",
+    ["drag_handle_title"] = "枪栓",
+    ["rail_title"] = "导轨"
   })
 end)
 
@@ -575,7 +575,7 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
 
     local params = {
       name = item:name(),
-      text_id = "Refresh weapon",
+      text_id = "刷新武器",
       localize = false,
       callback = "refresh_weapon_action",
       localize_help = false,
