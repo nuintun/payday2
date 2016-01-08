@@ -560,7 +560,7 @@ end
 Hooks:Add("NetworkManagerOnPeerAdded", "NetworkManagerOnPeerAdded_BB", function(peer, peer_id)
   if Network:is_server() then
     DelayedCalls:Add("DelayedWarnModBB" .. tostring(peer_id), 2, function()
-      local message = "Host is running 'Better Bots': AI teammates will be tweaked and improved."
+      local message = "主机已运行'Better Bots': AI队友会被调整和改进。"
       local peer2 = managers.network:session() and managers.network:session():peer(peer_id)
 
       if peer2 then
