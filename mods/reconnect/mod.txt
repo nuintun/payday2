@@ -2,6 +2,7 @@
   "name": "reconnect",
   "description": "断线重连",
   "author": "Luffy",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=13546",
   "version": "2.0.0",
   "hooks": [
     {
