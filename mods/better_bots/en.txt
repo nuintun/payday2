@@ -26,7 +26,7 @@
   "speed_choice_very_fast": "非常快",
   "speed_choice_lightning": "闪电般速度",
   "move_choice_title": "AI活动",
-  "move_choice_desc": "选择AI队友活动模式",
+  "move_choice_desc": "选择AI队友闪避模式",
   "move_choice_default": "默认",
   "move_choice_dodge": "闪避",
   "move_choice_no_crouching": "无下蹲",
