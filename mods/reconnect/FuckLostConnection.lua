@@ -57,7 +57,7 @@ if RequiredScript == "lib/managers/crimenetmanager" then
     local key = LuaModManager:GetPlayerKeybind("Reconnect_key") or "f1"
     local reconnect_button = self._panel:text({
       name = "reconnect_button",
-      text = string.upper("[" .. key .. "]" .. " 断线重连"),
+      text = string.upper("[" .. key .. "]" .. "断线重连"),
       font_size = tweak_data.menu.pd2_small_font_size,
       font = tweak_data.menu.pd2_small_font,
       color = tweak_data.screen_colors.button_stage_3,
