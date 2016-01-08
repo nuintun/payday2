@@ -1,0 +1,7 @@
+{
+  "name": "hd medic pack",
+  "description": "高清医疗箱",
+  "author": "Master Indigo",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=12411",
+  "version": "2015.05.26"
+}
