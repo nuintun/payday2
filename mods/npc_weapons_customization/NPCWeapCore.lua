@@ -257,8 +257,8 @@ end
 
 Hooks:Add("LocalizationManagerPostInit", "NPCWeap_Localization", function(loc)
   LocalizationManager:add_localized_strings({
-    ["NPCWeap_button"] = "NPC Weapon Customization",
-    ["NPCWeap_button_help"] = "Customize NPC weapons",
+    ["NPCWeap_button"] = "自定义NPC武器",
+    ["NPCWeap_button_help"] = "自定义NPC武器模型",
     ["barrel_title"] = "Barrel",
     ["body_title"] = "Body",
     ["barrel_ext_title"] = "Barrel Extension",
