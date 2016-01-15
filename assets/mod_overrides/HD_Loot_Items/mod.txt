@@ -1,7 +1,0 @@
-{
-  "name": "hd loot items",
-  "description": "高清金条纸币",
-  "author": "LemonCatHD",
-  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=14551",
-  "version": "0.0.3"
-}
