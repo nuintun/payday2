@@ -2,6 +2,6 @@
   "name": "readable clues for heists",
   "author": "I am not a spy... & Zdann",
   "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=789",
-  "version": "2016.01.15",
+  "version": "2015.05.22",
   "description": "收获日2劫案高清线索"
 }
