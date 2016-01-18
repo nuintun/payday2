@@ -3,7 +3,7 @@
   "description": "自定义AI队友",
   "author": "Schmuddel, Spruebox, TdlQ",
   "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=12736",
-  "version": "2.5",
+  "version": "2.5.0",
   "hooks": [
     {
       "hook_id": "lib/managers/menumanager",
