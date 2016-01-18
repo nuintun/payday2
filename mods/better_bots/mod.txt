@@ -2,7 +2,7 @@
   "name": "Better Bots",
   "description": "自定义AI队友",
   "author": "Schmuddel, Spruebox, TdlQ",
-  "contact": "id/schmuddelzuru",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=12736",
   "version": "2.5",
   "hooks": [
     {
