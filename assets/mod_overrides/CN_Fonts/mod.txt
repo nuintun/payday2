@@ -1,0 +1,7 @@
+{
+  "name": "cn fonts",
+  "author": "awcjack",
+  "contact": "http://forum.gamer.com.tw/C.php?bsn=20328&snA=3790&tnum=59&subbsn=3",
+  "version": "9.0.0",
+  "description": "收获日2中文字库"
+}
