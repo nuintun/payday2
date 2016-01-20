@@ -22,7 +22,7 @@ function BBMenu:Load()
 end
 
 Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_BBMenu", function(loc)
-  loc:load_localization_file(BBMenu._path .. "en.txt")
+  loc:load_localization_file(BBMenu._path .. "cn.txt")
 end)
 
 Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_BBMenu", function(menu_manager)
