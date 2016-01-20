@@ -430,14 +430,8 @@ end
 
 
 function MenuNodeTableGui:mouse_pressed(button, x, y)
-  --[[if self.item_panel:inside(x, y) and self._item_panel_parent:inside(x, y) and x > self:_mid_align() then
-    if button == Idstring("mouse wheel down") then
-      return self:wheel_scroll_start(-1)
-    elseif button == Idstring("mouse wheel up") then
-      return self:wheel_scroll_start(1)
-    end
-  end]] --
   MenuNodeTableGui.super.mouse_pressed(self, button, x, y)
+
   if button == Idstring("0") and self._mini_info_text:inside(x, y) then
     Steam:overlay_activate("url", "http://store.steampowered.com/stats")
     return true
@@ -445,8 +439,8 @@ function MenuNodeTableGui:mouse_pressed(button, x, y)
 end
 
 function MenuNodeTableGui:mouse_moved(o, x, y)
-
   local inside = self._mini_info_text:inside(x, y)
+
   --self._mouse_over = inside
   return inside, inside and "link"
 end
