@@ -153,6 +153,7 @@ elseif string.lower(RequiredScript) == "lib/units/enemies/cop/copdamage" then
       local panel_id
 
       if aggressor == managers.player:player_unit() then
+        --noinspection UnusedDef
         panel_id = HUDManager.PLAYER_PANEL
       else
         local char_data = managers.criminals:character_data_by_unit(aggressor)
