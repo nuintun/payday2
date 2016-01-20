@@ -270,7 +270,7 @@ function MenuNodeTableGui:_create_menu_item(row_item)
     })
     row_item.level_pro_text = row_item.gui_info_panel:text({
       name = "level_pro_text",
-      text = utf8.to_upper(row_item.item:parameters().pro and "PRO JOB" or ""),
+      text = utf8.to_upper(row_item.item:parameters().pro and "专家任务" or ""),
       font = tweak_data.menu.pd2_small_font,
       color = tweak_data.screen_colors.pro_color,
       font_size = font_size,
