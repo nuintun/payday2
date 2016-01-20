@@ -2,6 +2,7 @@ log("MenuNodeTableGui")
 
 function MenuNodeTableGui:_setup_panels(node)
   MenuNodeTableGui.super._setup_panels(self, node)
+
   local safe_rect_pixels = self:_scaled_size()
   local mini_info = self.safe_rect_panel:panel({
     x = 0,
@@ -23,6 +24,7 @@ function MenuNodeTableGui:_setup_panels(node)
     wrap = true,
     word_wrap = true
   })
+
   mini_info:set_width(self._info_bg_rect:w() - tweak_data.menu.info_padding * 38)
   mini_text:set_width(mini_info:w())
   mini_info:set_height(35)
@@ -34,7 +36,6 @@ function MenuNodeTableGui:_setup_panels(node)
   self._mini_info_text = mini_text
 end
 
-
 function MenuNodeTableGui:set_mini_info(text)
   self._mini_info_text:set_text(text)
 end
@@ -43,12 +44,15 @@ function MenuNodeTableGui:_create_menu_item(row_item)
   if row_item.type == "column" then
     local columns = row_item.node:columns()
     local total_proportions = row_item.node:parameters().total_proportions
+
     row_item.gui_panel = self.item_panel:panel({
       x = self:_right_align(),
       w = self.item_panel:w()
     })
     row_item.gui_columns = {}
+
     local x = 0
+
     for i, data in ipairs(columns) do
       local text = row_item.gui_panel:text({
         font_size = self.font_size,
@@ -62,15 +66,22 @@ function MenuNodeTableGui:_create_menu_item(row_item)
         layer = self.layers.items,
         text = row_item.item:parameters().columns[i]
       })
+
       row_item.gui_columns[i] = text
+
       local _, _, w, h = text:text_rect()
+
       text:set_h(h)
+
       local w = data.proportions / total_proportions * row_item.gui_panel:w()
+
       text:set_w(w)
       text:set_x(x)
       x = x + w
     end
+
     local x, y, w, h = row_item.gui_columns[1]:text_rect()
+
     row_item.gui_panel:set_height(h)
   elseif row_item.type == "server_column" then
     --row_item.font = tweak_data.menu.pd2_medium_font_id
@@ -78,12 +89,15 @@ function MenuNodeTableGui:_create_menu_item(row_item)
     local total_proportions = row_item.node:parameters().total_proportions
     local safe_rect = self:_scaled_size()
     local xl_pad = 54
+
     row_item.gui_panel = self.item_panel:panel({
       x = safe_rect.width / 2 - xl_pad,
       w = safe_rect.width / 2 + xl_pad
     })
     row_item.gui_columns = {}
+
     local x = 0
+
     for i, data in ipairs(columns) do
       local text = row_item.gui_panel:text({
         font_size = tweak_data.menu.server_list_font_size,
@@ -97,15 +111,22 @@ function MenuNodeTableGui:_create_menu_item(row_item)
         layer = self.layers.items,
         text = row_item.item:parameters().columns[i]
       })
+
       row_item.gui_columns[i] = text
+
       local _, _, w, h = text:text_rect()
+
       text:set_h(h)
+
       local w = data.proportions / total_proportions * row_item.gui_panel:w()
+
       text:set_w(w + (i == 2 and 10 or 0))
       text:set_x(x)
       x = x + w
     end
+
     local x, y, w, h = row_item.gui_columns[1]:text_rect()
+
     row_item.gui_panel:set_height(h)
 
     local x = row_item.gui_columns[2]:right()
@@ -114,7 +135,9 @@ function MenuNodeTableGui:_create_menu_item(row_item)
     local start_difficulty = 3
     local num_difficulties = 6
     local spacing = 14
+
     row_item.difficulty_icons = {}
+
     for i = start_difficulty, difficulty_stars do
       local skull = row_item.gui_panel:bitmap({
         texture = i == num_difficulties and "guis/textures/pd2/risklevel_deathwish_blackscreen" or "guis/textures/pd2/risklevel_blackscreen",
@@ -126,16 +149,17 @@ function MenuNodeTableGui:_create_menu_item(row_item)
         layer = self.layers.items,
         color = tweak_data.screen_colors.risk
       })
+
       x = x + (spacing)
+
       row_item.difficulty_icons[i] = skull
       --num_stars = num_stars + 1
       --skull:set_center_y(row_item.gui_columns[2]:center_y())
     end
 
-
-
     local level_id = row_item.item:parameters().level_id
     local days = row_item.item:parameters().days
+
     row_item.gui_info_panel = self.safe_rect_panel:panel({
       visible = false,
       layer = self.layers.items,
@@ -154,7 +178,9 @@ function MenuNodeTableGui:_create_menu_item(row_item)
       align = "left",
       vertical = "left"
     })
+
     local briefing_text = level_id and managers.localization:text(tweak_data.levels[level_id].briefing_id) or ""
+
     row_item.heist_briefing = row_item.gui_info_panel:text({
       visible = true,
       x = 0,
@@ -172,6 +198,7 @@ function MenuNodeTableGui:_create_menu_item(row_item)
     })
 
     local font_size = tweak_data.menu.pd2_small_font_size
+
     row_item.server_title = row_item.gui_info_panel:text({
       name = "server_title",
       text = utf8.to_upper(managers.localization:text("menu_lobby_server_title")) .. " ",
@@ -241,7 +268,6 @@ function MenuNodeTableGui:_create_menu_item(row_item)
       h = font_size,
       layer = 1
     })
-
     row_item.level_pro_text = row_item.gui_info_panel:text({
       name = "level_pro_text",
       text = utf8.to_upper(row_item.item:parameters().pro and "PRO JOB" or ""),
@@ -254,7 +280,6 @@ function MenuNodeTableGui:_create_menu_item(row_item)
       h = font_size,
       layer = 1
     })
-
     row_item.difficulty_title = row_item.gui_info_panel:text({
       name = "difficulty_title",
       text = utf8.to_upper(managers.localization:text("menu_lobby_difficulty_title")) .. " ",
@@ -278,7 +303,6 @@ function MenuNodeTableGui:_create_menu_item(row_item)
       h = font_size,
       layer = 1
     })
-
     row_item.days_title = row_item.gui_info_panel:text({
       name = "days_title",
       text = utf8.to_upper(managers.localization:text("menu_lobby_days_title")) .. "  ",
@@ -304,7 +328,9 @@ function MenuNodeTableGui:_create_menu_item(row_item)
     })
 
     self:_align_server_column(row_item)
+
     local visible = row_item.item:menu_unselected_visible(self, row_item) and not row_item.item:parameters().back
+
     row_item.menu_unselected = self.item_panel:bitmap({
       visible = visible,
       texture = "guis/textures/menu_unselected",
@@ -321,60 +347,68 @@ end
 
 function MenuNodeTableGui:_align_server_column(row_item)
   local safe_rect = self:_scaled_size()
+
   self:_align_item_gui_info_panel(row_item.gui_info_panel)
+
   local font_size = tweak_data.menu.pd2_small_font_size
   local offset = 22 * tweak_data.scale.lobby_info_offset_multiplier
+
   row_item.server_title:set_font_size(font_size)
   row_item.server_text:set_font_size(font_size)
+
   local x, y, w, h = row_item.server_title:text_rect()
+
   row_item.server_title:set_x(tweak_data.menu.info_padding)
   row_item.server_title:set_y(tweak_data.menu.info_padding)
   row_item.server_title:set_w(w)
   row_item.server_text:set_lefttop(row_item.server_title:righttop())
   row_item.server_text:set_w(row_item.gui_info_panel:w())
   row_item.server_text:set_position(math.round(row_item.server_text:x()), math.round(row_item.server_text:y()))
-
-
   row_item.server_info_title:set_font_size(font_size)
   row_item.server_info_text:set_font_size(font_size)
+
   local x, y, w, h = row_item.server_info_title:text_rect()
+
   row_item.server_info_title:set_x(tweak_data.menu.info_padding)
   row_item.server_info_title:set_y(tweak_data.menu.info_padding + offset)
   row_item.server_info_title:set_w(w)
   row_item.server_info_text:set_lefttop(row_item.server_info_title:righttop())
   row_item.server_info_text:set_w(row_item.gui_info_panel:w())
   row_item.server_info_text:set_position(math.round(row_item.server_info_text:x()), math.round(row_item.server_info_text:y()))
-
-
   row_item.level_title:set_font_size(font_size)
   row_item.level_text:set_font_size(font_size)
   row_item.level_pro_text:set_font_size(font_size)
+
   local x, y, w, h = row_item.level_title:text_rect()
+
   row_item.level_title:set_x(tweak_data.menu.info_padding)
   row_item.level_title:set_y(tweak_data.menu.info_padding + offset * 2)
   row_item.level_title:set_w(w)
+
   local x, y, w, h = row_item.level_text:text_rect()
+
   row_item.level_text:set_lefttop(row_item.level_title:righttop())
   row_item.level_text:set_w(w)
   row_item.level_text:set_position(math.round(row_item.level_text:x()), math.round(row_item.level_text:y()))
-
   row_item.level_pro_text:set_lefttop(row_item.level_text:righttop())
   row_item.level_pro_text:set_w(row_item.gui_info_panel:w())
   row_item.level_pro_text:set_position(math.round(row_item.level_pro_text:x()), math.round(row_item.level_pro_text:y()))
-
   row_item.days_title:set_font_size(font_size)
   row_item.days_text:set_font_size(font_size)
+
   local x, y, w, h = row_item.days_title:text_rect()
+
   row_item.days_title:set_x(tweak_data.menu.info_padding)
   row_item.days_title:set_y(tweak_data.menu.info_padding + offset * 3)
   row_item.days_title:set_w(w)
   row_item.days_text:set_lefttop(row_item.days_title:righttop())
   row_item.days_text:set_w(row_item.gui_info_panel:w())
   row_item.days_text:set_position(math.round(row_item.days_text:x()), math.round(row_item.days_text:y()))
-
   row_item.difficulty_title:set_font_size(font_size)
   row_item.difficulty_text:set_font_size(font_size)
+
   local x, y, w, h = row_item.difficulty_title:text_rect()
+
   row_item.difficulty_title:set_x(tweak_data.menu.info_padding)
   row_item.difficulty_title:set_y(tweak_data.menu.info_padding + offset * 4)
   row_item.difficulty_title:set_w(w)
@@ -382,9 +416,9 @@ function MenuNodeTableGui:_align_server_column(row_item)
   row_item.difficulty_text:set_w(row_item.gui_info_panel:w())
   row_item.difficulty_text:set_position(math.round(row_item.difficulty_text:x()), math.round(row_item.difficulty_text:y()))
 
-
   local _, _, _, h = row_item.heist_name:text_rect()
   local w = row_item.gui_info_panel:w()
+
   row_item.heist_name:set_height(h)
   row_item.heist_name:set_w(w)
   row_item.heist_briefing:set_w(w)

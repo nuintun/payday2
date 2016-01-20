@@ -19,11 +19,13 @@ if not FastNet.setup then
   for p, d in pairs(FastNet.dofiles) do
     dofile(ModPath .. d)
   end
+
   FastNet.setup = true
 end
 
 if RequiredScript then
   local requiredScript = RequiredScript:lower()
+
   if FastNet.hook_files[requiredScript] then
     dofile(ModPath .. FastNet.hook_files[requiredScript])
   end
@@ -52,7 +54,6 @@ if Hooks then
   end)
 
   Hooks:Add("MenuManagerBuildCustomMenus", "Base_BuildFastNetMenu", function(menu_manager, nodes)
-
     local arugements = {
       --type = "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object, mscorlib]], mscorlib",
       _meta = "node",
@@ -82,13 +83,17 @@ if Hooks then
       update = "MenuSTEAMHostBrowser"
       --scene_state = "options"
     }
+
     local type = "MenuNodeServerList"
+
     if type then
       node_class = CoreSerialize.string_to_classtable(type)
     end
+
     nodes[FastNet.fastnetmenu] = node_class:new(arugements)
 
     local callback_handler = CoreSerialize.string_to_classtable("MenuCallbackHandler")
+
     nodes[FastNet.fastnetmenu]:set_callback_handler(callback_handler:new())
 
     local parent_menu
@@ -97,6 +102,7 @@ if Hooks then
     if nodes.main then
       parent_menu = nodes.main
     end
+
     if parent_menu then
       for k, v in pairs(parent_menu._items) do
         if "crimenet" == v["_parameters"]["name"] then
@@ -116,8 +122,11 @@ if Hooks then
         next_node = FastNet.fastnetmenu,
       }
       local new_item = parent_menu:create_item(data, params)
+
       parent_menu:add_item(new_item)
+
       local element = table.remove(parent_menu._items, table.maxn(parent_menu._items))
+
       table.insert(parent_menu._items, menu_position, element)
 
       local data = {
@@ -131,8 +140,11 @@ if Hooks then
         next_node = FastNet.fastnetmenu,
       }
       local new_item = parent_menu:create_item(data, params)
+
       parent_menu:add_item(new_item)
+
       local element = table.remove(parent_menu._items, table.maxn(parent_menu._items))
+
       table.insert(parent_menu._items, menu_position, element)
     end
   end)
