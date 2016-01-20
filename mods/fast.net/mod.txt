@@ -21,11 +21,5 @@
       "hook_id": "lib/network/base/networkpeer",
       "script_path": "FastNetCore.lua"
     }
-  ],
-  "updates": [
-    {
-      "revision": 8,
-      "identifier": "fastnetstand"
-    }
   ]
 }
