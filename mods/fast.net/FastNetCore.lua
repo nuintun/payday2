@@ -84,6 +84,7 @@ if Hooks then
       --scene_state = "options"
     }
 
+    local node_class
     local type = "MenuNodeServerList"
 
     if type then
