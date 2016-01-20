@@ -34,18 +34,18 @@ end
 if Hooks then
   Hooks:Add("LocalizationManagerPostInit", "FastNet_Localization", function(loc)
     LocalizationManager:add_localized_strings({
-      ["fast_net_title"] = "'Fast.net'",
-      ["fast_net_friends_title"] = "'Fast.net' Friends",
-      ["menu_heist_filter"] = "Heist Filter",
-      ["menu_heist_filter_help"] = "Select the Heist to search for",
-      ["menu_lobby_days_title"] = "DAYS:",
-      ["menu_state_filter"] = "STATE",
-      ["menu_state_lobby"] = "In Lobby",
-      ["menu_state_loading"] = "Loading",
-      ["menu_state_ingame"] = "In game",
-      ["menu_state_filter_help"] = "Change the filter for the current lobby state",
-      ["menu_servers_filter"] = "Maximum Servers",
-      ["menu_servers_filter_help"] = "Select the maximum amount of servers that can appear on screen at once",
+      ["fast_net_title"] = "Fast.Net",
+      ["fast_net_friends_title"] = "Fast.Net好友",
+      ["menu_heist_filter"] = "合约过滤",
+      ["menu_heist_filter_help"] = "选择想要过滤的合约。",
+      ["menu_lobby_days_title"] = "合约天数:",
+      ["menu_state_filter"] = "大厅状态",
+      ["menu_state_lobby"] = "大厅中",
+      ["menu_state_loading"] = "加载中",
+      ["menu_state_ingame"] = "游戏中",
+      ["menu_state_filter_help"] = "选择想要过滤的大厅状态。",
+      ["menu_servers_filter"] = "服务器最大显示数目",
+      ["menu_servers_filter_help"] = "选择服务器最大显示数目。",
     })
   end)
 
