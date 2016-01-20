@@ -46,9 +46,11 @@ Hooks:Add("LocalizationManagerPostInit", "Base_LocalizationManagerPostInit", fun
   loc:load_localization_file(LuaModManager:GetLanguageFile())
 end)
 
+--noinspection UnusedDef
 Hooks:Add("MenuManager_Base_BuildModOptionsMenu", "MenuManager_Base_SetupModOptionsMenu_Localization", function(menu_manager)
   local menu_id = LuaModManager.Constants._lua_mod_options_menu_id
 
+  --noinspection UnusedDef
   MenuCallbackHandler.blt_base_select_language = function(this, item)
     LuaModManager:SetActiveLanguage(tonumber(item:value()))
     LuaModManager:Save()
