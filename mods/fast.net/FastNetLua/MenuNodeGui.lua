@@ -61,6 +61,7 @@ function MenuNodeGui._create_legends(self, node)
 
       local spacing = i > 1 and "  |  " or ""
 
+      --noinspection StringConcatenationInLoops
       t_text = t_text .. spacing .. utf8.to_upper(managers.localization:text(legend.string_id, {
         BTN_UPDATE = managers.localization:btn_macro("menu_update") or managers.localization:get_default_macro("BTN_Y"),
         BTN_BACK = managers.localization:btn_macro("back")
