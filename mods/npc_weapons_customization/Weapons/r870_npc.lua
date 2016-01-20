@@ -1,4 +1,5 @@
 log("r870_npc loaded")
+--noinspection UnusedDef
 Hooks:Add("LocalizationManagerPostInit", "NPCWeap_R870_Localization", function(loc)
   LocalizationManager:add_localized_strings({
     ["random"] = "Random",

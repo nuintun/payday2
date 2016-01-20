@@ -1,4 +1,5 @@
 log("mac11_npc loaded")
+--noinspection UnusedDef
 Hooks:Add("LocalizationManagerPostInit", "NPCWeap_mac11_Localization", function(loc)
   LocalizationManager:add_localized_strings({
     ["random"] = "Random",

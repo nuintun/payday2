@@ -1,4 +1,5 @@
 log("m14_sniper_npc loaded")
+--noinspection UnusedDef
 Hooks:Add("LocalizationManagerPostInit", "NPCWeap_sniper_Localization", function(loc)
   LocalizationManager:add_localized_strings({
     ["random"] = "Random",

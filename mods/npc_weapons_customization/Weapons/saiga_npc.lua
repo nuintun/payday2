@@ -1,4 +1,5 @@
 log("saiga_npc loaded")
+--noinspection UnusedDef
 Hooks:Add("LocalizationManagerPostInit", "NPCWeap_saiga_Localization", function(loc)
   LocalizationManager:add_localized_strings({
     ["random"] = "Random",

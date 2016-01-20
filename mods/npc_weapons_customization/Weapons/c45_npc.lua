@@ -1,4 +1,5 @@
 log("c45_npc loaded")
+--noinspection UnusedDef
 Hooks:Add("LocalizationManagerPostInit", "NPCWeap_c45_Localization", function(loc)
   LocalizationManager:add_localized_strings({
     ["random"] = "Random",

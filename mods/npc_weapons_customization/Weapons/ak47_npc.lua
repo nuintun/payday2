@@ -1,4 +1,5 @@
 log("ak47_npc loaded")
+--noinspection UnusedDef
 Hooks:Add("LocalizationManagerPostInit", "NPCWeap_AK_Localization", function(loc)
   LocalizationManager:add_localized_strings({
     ["random"] = "Random",

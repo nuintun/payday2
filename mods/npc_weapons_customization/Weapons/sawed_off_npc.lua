@@ -1,4 +1,5 @@
 log("mossberg_npc loaded")
+--noinspection UnusedDef
 Hooks:Add("LocalizationManagerPostInit", "NPCWeap_sawed_off_Localization", function(loc)
   LocalizationManager:add_localized_strings({
     ["random"] = "Random",
