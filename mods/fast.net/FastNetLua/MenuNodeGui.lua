@@ -11,6 +11,7 @@ function MenuNodeGui._highlight_row_item(self, row_item, mouse_over)
         gui:set_font(Idstring(row_item.font))
       end
 
+      --noinspection UnusedDef
       for i, gui in pairs(row_item.difficulty_icons) do
         gui:set_color(row_item.color)
       end
@@ -30,6 +31,7 @@ function MenuNodeGui._fade_row_item(self, row_item)
         gui:set_font(Idstring(row_item.font))
       end
 
+      --noinspection UnusedDef
       for i, gui in pairs(row_item.difficulty_icons) do
         gui:set_color(tweak_data.screen_colors.risk)
       end

@@ -345,6 +345,7 @@ function MenuNodeTableGui:_create_menu_item(row_item)
   end
 end
 
+--noinspection LuaOverlyLongMethod
 function MenuNodeTableGui:_align_server_column(row_item)
   local safe_rect = self:_scaled_size()
 
