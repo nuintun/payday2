@@ -24,10 +24,12 @@ end
 
 Reconnect:Load()
 
+--noinspection UnusedDef
 Hooks:Add("MenuManager_Base_SetupModOptionsMenu", "ReconnectOptions", function(menu_manager, nodes)
   MenuHelper:NewMenu(keybinds_menu_id)
 end)
 
+--noinspection UnusedDef
 Hooks:Add("MenuManager_Base_PopulateModOptionsMenu", "ReconnectOptions", function(menu_manager, nodes)
   local key = LuaModManager:GetPlayerKeybind("Reconnect_key") or "f1"
 
@@ -43,6 +45,7 @@ Hooks:Add("MenuManager_Base_PopulateModOptionsMenu", "ReconnectOptions", functio
   })
 end)
 
+--noinspection UnusedDef
 Hooks:Add("MenuManager_Base_BuildModOptionsMenu", "ReconnectOptionsBuild", function(menu_manager, nodes)
   local keybinds = "base_options_menu_keybinds";
   local keybinds_desc = "base_options_menu_keybinds_desc"
@@ -53,6 +56,7 @@ Hooks:Add("MenuManager_Base_BuildModOptionsMenu", "ReconnectOptionsBuild", funct
 end)
 
 if RequiredScript == "lib/managers/crimenetmanager" then
+  --noinspection UnusedDef
   Hooks:PostHook(CrimeNetGui, "init", "reinit", function(self, ws, fullscreeen_ws, node)
     local key = LuaModManager:GetPlayerKeybind("Reconnect_key") or "f1"
     local reconnect_button = self._panel:text({
@@ -72,6 +76,7 @@ if RequiredScript == "lib/managers/crimenetmanager" then
     self._fullscreen_panel:key_press(callback(self, self, "key_press"))
   end)
 
+  --noinspection UnusedDef
   function CrimeNetGui:key_press(o, k)
     local key = LuaModManager:GetPlayerKeybind("Reconnect_key") or "f1"
 
@@ -91,6 +96,7 @@ if RequiredScript == "lib/managers/crimenetmanager" then
     end
   end
 
+  --noinspection UnusedDef
   Hooks:PostHook(CrimeNetGui, "mouse_moved", "mouse_move", function(self, o, x, y)
     if self._panel:child("reconnect_button") then
       if self._panel:child("reconnect_button"):inside(x, y) then
@@ -108,6 +114,7 @@ if RequiredScript == "lib/managers/crimenetmanager" then
     end
   end)
 
+  --noinspection UnusedDef
   Hooks:PostHook(CrimeNetGui, "mouse_pressed", "mouse_presse", function(self, o, button, x, y)
     if self._panel:child("reconnect_button") and self._panel:child("reconnect_button"):inside(x, y) then
       Reconnect:Load()
