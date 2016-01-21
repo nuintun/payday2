@@ -25,7 +25,8 @@ function MenuNodeTableGui:_setup_panels(node)
     word_wrap = true
   })
 
-  mini_info:set_width(self._info_bg_rect:w() - tweak_data.menu.info_padding * 38)
+  --mini_info:set_width(self._info_bg_rect:w() - tweak_data.menu.info_padding * 38)
+  mini_info:set_width(self._info_bg_rect:w() - tweak_data.menu.info_padding)
   mini_text:set_width(mini_info:w())
   mini_info:set_height(35)
   mini_text:set_height(35)
