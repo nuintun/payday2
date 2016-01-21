@@ -366,7 +366,7 @@ function MenuSTEAMHostBrowser:refresh_node(node, info, friends_only)
           state = state,
           num_plrs = num_plrs,
           callback = "connect_to_lobby",
-          localize = "false"
+          localize = false
         }
         local new_item = new_node:create_item({ type = "ItemServerColumn" }, params)
 
