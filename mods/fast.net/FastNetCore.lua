@@ -16,6 +16,7 @@ FastNet.hook_files = {
 }
 
 if not FastNet.setup then
+  --noinspection UnusedDef
   for p, d in pairs(FastNet.dofiles) do
     dofile(ModPath .. d)
   end
@@ -32,6 +33,7 @@ if RequiredScript then
 end
 
 if Hooks then
+  --noinspection UnusedDef
   Hooks:Add("LocalizationManagerPostInit", "FastNet_Localization", function(loc)
     LocalizationManager:add_localized_strings({
       ["fast_net_title"] = "Fast.Net",
@@ -49,10 +51,12 @@ if Hooks then
     })
   end)
 
+  --noinspection UnusedDef
   Hooks:Add("MenuManagerSetupCustomMenus", "FastNetSetupMenu", function(menu_manager, nodes)
     MenuHelper:NewMenu(FastNet.fastnetmenu)
   end)
 
+  --noinspection UnusedDef
   Hooks:Add("MenuManagerBuildCustomMenus", "Base_BuildFastNetMenu", function(menu_manager, nodes)
     local arugements = {
       --type = "System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object, mscorlib]], mscorlib",
