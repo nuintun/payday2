@@ -1,4 +1,4 @@
-log("MenuNodeTableGui")
+--log("MenuNodeTableGui")
 
 function MenuNodeTableGui:_setup_panels(node)
   MenuNodeTableGui.super._setup_panels(self, node)

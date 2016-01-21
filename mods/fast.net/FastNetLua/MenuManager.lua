@@ -1,9 +1,9 @@
 function MenuCallbackHandler:choice_difficulty_filter(item)
-  log("initial choice difficulty")
+  --log("initial choice difficulty")
 
   local diff_filter = item:value()
 
-  print("diff_filter", diff_filter)
+  --print("diff_filter", diff_filter)
 
   if managers.network.matchmake:get_lobby_filter("difficulty") == diff_filter then
     return
@@ -11,15 +11,15 @@ function MenuCallbackHandler:choice_difficulty_filter(item)
 
   managers.network.matchmake:add_lobby_filter("difficulty", diff_filter, "equal")
   managers.network.matchmake:search_lobby(managers.network.matchmake:search_friends_only())
-  log("it should be done")
+  --log("it should be done")
 end
 
 
 function MenuCallbackHandler:_find_online_games(friends_only)
   if self:is_win32() then
     local function f(info)
-      print("info in function")
-      print(inspect(info))
+      --print("info in function")
+      --print(inspect(info))
       managers.network.matchmake:search_lobby_done()
       managers.menu:active_menu().logic:refresh_node(FastNet.fastnetmenu, true, info, friends_only)
     end
@@ -30,7 +30,7 @@ function MenuCallbackHandler:_find_online_games(friends_only)
     managers.network.matchmake:search_lobby(friends_only)
 
     local usrs_f = function(success, amount)
-      print("usrs_f", success, amount)
+      --print("usrs_f", success, amount)
 
       if success then
         local stack = managers.menu:active_menu().renderer._node_gui_stack
@@ -58,8 +58,8 @@ function MenuCallbackHandler:_find_online_games(friends_only)
     end
 
     local function f(info_list)
-      print("info_list in function")
-      print(inspect(info_list))
+      --print("info_list in function")
+      --print(inspect(info_list))
       managers.network.matchmake:search_lobby_done()
       managers.menu:active_menu().logic:refresh_node("play_online", true, info_list, friends_only)
     end
@@ -70,7 +70,7 @@ function MenuCallbackHandler:_find_online_games(friends_only)
 end
 
 function MenuCallbackHandler:choice_state_filter(item)
-  log("state Filter")
+  --log("state Filter")
 
   local state_filter = item:value()
 
