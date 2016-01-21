@@ -35,7 +35,7 @@ if Hooks then
   Hooks:Add("LocalizationManagerPostInit", "FastNet_Localization", function(loc)
     LocalizationManager:add_localized_strings({
       ["fast_net_title"] = "Fast.Net",
-      ["fast_net_friends_title"] = "Fast.Net好友",
+      ["fast_net_friends_title"] = "Fast.Net好友游戏",
       ["menu_heist_filter"] = "合约过滤",
       ["menu_heist_filter_help"] = "选择想要过滤的合约。",
       ["menu_lobby_days_title"] = "合约天数:",
