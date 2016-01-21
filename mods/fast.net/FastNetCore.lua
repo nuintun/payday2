@@ -37,15 +37,15 @@ if Hooks then
       ["fast_net_title"] = "Fast.Net",
       ["fast_net_friends_title"] = "Fast.Net好友游戏",
       ["menu_heist_filter"] = "合约过滤",
-      ["menu_heist_filter_help"] = "选择想要过滤的合约。",
+      ["menu_heist_filter_help"] = "根据合约过滤服务器。",
       ["menu_lobby_days_title"] = "合约天数:",
       ["menu_state_filter"] = "大厅状态",
       ["menu_state_lobby"] = "大厅中",
       ["menu_state_loading"] = "加载中",
       ["menu_state_ingame"] = "游戏中",
-      ["menu_state_filter_help"] = "选择想要过滤的大厅状态。",
+      ["menu_state_filter_help"] = "根据大厅状态过滤服务器。",
       ["menu_servers_filter"] = "服务器最大显示数目",
-      ["menu_servers_filter_help"] = "选择服务器最大显示数目。",
+      ["menu_servers_filter_help"] = "设置服务器最大显示数目。",
     })
   end)
 
