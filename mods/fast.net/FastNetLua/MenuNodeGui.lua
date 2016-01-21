@@ -61,7 +61,7 @@ function MenuNodeGui._create_legends(self, node)
     if (not is_pc or legend.pc) and (not visible_callback or visible_callback(self)) then
       has_pc_legend = has_pc_legend or legend.pc
 
-      local spacing = i > 1 and "  |  " or ""
+      local spacing = i > 1 and " | " or ""
 
       --noinspection StringConcatenationInLoops
       t_text = t_text .. spacing .. utf8.to_upper(managers.localization:text(legend.string_id, {
