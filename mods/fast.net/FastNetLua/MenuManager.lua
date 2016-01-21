@@ -320,9 +320,9 @@ function MenuSTEAMHostBrowser:refresh_node(node, info, friends_only)
       local level_index, job_index = managers.network.matchmake:_split_attribute_number(attributes_numbers[1], 1000)
       local level_id = tweak_data.levels:get_level_name_from_index(level_index)
       local name_id = level_id and tweak_data.levels[level_id] and tweak_data.levels[level_id].name_id
-      local level_name = name_id and managers.localization:text(name_id) or "CONTRACTLESS"
+      local level_name = name_id and managers.localization:text(name_id) or "无合约"
       local job_id = tweak_data.narrative:get_job_name_from_index(math.floor(job_index))
-      local job_name = job_id and tweak_data.narrative.jobs[job_id] and managers.localization:text(tweak_data.narrative.jobs[job_id].name_id) or "CONTRACTLESS"
+      local job_name = job_id and tweak_data.narrative.jobs[job_id] and managers.localization:text(tweak_data.narrative.jobs[job_id].name_id) or "无合约"
       local job_days = job_id and (tweak_data.narrative.jobs[job_id].job_wrapper and table.maxn(tweak_data.narrative.jobs[tweak_data.narrative.jobs[job_id].job_wrapper[1]].chain) or table.maxn(tweak_data.narrative.jobs[job_id].chain)) or 1
       local is_pro = job_id and (tweak_data.narrative.jobs[job_id].professional and tweak_data.narrative.jobs[job_id].professional or false) or false
       local difficulties = {
@@ -336,7 +336,7 @@ function MenuSTEAMHostBrowser:refresh_node(node, info, friends_only)
       local difficulty = difficulties[attributes_numbers[2]] or "error"
       local difficulty_num = attributes_numbers[2]
       local state_string_id = tweak_data:index_to_server_state(attributes_numbers[4])
-      local state_name = state_string_id and managers.localization:text("menu_lobby_server_state_" .. state_string_id) or "blah"
+      local state_name = state_string_id and managers.localization:text("menu_lobby_server_state_" .. state_string_id) or "等待中"
       --local display_job = job_name .. ((level_name ~= job_name and job_days ~= 1)and " (" .. level_name .. ")" or "")
       local display_job = job_name .. ((level_name ~= job_name) and " (" .. level_name .. ")" or "")
       local state = attributes_numbers[4]
