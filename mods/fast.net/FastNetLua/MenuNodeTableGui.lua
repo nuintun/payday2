@@ -27,26 +27,22 @@ function MenuNodeTableGui:_setup_panels(node)
   local _, _, w, h = mini_text:text_rect()
 
   --mini_info:set_width(self._info_bg_rect:w() - tweak_data.menu.info_padding * 38)
-  --mini_info:set_width(self._info_bg_rect:w() - tweak_data.menu.info_padding)
   --mini_text:set_width(mini_info:w())
   --mini_info:set_height(35)
   --mini_text:set_height(35)
-  mini_info:set_width(w)
+  mini_info:set_width(self._info_bg_rect:w() - tweak_data.menu.info_padding)
+  mini_text:set_width(mini_info:w())
   mini_info:set_height(35)
+  mini_text:set_height(35)
   mini_info:set_top(self._info_bg_rect:bottom() + tweak_data.menu.info_padding - 12)
   mini_text:set_top(0)
   mini_info:set_left(tweak_data.menu.info_padding)
   mini_text:set_left(0)
-  self._mini_info = mini_info
   self._mini_info_text = mini_text
 end
 
 function MenuNodeTableGui:set_mini_info(text)
   self._mini_info_text:set_text(text)
-
-  local _, _, w, h = mini_text:text_rect()
-
-  self._mini_info:set_width(w)
 end
 
 function MenuNodeTableGui:toggle_mini_info(state)
