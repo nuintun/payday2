@@ -3,7 +3,7 @@ if not _G.FastNet then
   FastNet.loaded_options = {}
   FastNet.mod_path = ModPath
   FastNet.save_path = SavePath
-  FastNet.fastnetmenu = "play_STEAM_online"
+  FastNet.fastnetmenu = "fast_play_online"
 end
 
 FastNet.dofiles = {}
@@ -106,7 +106,8 @@ if Hooks then
 
     if parent_menu then
       for k, v in pairs(parent_menu._items) do
-        if "crimenet" == v["_parameters"]["name"] then
+        --if "crimenet" == v["_parameters"]["name"] then
+        if "crimenet_offline" == v["_parameters"]["name"] then
           menu_position = k + 1
           break
         end
