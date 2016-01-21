@@ -84,7 +84,7 @@ if string.lower(RequiredScript) == "lib/managers/hud/hudteammate" then
 
       local _, _, w, _ = self._kills_text:text_rect()
 
-      self._kill_icon:set_right(self._kills_panel:w() - w - self._kill_icon:w() * 0.15)
+      self._kill_icon:set_right(self._kills_panel:w() - w)
     end
 
     function HUDTeammate:reset_kill_count()
