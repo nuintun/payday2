@@ -38,6 +38,12 @@ function MenuCallbackHandler:_find_online_games(friends_only)
 
         if node_gui.set_mini_info then
           node_gui:set_mini_info(managers.localization:text("menu_players_online", { COUNT = amount }))
+          node_gui.toggle_mini_info(true);
+        end
+      else
+        if node_gui.set_mini_info then
+          node_gui.toggle_mini_info(false);
+          node_gui:set_mini_info("");
         end
       end
     end

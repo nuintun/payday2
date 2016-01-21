@@ -41,6 +41,10 @@ function MenuNodeTableGui:set_mini_info(text)
   self._mini_info_text:set_text(text)
 end
 
+function MenuNodeTableGui:toggle_mini_info(state)
+  self._mini_info_text:set_visible(state)
+end
+
 function MenuNodeTableGui:_create_menu_item(row_item)
   if row_item.type == "column" then
     local columns = row_item.node:columns()
