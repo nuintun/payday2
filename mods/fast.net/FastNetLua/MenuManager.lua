@@ -220,8 +220,7 @@ function MenuSTEAMHostBrowser:add_filter(node)
       local params = {
         _meta = "option",
         text_id = text_id,
-        value = index,
-        localize = false
+        value = index
       }
 
       for count, color in ipairs(color_data) do
