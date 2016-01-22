@@ -88,12 +88,7 @@ Hooks:PostHook(HUDTeammate, "init", "teamExtTeammateInit", function(self, i, tea
     local radial_stamina_warning = radial_health_panel:bitmap({
       name = "radial_stamina_warning",
       texture = "guis/textures/pd2/hud_radial_rim",
-      texture_rect = {
-        64,
-        0,
-        -64,
-        64
-      },
+      texture_rect = { 64, 0, -64, 64 },
       blend_mode = "add",
       color = Color.red,
       alpha = 1,
@@ -110,7 +105,7 @@ Hooks:PostHook(HUDTeammate, "init", "teamExtTeammateInit", function(self, i, tea
       text = "0",
       blend_mode = "add",
       alpha = 1,
-      visible = uHUD:HasSetting("downed_counter") and true or false,
+      visible = true,
       w = radial_health_panel:w() / 2,
       h = radial_health_panel:h() / 2,
       valign = "center",
@@ -126,7 +121,6 @@ Hooks:PostHook(HUDTeammate, "init", "teamExtTeammateInit", function(self, i, tea
     downed_counter:set_center(radial_health_panel:w() / 2, radial_health_panel:h() / 2)
 
     if managers.player:has_category_upgrade("player", "armor_health_store_amount") then
-
       radial_stamina:set_size(radial_health_panel:w() / 3.25, radial_health_panel:h() / 3.25)
       radial_stamina:set_center(radial_health_panel:w() / 2, radial_health_panel:h() / 2)
       radial_stamina_warning:set_size(radial_health_panel:w() / 3.25, radial_health_panel:h() / 3.25)
@@ -156,12 +150,7 @@ Hooks:PostHook(HUDTeammate, "init", "teamExtTeammateInit", function(self, i, tea
     local health_warning = radial_health_panel:bitmap({
       name = "health_warning",
       texture = "guis/textures/pd2/hud_health",
-      texture_rect = {
-        64,
-        0,
-        -64,
-        64
-      },
+      texture_rect = { 64, 0, -64, 64 },
       color = Color.red,
       blend_mode = "add",
       alpha = 1,
@@ -225,13 +214,12 @@ Hooks:PostHook(HUDTeammate, "init", "teamExtTeammateInit", function(self, i, tea
     })
 
     local _, _, counter_w, _ = kill_counter:text_rect()
+
     kill_counter:set_bottom(self._panel:child("name_bg"):top())
   end
 
   if not self._main_player then
-
     local interact_panel = self._player_panel:child("interact_panel")
-
     local interact_timer = interact_panel:text({
       name = "interact_timer",
       text = "0.0s",
@@ -267,12 +255,7 @@ Hooks:PostHook(HUDTeammate, "init", "teamExtTeammateInit", function(self, i, tea
     local health_warning = radial_health_panel:bitmap({
       name = "health_warning",
       texture = "guis/textures/pd2/hud_health",
-      texture_rect = {
-        64,
-        0,
-        -64,
-        64
-      },
+      texture_rect = { 64, 0, -64, 64 },
       color = Color.red,
       blend_mode = "add",
       alpha = 1,
@@ -289,7 +272,7 @@ Hooks:PostHook(HUDTeammate, "init", "teamExtTeammateInit", function(self, i, tea
       name = "downed_counter",
       text = "0",
       blend_mode = "normal",
-      visible = uHUD:HasSetting("downed_counter_teammate") and true or false,
+      --visible = true,
       alpha = 1,
       w = radial_health_panel:w() / 2,
       h = radial_health_panel:h() / 2,
@@ -606,7 +589,6 @@ Hooks:PostHook(HUDTeammate, "set_callsign", "uHUDPostHUDTeammateSetCallsign", fu
 end)
 
 Hooks:PostHook(HUDTeammate, "set_state", "uHUDPostHUDTeammateSetState", function(self, state)
-
   if not self._main_player then
 
     self._panel:child("infamy_icon"):set_position(self._panel:child("callsign_bg"):x(), self._panel:child("callsign_bg"):y())
@@ -617,23 +599,19 @@ Hooks:PostHook(HUDTeammate, "set_state", "uHUDPostHUDTeammateSetState", function
 end)
 
 Hooks:PostHook(HUDTeammate, "set_condition", "uHUDPostHUDTeammateSetCondition", function(self, icon_data, text)
-
   local downed_counter = self._player_panel:child("radial_health_panel"):child("downed_counter")
   local underdog_glow = self._player_panel:child("radial_health_panel"):child("underdog_glow")
   local armor_timer = self._player_panel:child("radial_health_panel"):child("armor_timer")
   local interact_timer = self._player_panel:child("interact_panel"):child("interact_timer")
 
   if icon_data == "mugshot_in_custody" then
-
     if self._main_player then
-
       downed_counter:set_visible(false)
       underdog_glow:set_visible(false)
       armor_timer:set_visible(false)
     end
 
     if not self._main_player and self:peer_id() and managers.network:session() then
-
       if self._downs and not self._downs[managers.network:session():peer(self:peer_id()):user_id()] then
         self._downs[managers.network:session():peer(self:peer_id()):user_id()] = 0
       end
@@ -646,26 +624,25 @@ Hooks:PostHook(HUDTeammate, "set_condition", "uHUDPostHUDTeammateSetCondition", 
     end
 
   else
-
-    if not downed_counter:visible() then downed_counter:set_visible((self._main_player and uHUD:HasSetting("downed_counter") or self._peer_id and uHUD:HasSetting("downed_counter_teammate")) and true or false) end
+    if not downed_counter:visible() then
+      downed_counter:set_visible((self._main_player and uHUD:HasSetting("downed_counter") or self._peer_id and uHUD:HasSetting("downed_counter_teammate")) and true or false)
+    end
   end
 end)
 
 Hooks:PreHook(HUDTeammate, "teammate_progress", "uHUDPreHUDTeammateTeammateProgress", function(self, enabled, tweak_data_id, timer, success)
-
   if not self._player_panel:child("interact_panel"):child("interact_timer") then return end
 
   self._panel:child("name_panel"):child("interact_text"):stop()
   self._panel:child("name_panel"):child("interact_text"):set_left(0)
 
   if enabled and not self._main_player and self:peer_id() then
-
     self._new_name:set_alpha(0.2)
-
     self._panel:child("name_panel"):child("interact_text"):set_visible(uHUD:HasSetting("interaction_text_teammate") and true or false)
     self._panel:child("name_panel"):child("interact_text"):set_text(" " .. managers.hud:_name_label_by_peer_id(self:peer_id()).panel:child("action"):text())
 
     local x, y, w, h = self._panel:child("name_panel"):child("interact_text"):text_rect()
+
     self._panel:child("name_panel"):child("interact_text"):set_size(w, h)
 
     if self._panel:child("name_panel"):child("interact_text"):w() + 4 > self._panel:child("name_bg"):w() then
@@ -675,10 +652,9 @@ Hooks:PreHook(HUDTeammate, "teammate_progress", "uHUDPreHUDTeammateTeammateProgr
     if self._panel:child("name_panel"):w() < self._panel:child("name_panel"):child("interact_text"):w() + 4 then
       self._panel:child("name_panel"):child("interact_text"):animate(callback(self, self, "_animate_name"), self._panel:child("name_bg"):w() - self._panel:child("name_panel"):w() + 2)
     end
-
   elseif not success and not self._main_player then
-
     local x, y, w, h = self._new_name:text_rect()
+
     self._new_name:set_size(w, h)
 
     self._panel:child("name_panel"):child("interact_text"):stop()
@@ -690,7 +666,6 @@ Hooks:PreHook(HUDTeammate, "teammate_progress", "uHUDPreHUDTeammateTeammateProgr
   end
 
   if success then
-
     self._new_name:set_alpha(1)
     self._panel:child("name_panel"):child("interact_text"):set_visible(false)
     self._panel:child("name_bg"):set_w(self._new_name:w() + 4)
@@ -701,17 +676,14 @@ Hooks:PreHook(HUDTeammate, "teammate_progress", "uHUDPreHUDTeammateTeammateProgr
 end)
 
 Hooks:PreHook(HUDTeammate, "set_carry_info", "uHUDPostHUDTeammateSetCarryInfo", function(self, carry_id, value)
-
   if self._peer_id then
     self._player_panel:child("carry_panel"):child("bag"):set_color(uHUD:HasSetting("coloured_bag") and tweak_data.chat_colors[self._peer_id] or Color.white)
   end
 end)
 
 Hooks:PostHook(HUDTeammate, "teammate_progress", "uHUDPostHUDTeammateTeammateProgress", function(self, enabled, tweak_data_id, timer, success)
-
   if not self._player_panel:child("interact_panel"):child("interact_timer") then return end
   if not uHUD:HasSetting("interact_timer_teammate") then return end
-
   if enabled then
     self._player_panel:child("interact_panel"):child("interact_timer"):animate(callback(self, self, "_animate_interact_timer"), timer)
   else
