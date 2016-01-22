@@ -1,3 +1,4 @@
+--noinspection UnusedDef
 Hooks:PostHook(HuskPlayerMovement, "_start_bleedout", "teamExtPlayerMovementStartBleedout", function(self, event_desc)
   if not managers.criminals:character_peer_id_by_unit(self._unit) then return end
 
