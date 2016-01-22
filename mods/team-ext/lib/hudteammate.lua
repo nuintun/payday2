@@ -26,49 +26,34 @@ Hooks:PostHook(HUDTeammate, "init", "teamExtTeammateInit", function(self, i, tea
   kill_counter:set_right(weapons_panel:right())
   kill_counter:set_top(weapons_panel:bottom())
 
-  if self._main_player then
-    local downed_counter = radial_health_panel:text({
-      name = "downed_counter",
-      text = "0",
-      blend_mode = "add",
-      alpha = 1,
-      --visible = true,
-      w = radial_health_panel:w() / 2,
-      h = radial_health_panel:h() / 2,
-      valign = "center",
-      halign = "center",
-      font = "fonts/font_medium_mf",
-      font_size = 20,
-      color = Color.white,
-      vertical = "center",
-      align = "center",
-      layer = 2
-    })
+  local downed_counter_options = {
+    name = "downed_counter",
+    text = "0",
+    alpha = 1,
+    w = radial_health_panel:w() / 2,
+    h = radial_health_panel:h() / 2,
+    valign = "center",
+    halign = "center",
+    font = "fonts/font_medium_mf",
+    font_size = 20,
+    color = Color.white,
+    vertical = "center",
+    align = "center"
+  }
 
-    downed_counter:set_center(radial_health_panel:w() / 2, radial_health_panel:h() / 2)
+  if self._main_player then
+    downed_counter_options.layer = 2
+    downed_counter_options.blend_mode = "add"
   end
 
   if not self._main_player then
-    local downed_counter = radial_health_panel:text({
-      name = "downed_counter",
-      text = "0",
-      blend_mode = "normal",
-      --visible = true,
-      alpha = 1,
-      w = radial_health_panel:w() / 2,
-      h = radial_health_panel:h() / 2,
-      valign = "center",
-      halign = "center",
-      font = "fonts/font_medium_mf",
-      font_size = 20,
-      color = Color.white,
-      vertical = "center",
-      align = "center",
-      layer = 3
-    })
-
-    downed_counter:set_center(radial_health_panel:w() / 2, radial_health_panel:h() / 2)
+    downed_counter_options.layer = 3
+    downed_counter_options.blend_mode = "normal"
   end
+
+  local downed_counter = radial_health_panel:text(downed_counter_options)
+
+  downed_counter:set_center(radial_health_panel:w() / 2, radial_health_panel:h() / 2)
 end)
 
 --noinspection UnusedDef
