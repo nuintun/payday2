@@ -32,7 +32,7 @@ Hooks:PostHook(HUDTeammate, "init", "teamExtTeammateInit", function(self, i, tea
       text = "0",
       blend_mode = "add",
       alpha = 1,
-      visible = true,
+      --visible = true,
       w = radial_health_panel:w() / 2,
       h = radial_health_panel:h() / 2,
       valign = "center",
