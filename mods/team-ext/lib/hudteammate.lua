@@ -1,41 +1,4 @@
-local function ConvertToRGB(hue, saturation, value)
-  local red, grn, blu
-  local i = math.floor(hue * 6)
-  local f = hue * 6 - i
-  local p = value * (1 - saturation)
-  local q = value * (1 - f * saturation)
-  local t = value * (1 - (1 - f) * saturation)
-  local m = i % 6
-
-  if m == 0 then
-    red = value
-    grn = t
-    blu = p
-  elseif m == 1 then
-    red = q
-    grn = value
-    blu = p
-  elseif m == 2 then
-    red = p
-    grn = value
-    blu = t
-  elseif m == 3 then
-    red = p
-    grn = q
-    blu = value
-  elseif m == 4 then
-    red = t
-    grn = p
-    blu = value
-  elseif m == 5 then
-    red = value
-    grn = p
-    blu = q
-  end
-
-  return red, grn, blu
-end
-
+--noinspection UnusedDef
 Hooks:PostHook(HUDTeammate, "init", "teamExtTeammateInit", function(self, i, teammates_panel, is_player, width)
   local weapons_panel = self._player_panel:child("weapons_panel")
   local radial_health_panel = self._player_panel:child("radial_health_panel")
@@ -108,6 +71,7 @@ Hooks:PostHook(HUDTeammate, "init", "teamExtTeammateInit", function(self, i, tea
   end
 end)
 
+--noinspection UnusedDef
 Hooks:PostHook(HUDTeammate, "set_condition", "teamExtTeammateSetCondition", function(self, icon_data, text)
   local downed_counter = self._player_panel:child("radial_health_panel"):child("downed_counter")
 
@@ -186,6 +150,7 @@ function HUDTeammate:update_kill_counter(weapon, total)
   self._panel:child("kill_counter"):set_text("  (" .. tostring(weapon or 0) .. "/" .. tostring(total or 0) .. ")")
 
   if total ~= self._last_kill_count then
+    --noinspection UnusedDef
     self._panel:child("kill_counter"):animate(function(o)
       local red_r = Color.red.red
       local red_g = Color.red.green
