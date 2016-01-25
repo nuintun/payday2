@@ -1,7 +1,14 @@
 Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(self)
+  if self._hud_panel:child("hit_confirm") then
+    self._hud_panel:remove(self._hud_panel:child("hit_confirm"))
+  end
+
   if self._hud_panel:child("headshot_confirm") then
-    -- no hoxhud's red circle allowed
     self._hud_panel:remove(self._hud_panel:child("headshot_confirm"))
+  end
+
+  if self._hud_panel:child("crit_confirm") then
+    self._hud_panel:remove(self._hud_panel:child("crit_confirm"))
   end
 
   local hms = {
