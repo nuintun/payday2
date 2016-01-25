@@ -3,25 +3,17 @@ _G.HitMark = _G.HitMark or {}
 HitMark.ModPath = ModPath
 
 HitMark.settings = {
-  hit_texture = "guis/textures/pd2/hitconfirm.texture",
-  crit_texture = "guis/textures/pd2/hitconfirm_crit.texture",
-  headshot_texture = "guis/textures/pd2/hitconfirm_headshot.texture"
+  hit_texture = "guis/textures/pd2/hitconfirm",
+  crit_texture = "guis/textures/pd2/hitconfirm_crit",
+  headshot_texture = "units/test/gray_noise_df",
+  hit = "ff0000",
+  crit = "ff0000",
+  headshot = "ff0000",
+  hit_kill = "00ff00",
+  crit_kill = "00ff00",
+  headshot_kill = "00ff00",
+  blend_mode = "normal"
 }
-
-function HitMark:InitSettings()
-  self.settings.hit = "ff0000"
-  self.settings.crit = "ff0000"
-  self.settings.headshot = "ff0000"
-  self.settings.hit_kill = "00ff00"
-  self.settings.crit_kill = "00ff00"
-  self.settings.headshot_kill = "00ff00"
-
-  self.settings.blend_mode = "normal"
-end
-
-function HitMark:Load()
-  self:InitSettings()
-end
 
 if RequiredScript then
   local hook_files = {
