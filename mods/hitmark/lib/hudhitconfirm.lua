@@ -8,15 +8,13 @@ function HUDHitConfirm:init(hud)
     self._hud_panel:child("headshot_confirm"):set_size(0, 0)
   end
 
-  local tex_hit = "guis/textures/pd2/hitconfirm"
-  local tex_kill = "guis/textures/pd2/hitconfirm_crit"
   local hms = {
-    { name = "hit_body_confirm", texture = tex_hit, color = HitMark.settings.body },
-    { name = "hit_head_confirm", texture = tex_hit, color = HitMark.settings.head },
-    { name = "hit_crit_confirm", texture = tex_hit, color = HitMark.settings.crit },
-    { name = "kill_body_confirm", texture = tex_kill, color = HitMark.settings.body },
-    { name = "kill_head_confirm", texture = tex_kill, color = HitMark.settings.head },
-    { name = "kill_crit_confirm", texture = tex_kill, color = HitMark.settings.crit }
+    { name = "hit_body_confirm", texture = HitMark.settings.hit_texture, color = HitMark.settings.hit },
+    { name = "hit_crit_confirm", texture = HitMark.settings.crit_texture, color = HitMark.settings.crit },
+    { name = "hit_head_confirm", texture = HitMark.settings.headshot_texture, color = HitMark.settings.headshot },
+    { name = "kill_body_confirm", texture = HitMark.settings.hit_texture, color = HitMark.settings.hit_kill },
+    { name = "kill_crit_confirm", texture = HitMark.settings.crit_texture, color = HitMark.settings.crit_kill },
+    { name = "kill_head_confirm", texture = HitMark.settings.headshot_texture, color = HitMark.settings.headshot_kill }
   }
 
   self.eh_bitmaps = {}
@@ -48,6 +46,7 @@ function HUDHitConfirm:init(hud)
     end
 
     bmp:set_center(hp:w() / 2, hp:h() / 2)
+    
     self.eh_bitmaps[i] = bmp
   end
 end
