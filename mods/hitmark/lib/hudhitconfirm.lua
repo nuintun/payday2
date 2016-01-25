@@ -1,8 +1,4 @@
-local eh_original_hudhitconfirm_init = HUDHitConfirm.init
-
-function HUDHitConfirm:init(hud)
-  eh_original_hudhitconfirm_init(self, hud)
-
+Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(self)
   if self._hud_panel:child("headshot_confirm") then
     -- no hoxhud's red circle allowed
     self._hud_panel:remove(self._hud_panel:child("headshot_confirm"))
@@ -49,7 +45,7 @@ function HUDHitConfirm:init(hud)
 
     self.eh_bitmaps[i] = bmp
   end
-end
+end)
 
 function HUDHitConfirm:on_damage_confirmed(kill_confirmed, headshot)
   local index = (kill_confirmed and 4 or 1) + (HitMark.critshot and 2 or (headshot and 1 or 0))
