@@ -1,6 +1,6 @@
 _G.teamExt = _G.teamExt or {}
 
-teammateExtended.ModPath = ModPath
+teamExt.ModPath = ModPath
 
 if RequiredScript then
   local hook_files = {
