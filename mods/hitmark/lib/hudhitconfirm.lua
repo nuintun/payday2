@@ -24,13 +24,13 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
     end
 
     local bmp = hp:bitmap({
+      layer = 0,
+      name = hm.name,
+      visible = false,
       valign = "center",
       halign = "center",
-      visible = false,
-      name = hm.name,
       texture = hm.texture,
       color = Color(hm.color),
-      layer = 0,
       blend_mode = blend_mode
     })
     local w = bmp:texture_width()
