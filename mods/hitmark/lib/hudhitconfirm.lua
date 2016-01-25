@@ -8,8 +8,8 @@ function HUDHitConfirm:init(hud)
     self._hud_panel:child("headshot_confirm"):set_size(0, 0)
   end
 
-  local tex_kill = "guis/textures/pd2/hitconfirm_crit"
   local tex_hit = "guis/textures/pd2/hitconfirm"
+  local tex_kill = "guis/textures/pd2/hitconfirm_crit"
   local hms = {
     { name = "hit_body_confirm", texture = tex_hit, color = HitMark.settings.body },
     { name = "hit_head_confirm", texture = tex_hit, color = HitMark.settings.head },
