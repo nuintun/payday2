@@ -1,6 +1,8 @@
 local eh_original_hudhitconfirm_init = HUDHitConfirm.init
+
 function HUDHitConfirm:init(hud)
   eh_original_hudhitconfirm_init(self, hud)
+
   if self._hud_panel:child("headshot_confirm") then
     self._hud_panel:child("headshot_confirm"):set_size(0, 0) -- no hoxhud's red circle allowed
   end
@@ -17,12 +19,15 @@ function HUDHitConfirm:init(hud)
   }
 
   self.eh_bitmaps = {}
+
   local hp = self._hud_panel
   local blend_mode = HitMark:GetBlendMode()
+
   for i, hm in ipairs(hms) do
     if hp:child(hm.name) then
       hp:remove(hp:child(hm.name))
     end
+
     local bmp = hp:bitmap({
       valign = "center",
       halign = "center",
@@ -35,6 +40,7 @@ function HUDHitConfirm:init(hud)
     })
 
     local w = bmp:texture_width()
+
     if w * 3 == bmp:texture_height() then
       bmp:set_texture_rect(0, math.mod(i - 1, 3) * w, w, w)
       bmp:set_height(w)
@@ -50,10 +56,13 @@ function HUDHitConfirm:on_damage_confirmed(kill_confirmed, headshot)
   local hm = self.eh_bitmaps[index]
 
   hm:stop()
+
   if HitMark.settings.shake then
     local rotation_angle = math.random(0, 8) - 4
+
     hm:rotate(rotation_angle)
   end
+
   hm:animate(callback(self, self, "_animate_show"), callback(self, self, "show_done"), 0.25)
 end
 
