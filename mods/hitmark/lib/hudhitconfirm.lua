@@ -53,7 +53,7 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
 end)
 
 function HUDHitConfirm:on_damage_confirmed(kill_confirmed, headshot)
-  local index = (kill_confirmed and 4 or 1) + (HitMark.critshot and 2 or (headshot and 1 or 0))
+  local index = (kill_confirmed and 4 or 1) + (HitMark.critshot and 1 or (headshot and 2 or 0))
   local hm = self.eh_bitmaps[index]
 
   hm:stop()
