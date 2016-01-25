@@ -75,7 +75,7 @@ function HUDHitConfirm:on_crit_confirmed()
     HitMark.direct_hit = true
     HitMark.critshot = true
   else
-    self.eh_bitmaps[3]:stop()
-    self.eh_bitmaps[3]:animate(callback(self, self, "_animate_show"), callback(self, self, "show_done"), 0.25)
+    self.eh_bitmaps[2]:stop()
+    self.eh_bitmaps[2]:animate(callback(self, self, "_animate_show"), callback(self, self, "show_done"), 0.25)
   end
 end
