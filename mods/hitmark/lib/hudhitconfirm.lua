@@ -22,7 +22,7 @@ function HUDHitConfirm:init(hud)
   self.eh_bitmaps = {}
 
   local hp = self._hud_panel
-  local blend_mode = HitMark:GetBlendMode()
+  local blend_mode = HitMark:settings.blend_mode
 
   for i, hm in ipairs(hms) do
     if hp:child(hm.name) then
