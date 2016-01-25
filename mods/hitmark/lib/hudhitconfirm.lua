@@ -8,17 +8,17 @@ function HUDHitConfirm:init(hud)
   local tex_kill = "guis/textures/pd2/hitconfirm_crit"
   local tex_hit = "guis/textures/pd2/hitconfirm"
   local hms = {
-    { name = "hit_body_confirm", texture = tex_hit, color = EnhancedHitmarkers.settings.body },
-    { name = "hit_head_confirm", texture = tex_hit, color = EnhancedHitmarkers.settings.head },
-    { name = "hit_crit_confirm", texture = tex_hit, color = EnhancedHitmarkers.settings.crit },
-    { name = "kill_body_confirm", texture = tex_kill, color = EnhancedHitmarkers.settings.body },
-    { name = "kill_head_confirm", texture = tex_kill, color = EnhancedHitmarkers.settings.head },
-    { name = "kill_crit_confirm", texture = tex_kill, color = EnhancedHitmarkers.settings.crit }
+    { name = "hit_body_confirm", texture = tex_hit, color = HitMark.settings.body },
+    { name = "hit_head_confirm", texture = tex_hit, color = HitMark.settings.head },
+    { name = "hit_crit_confirm", texture = tex_hit, color = HitMark.settings.crit },
+    { name = "kill_body_confirm", texture = tex_kill, color = HitMark.settings.body },
+    { name = "kill_head_confirm", texture = tex_kill, color = HitMark.settings.head },
+    { name = "kill_crit_confirm", texture = tex_kill, color = HitMark.settings.crit }
   }
 
   self.eh_bitmaps = {}
   local hp = self._hud_panel
-  local blend_mode = EnhancedHitmarkers:GetBlendMode()
+  local blend_mode = HitMark:GetBlendMode()
   for i, hm in ipairs(hms) do
     if hp:child(hm.name) then
       hp:remove(hp:child(hm.name))
@@ -46,11 +46,11 @@ function HUDHitConfirm:init(hud)
 end
 
 function HUDHitConfirm:on_damage_confirmed(kill_confirmed, headshot)
-  local index = (kill_confirmed and 4 or 1) + (EnhancedHitmarkers.critshot and 2 or (headshot and 1 or 0))
+  local index = (kill_confirmed and 4 or 1) + (HitMark.critshot and 2 or (headshot and 1 or 0))
   local hm = self.eh_bitmaps[index]
 
   hm:stop()
-  if EnhancedHitmarkers.settings.shake then
+  if HitMark.settings.shake then
     local rotation_angle = math.random(0, 8) - 4
     hm:rotate(rotation_angle)
   end
@@ -58,9 +58,9 @@ function HUDHitConfirm:on_damage_confirmed(kill_confirmed, headshot)
 end
 
 function HUDHitConfirm:on_hit_confirmed()
-  if EnhancedHitmarkers.hooked then
-    EnhancedHitmarkers.direct_hit = true
-    EnhancedHitmarkers.critshot = false
+  if HitMark.hooked then
+    HitMark.direct_hit = true
+    HitMark.critshot = false
   else
     self.eh_bitmaps[1]:stop()
     self.eh_bitmaps[1]:animate(callback(self, self, "_animate_show"), callback(self, self, "show_done"), 0.25)
@@ -68,9 +68,9 @@ function HUDHitConfirm:on_hit_confirmed()
 end
 
 function HUDHitConfirm:on_crit_confirmed()
-  if EnhancedHitmarkers.hooked then
-    EnhancedHitmarkers.direct_hit = true
-    EnhancedHitmarkers.critshot = true
+  if HitMark.hooked then
+    HitMark.direct_hit = true
+    HitMark.critshot = true
   else
     self.eh_bitmaps[3]:stop()
     self.eh_bitmaps[3]:animate(callback(self, self, "_animate_show"), callback(self, self, "show_done"), 0.25)

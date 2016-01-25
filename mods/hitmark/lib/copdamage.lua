@@ -1,11 +1,12 @@
 function CopDamage:eh_damage_hub(attack_data, original_function)
-  EnhancedHitmarkers.direct_hit = false
+  HitMark.direct_hit = false
+  HitMark.hooked = true
 
-  EnhancedHitmarkers.hooked = true
   local result = original_function(self, attack_data)
-  EnhancedHitmarkers.hooked = false
 
-  if EnhancedHitmarkers.direct_hit then
+  HitMark.hooked = false
+
+  if HitMark.direct_hit then
     local headshot = self._head_body_name and attack_data.col_ray.body and self._head_body_key and attack_data.col_ray.body:key() == self._head_body_key
     local kill_confirmed = attack_data.result.type == "death"
     managers.hud:on_damage_confirmed(kill_confirmed, headshot)
