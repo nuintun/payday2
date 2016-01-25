@@ -1,4 +1,5 @@
 local was_dead
+
 local function PreHook(self)
   was_dead = self._dead
   HitMark.direct_hit = false
