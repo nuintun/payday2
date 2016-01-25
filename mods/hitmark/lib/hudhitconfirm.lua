@@ -51,13 +51,6 @@ function HUDHitConfirm:on_damage_confirmed(kill_confirmed, headshot)
   local hm = self.eh_bitmaps[index]
 
   hm:stop()
-
-  if HitMark.settings.shake then
-    local rotation_angle = math.random(0, 8) - 4
-
-    hm:rotate(rotation_angle)
-  end
-
   hm:animate(callback(self, self, "_animate_show"), callback(self, self, "show_done"), 0.25)
 end
 

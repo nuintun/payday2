@@ -16,7 +16,6 @@ function HitMark:InitSettings()
   self.settings.crit_kill = "00ff00"
   self.settings.headshot_kill = "00ff00"
 
-  self.settings.shake = true
   self.settings.blend_mode = "normal"
 end
 
