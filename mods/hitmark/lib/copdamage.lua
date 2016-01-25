@@ -1,47 +1,32 @@
-function CopDamage:eh_damage_hub(attack_data, original_function)
+local function PreHook()
   HitMark.direct_hit = false
   HitMark.hooked = true
+end
 
-  local result = original_function(self, attack_data)
-
+local function PostHook(self, attack_data)
   HitMark.hooked = false
 
   if HitMark.direct_hit then
-    local headshot = self._head_body_name and attack_data.col_ray.body and self._head_body_key and attack_data.col_ray.body:key() == self._head_body_key
     local kill_confirmed = attack_data.result.type == "death"
-
+    local headshot = self._head_body_name
+      and attack_data.col_ray.body
+      and self._head_body_key
+      and attack_data.col_ray.body:key() == self._head_body_key
+    
     managers.hud:on_damage_confirmed(kill_confirmed, headshot)
   end
-
-  return result
 end
 
-local eh_original_copdamage_damagebullet = CopDamage.damage_bullet
+-- PreHook
+Hooks:PreHook(CopDamage, "damage_bullet", "hit_mark_damage_bullet", PreHook)
+Hooks:PreHook(CopDamage, "damage_fire", "hit_mark_damage_bullet", PreHook)
+Hooks:PreHook(CopDamage, "damage_explosion", "hit_mark_damage_bullet", PreHook)
+Hooks:PreHook(CopDamage, "damage_tase", "hit_mark_damage_bullet", PreHook)
+Hooks:PreHook(CopDamage, "damage_melee", "hit_mark_damage_bullet", PreHook)
 
-function CopDamage:damage_bullet(attack_data)
-  return self:eh_damage_hub(attack_data, eh_original_copdamage_damagebullet)
-end
-
-local eh_original_copdamage_damagefire = CopDamage.damage_fire
-
-function CopDamage:damage_fire(attack_data)
-  return self:eh_damage_hub(attack_data, eh_original_copdamage_damagefire)
-end
-
-local eh_original_copdamage_damageexplosion = CopDamage.damage_explosion
-
-function CopDamage:damage_explosion(attack_data)
-  return self:eh_damage_hub(attack_data, eh_original_copdamage_damageexplosion)
-end
-
-local eh_original_copdamage_damagetase = CopDamage.damage_tase
-
-function CopDamage:damage_tase(attack_data)
-  return self:eh_damage_hub(attack_data, eh_original_copdamage_damagetase)
-end
-
-local eh_original_copdamage_damagemelee = CopDamage.damage_melee
-
-function CopDamage:damage_melee(attack_data)
-  return self:eh_damage_hub(attack_data, eh_original_copdamage_damagemelee)
-end
+-- PostHook
+Hooks:PostHook(CopDamage, "damage_bullet", "hit_mark_damage_bullet", PostHook)
+Hooks:PostHook(CopDamage, "damage_fire", "hit_mark_damage_bullet", PostHook)
+Hooks:PostHook(CopDamage, "damage_explosion", "hit_mark_damage_bullet", PostHook)
+Hooks:PostHook(CopDamage, "damage_tase", "hit_mark_damage_bullet", PostHook)
+Hooks:PostHook(CopDamage, "damage_melee", "hit_mark_damage_bullet", PostHook)
