@@ -33,7 +33,6 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
       layer = 0,
       blend_mode = blend_mode
     })
-
     local w = bmp:texture_width()
 
     if w * 3 == bmp:texture_height() then
