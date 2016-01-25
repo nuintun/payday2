@@ -5,7 +5,7 @@ function HUDHitConfirm:init(hud)
 
   if self._hud_panel:child("headshot_confirm") then
     -- no hoxhud's red circle allowed
-    self._hud_panel:child("headshot_confirm"):set_size(0, 0)
+    self._hud_panel:remove(self._hud_panel:child("headshot_confirm"))
   end
 
   local hms = {
@@ -46,7 +46,7 @@ function HUDHitConfirm:init(hud)
     end
 
     bmp:set_center(hp:w() / 2, hp:h() / 2)
-    
+
     self.eh_bitmaps[i] = bmp
   end
 end
