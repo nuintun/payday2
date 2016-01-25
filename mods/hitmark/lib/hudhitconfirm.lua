@@ -12,12 +12,11 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
     { name = "kill_crit_confirm", texture = HitMark.settings.crit_texture, color = HitMark.settings.crit_kill },
     { name = "kill_head_confirm", texture = HitMark.settings.headshot_texture, color = HitMark.settings.headshot_kill }
   }
-
-  self.eh_bitmaps = {}
-
   local hp = self._hud_panel
   local blend_mode = HitMark:settings.blend_mode
 
+  self.eh_bitmaps = {}
+  
   for i, hm in ipairs(hms) do
     if hp:child(hm.name) then
       hp:remove(hp:child(hm.name))
