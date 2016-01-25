@@ -1,4 +1,5 @@
 _G.HitMark = _G.HitMark or {}
+
 HitMark._texture_reload_delay = 0.1
 HitMark._path = ModPath
 HitMark._data_path = SavePath .. "enhanced_hitmarkers_options.txt"
@@ -221,6 +222,7 @@ function HitMark:CreateHitmarkerBitmap(i, texture, color, x, y)
   })
 
   local w = bmp:texture_width()
+  
   if w * 3 == bmp:texture_height() then
     bmp:set_texture_rect(0, math.mod(i - 1, 3) * w, w, w)
     bmp:set_height(w)
@@ -228,6 +230,7 @@ function HitMark:CreateHitmarkerBitmap(i, texture, color, x, y)
 
   bmp:set_right(self._panel:right() - self._panel:w() * (0.35 + x))
   bmp:set_top(self._panel:h() * y)
+
   return bmp
 end
 

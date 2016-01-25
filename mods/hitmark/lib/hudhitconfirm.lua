@@ -4,7 +4,8 @@ function HUDHitConfirm:init(hud)
   eh_original_hudhitconfirm_init(self, hud)
 
   if self._hud_panel:child("headshot_confirm") then
-    self._hud_panel:child("headshot_confirm"):set_size(0, 0) -- no hoxhud's red circle allowed
+    -- no hoxhud's red circle allowed
+    self._hud_panel:child("headshot_confirm"):set_size(0, 0)
   end
 
   local tex_kill = "guis/textures/pd2/hitconfirm_crit"
