@@ -1,9 +1,12 @@
+-- PreHook Callback
 local function PreHook()
   HitMark.hooked = true
   HitMark.critshot = false
   HitMark.direct_hit = false
 end
 
+-- PostHook Callback
+-- noinspection UnusedDef
 local function PostHook(self, attack_data)
   if HitMark.direct_hit then
     local headshot = false
