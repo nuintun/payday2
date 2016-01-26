@@ -5,7 +5,7 @@ HitMark.ModPath = ModPath
 HitMark.settings = {
   hit_texture = "guis/textures/pd2/hitconfirm",
   crit_texture = "guis/textures/pd2/hitconfirm_crit",
-  headshot_texture = "units/test/gray_noise_df",
+  headshot_texture = "guis/textures/pd2/hitconfirm_headshot",
   hit = "ff0000",
   crit = "ff0000",
   headshot = "ff0000",
@@ -14,6 +14,16 @@ HitMark.settings = {
   headshot_kill = "00ff00",
   blend_mode = "normal"
 }
+
+function HitMark:texture_loaded()
+  -- texture loaded
+end
+
+function HitMark:init()
+  TextureCache:request(HitMark.settings.headshot_texture, "NORMAL", callback(self, self, "texture_loaded"), 100)
+end
+
+HitMark:init()
 
 if RequiredScript then
   local hook_files = {
@@ -28,5 +38,3 @@ if RequiredScript then
     dofile(HitMark.ModPath .. hook_files[requiredScript])
   end
 end
-
-
