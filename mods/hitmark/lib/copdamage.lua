@@ -19,11 +19,11 @@ local function PostHook(self, attack_data)
 end
 
 -- PreHook
-Hooks:PreHook(CopDamage, "damage_bullet", "hitmark_copdamage_bullet", PreHook)
-Hooks:PreHook(CopDamage, "damage_fire", "hitmark_copdamage_fire", PreHook)
-Hooks:PreHook(CopDamage, "damage_explosion", "hitmark_copdamage_explosion", PreHook)
-Hooks:PreHook(CopDamage, "damage_tase", "hitmark_copdamage_tase", PreHook)
-Hooks:PreHook(CopDamage, "damage_melee", "hitmark_copdamage_melee", PreHook)
+Hooks:PreHook(CopDamage, "damage_bullet", "hitmark_copdamage_bullet_pre", PreHook)
+Hooks:PreHook(CopDamage, "damage_fire", "hitmark_copdamage_fire_pre", PreHook)
+Hooks:PreHook(CopDamage, "damage_explosion", "hitmark_copdamage_explosion_pre", PreHook)
+Hooks:PreHook(CopDamage, "damage_tase", "hitmark_copdamage_tase_pre", PreHook)
+Hooks:PreHook(CopDamage, "damage_melee", "hitmark_copdamage_melee_pre", PreHook)
 
 -- PostHook
 Hooks:PostHook(CopDamage, "damage_bullet", "hitmark_copdamage_bullet", PostHook)

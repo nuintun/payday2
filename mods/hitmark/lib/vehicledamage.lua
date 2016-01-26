@@ -19,15 +19,11 @@ local function PostHook(self, attack_data)
 end
 
 -- PreHook
-Hooks:PreHook(VehicleDamage, "damage_bullet", "hitmark_copdamage_bullet", PreHook)
-Hooks:PreHook(VehicleDamage, "damage_fire", "hitmark_copdamage_fire", PreHook)
-Hooks:PreHook(VehicleDamage, "damage_explosion", "hitmark_copdamage_explosion", PreHook)
-Hooks:PreHook(VehicleDamage, "damage_tase", "hitmark_copdamage_tase", PreHook)
-Hooks:PreHook(VehicleDamage, "damage_melee", "hitmark_copdamage_melee", PreHook)
+Hooks:PreHook(VehicleDamage, "damage_bullet", "hitmark_vehicledamage_bullet_pre", PreHook)
+Hooks:PreHook(VehicleDamage, "sync_damage_fire", "hitmark_vehicledamage_sync_fire_pre", PreHook)
+Hooks:PreHook(VehicleDamage, "sync_damage_explosion", "hitmark_vehicledamage_sync_explosion_pre", PreHook)
 
 -- PostHook
-Hooks:PostHook(VehicleDamage, "damage_bullet", "hitmark_copdamage_bullet", PostHook)
-Hooks:PostHook(VehicleDamage, "damage_fire", "hitmark_copdamage_fire", PostHook)
-Hooks:PostHook(VehicleDamage, "damage_explosion", "hitmark_copdamage_explosion", PostHook)
-Hooks:PostHook(VehicleDamage, "damage_tase", "hitmark_copdamage_tase", PostHook)
-Hooks:PostHook(VehicleDamage, "damage_melee", "hitmark_copdamage_melee", PostHook)
+Hooks:PostHook(VehicleDamage, "damage_bullet", "hitmark_vehicledamage_bullet", PostHook)
+Hooks:PostHook(VehicleDamage, "sync_damage_fire", "hitmark_vehicledamage_sync_fire", PostHook)
+Hooks:PostHook(VehicleDamage, "sync_damage_explosion", "hitmark_vehicledamage_sync_explosion", PostHook)
