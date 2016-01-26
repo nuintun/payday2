@@ -1,4 +1,5 @@
 local function PreHook()
+  HitMark.hooked = true
   HitMark.critshot = false
   HitMark.direct_hit = false
 end
@@ -13,6 +14,8 @@ local function PostHook(self, attack_data)
 
     managers.hud:on_damage_confirmed(kill_confirmed, headshot)
   end
+
+  HitMark.hooked = false
 end
 
 -- PreHook

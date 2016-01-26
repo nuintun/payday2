@@ -22,7 +22,7 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
   local hp = self._hud_panel
   local blend_mode = HitMark.settings.blend_mode
 
-  self.eh_bitmaps = {}
+  self.hitmark_bitmaps = {}
 
   for i, hm in ipairs(hms) do
     if hp:child(hm.name) then
@@ -48,27 +48,49 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
 
     bmp:set_center(hp:w() / 2, hp:h() / 2)
 
-    self.eh_bitmaps[i] = bmp
+    self.hitmark_bitmaps[i] = bmp
   end
 end)
 
+local function AnimateToggle(self, mark)
+  mark:stop()
+  mark:animate(callback(self, self, "_animate_show"), callback(self, self, "show_done"), 0.25)
+end
+
 function HUDHitConfirm:on_damage_confirmed(kill_confirmed, headshot)
   local index = (kill_confirmed and 4 or 1) + (HitMark.critshot and 1 or (headshot and 2 or 0))
-  local hm = self.eh_bitmaps[index]
+  local mark = self.hitmark_bitmaps[index]
 
-  hm:stop()
-  hm:animate(callback(self, self, "_animate_show"), callback(self, self, "show_done"), 0.25)
+  AnimateToggle(self, mark)
 end
 
 function HUDHitConfirm:on_hit_confirmed()
-  HitMark.direct_hit = true
+  if HitMark.hooked then
+    HitMark.direct_hit = true
+  else
+    local mark = self.eh_bitmaps[1];
+
+    AnimateToggle(self, mark)
+  end
 end
 
 function HUDHitConfirm:on_crit_confirmed()
-  HitMark.direct_hit = true
-  HitMark.critshot = true
+  if HitMark.hooked then
+    HitMark.direct_hit = true
+    HitMark.critshot = true
+  else
+    local mark = self.eh_bitmaps[2];
+
+    AnimateToggle(self, mark)
+  end
 end
 
 function HUDHitConfirm:on_headshot_confirmed()
-  HitMark.direct_hit = true
+  if HitMark.hooked then
+    HitMark.direct_hit = true
+  else
+    local mark = self.eh_bitmaps[3];
+
+    AnimateToggle(self, mark)
+  end
 end
