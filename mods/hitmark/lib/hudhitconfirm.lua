@@ -61,21 +61,14 @@ function HUDHitConfirm:on_damage_confirmed(kill_confirmed, headshot)
 end
 
 function HUDHitConfirm:on_hit_confirmed()
-  if HitMark.hooked then
-    HitMark.direct_hit = true
-    HitMark.critshot = false
-  else
-    self.eh_bitmaps[1]:stop()
-    self.eh_bitmaps[1]:animate(callback(self, self, "_animate_show"), callback(self, self, "show_done"), 0.25)
-  end
+  HitMark.direct_hit = true
 end
 
 function HUDHitConfirm:on_crit_confirmed()
-  if HitMark.hooked then
-    HitMark.direct_hit = true
-    HitMark.critshot = true
-  else
-    self.eh_bitmaps[2]:stop()
-    self.eh_bitmaps[2]:animate(callback(self, self, "_animate_show"), callback(self, self, "show_done"), 0.25)
-  end
+  HitMark.direct_hit = true
+  HitMark.critshot = true
+end
+
+function HUDHitConfirm:on_headshot_confirmed()
+  HitMark.direct_hit = true
 end

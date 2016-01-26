@@ -1,17 +1,13 @@
 local was_dead
 
-local function PreHook(self)
-  was_dead = self._dead
-  
+local function PreHook()
+  HitMark.critshot = false
   HitMark.direct_hit = false
-  HitMark.hooked = true
 end
 
 local function PostHook(self, attack_data)
-  HitMark.hooked = false
-
   if HitMark.direct_hit then
-    local kill_confirmed = was_dead ~= self._dead
+    local kill_confirmed = self.dead()
     local hit_body_name = attack_data.col_ray.body and attack_data.col_ray.body:name()
     local headshot = hit_body_name
       and (hit_body_name == self._shield_body_name_ids

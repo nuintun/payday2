@@ -1,11 +1,9 @@
 local function PreHook()
+  HitMark.critshot = false
   HitMark.direct_hit = false
-  HitMark.hooked = true
 end
 
 local function PostHook(self, attack_data)
-  HitMark.hooked = false
-
   if HitMark.direct_hit then
     local kill_confirmed = attack_data.result.type == "death"
     local headshot = self._head_body_name
