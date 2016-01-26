@@ -1,5 +1,3 @@
-local was_dead
-
 local function PreHook()
   HitMark.hooked = true
   HitMark.critshot = false
