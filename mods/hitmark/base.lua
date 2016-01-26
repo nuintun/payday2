@@ -15,15 +15,15 @@ HitMark.settings = {
   blend_mode = "normal"
 }
 
-function HitMark:texture_loaded()
-  -- texture loaded
+function HitMark:custom_texture_loaded()
+  --TODO custom texture loaded
 end
 
-function HitMark:init()
-  TextureCache:request(HitMark.settings.headshot_texture, "NORMAL", callback(self, self, "texture_loaded"), 100)
+function HitMark:load()
+  TextureCache:request(HitMark.settings.headshot_texture, "NORMAL", callback(self, self, "custom_texture_loaded"), 100)
 end
 
-HitMark:init()
+HitMark:load()
 
 if RequiredScript then
   local hook_files = {
