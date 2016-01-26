@@ -9,11 +9,12 @@ local function PostHook(self, attack_data)
     local headshot = false
     local kill_confirmed = attack_data.result.type == "death"
     local body = attack_data.body_name or attack_data.col_ray.body:name()
+    local body_key = body:key()
 
-    if body:key() then
-      if body:key() == Idstring("head"):key()
-        or body:key() == Idstring("hit_Head"):key()
-        or body:key() == Idstring("rag_Head"):key()
+    if body_key then
+      if body_key == Idstring("head"):key()
+        or body_key == Idstring("hit_Head"):key()
+        or body_key == Idstring("rag_Head"):key()
       then
         headshot = true
       end
