@@ -1,7 +1,7 @@
 {
   "name": "hit mark",
   "description": "击杀标志增强",
-  "author": "TdlQ & Malo & russian translation by chrom[K]a & korean translation by Yakumo Yukari",
+  "author": "TdlQ & Malo & russian translation by chrom[K]a & korean translation by Yakumo Yukari & nuintun",
   "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=13436",
   "version": "2.4.0",
   "hooks": [
