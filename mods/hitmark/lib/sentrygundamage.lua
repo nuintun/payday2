@@ -20,10 +20,8 @@ end
 
 -- PreHook
 Hooks:PreHook(SentryGunDamage, "damage_bullet", "hitmark_sentrygundamage_bullet_pre", PreHook)
-Hooks:PreHook(SentryGunDamage, "damage_fire", "hitmark_sentrygundamage_fire_pre", PreHook)
 Hooks:PreHook(SentryGunDamage, "damage_explosion", "hitmark_sentrygundamage_explosion_pre", PreHook)
 
 -- PostHook
 Hooks:PostHook(SentryGunDamage, "damage_bullet", "hitmark_sentrygundamage_bullet", PostHook)
-Hooks:PostHook(SentryGunDamage, "damage_fire", "hitmark_sentrygundamage_fire", PostHook)
 Hooks:PostHook(SentryGunDamage, "damage_explosion", "hitmark_sentrygundamage_explosion", PostHook)
