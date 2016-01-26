@@ -59,18 +59,15 @@ end
 
 function HUDHitConfirm:on_damage_confirmed(kill_confirmed, headshot)
   local index = (kill_confirmed and 4 or 1) + (HitMark.critshot and 1 or (headshot and 2 or 0))
-  local mark = self.hitmark_bitmaps[index]
 
-  AnimateToggle(self, mark)
+  AnimateToggle(self, self.hitmark_bitmaps[index])
 end
 
 function HUDHitConfirm:on_hit_confirmed()
   if HitMark.hooked then
     HitMark.direct_hit = true
   else
-    local mark = self.hitmark_bitmaps[1];
-
-    AnimateToggle(self, mark)
+    AnimateToggle(self, self.hitmark_bitmaps[1])
   end
 end
 
@@ -79,9 +76,7 @@ function HUDHitConfirm:on_crit_confirmed()
     HitMark.direct_hit = true
     HitMark.critshot = true
   else
-    local mark = self.hitmark_bitmaps[2];
-
-    AnimateToggle(self, mark)
+    AnimateToggle(self, self.hitmark_bitmaps[2])
   end
 end
 
@@ -89,8 +84,6 @@ function HUDHitConfirm:on_headshot_confirmed()
   if HitMark.hooked then
     HitMark.direct_hit = true
   else
-    local mark = self.hitmark_bitmaps[3];
-
-    AnimateToggle(self, mark)
+    AnimateToggle(self, self.hitmark_bitmaps[3])
   end
 end
