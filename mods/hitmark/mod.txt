@@ -24,14 +24,6 @@
     {
       "hook_id": "lib/units/equipment/sentry_gun/sentrygundamage",
       "script_path": "base.lua"
-    },
-    {
-      "hook_id": "lib/units/vehicles/vehicledamage.lua",
-      "script_path": "base.lua"
-    },
-    {
-      "hook_id": "lib/units/vehicles/npc/npcvehicledamage.lua",
-      "script_path": "base.lua"
     }
   ]
 }
