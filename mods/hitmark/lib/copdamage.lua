@@ -30,6 +30,8 @@ local function PostHook(self, attack_data)
 
     managers.hud:on_damage_confirmed(death, headshot)
   end
+
+  HitMark.hooked = false
 end
 
 --- 监听函数挂接前置钩子
