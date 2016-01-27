@@ -1,27 +1,16 @@
--- PreHook Callback
 local function PreHook()
   HitMark.hooked = true
   HitMark.critshot = false
   HitMark.direct_hit = false
 end
 
--- PostHook Callback
--- noinspection UnusedDef
 local function PostHook(self, attack_data)
   if HitMark.direct_hit then
-    local headshot = false
     local kill_confirmed = attack_data.result.type == "death"
-    local body = attack_data.body_name or attack_data.col_ray.body:name()
-    local body_key = body:key()
-
-    if body_key then
-      if body_key == Idstring("head"):key()
-        or body_key == Idstring("hit_Head"):key()
-        or body_key == Idstring("rag_Head"):key()
-      then
-        headshot = true
-      end
-    end
+    local headshot = self._head_body_name
+      and attack_data.col_ray.body
+      and self._head_body_key
+      and attack_data.col_ray.body:key() == self._head_body_key
 
     managers.hud:on_damage_confirmed(kill_confirmed, headshot)
   end

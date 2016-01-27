@@ -13,11 +13,11 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
 
   local hms = {
     { name = "hit_body_confirm", texture = HitMark.settings.hit_texture, color = HitMark.settings.hit },
-    { name = "hit_crit_confirm", texture = HitMark.settings.hit_texture, color = HitMark.settings.crit },
-    { name = "hit_head_confirm", texture = HitMark.settings.hit_texture, color = HitMark.settings.headshot },
-    { name = "kill_body_confirm", texture = HitMark.settings.crit_texture, color = HitMark.settings.hit },
-    { name = "kill_crit_confirm", texture = HitMark.settings.crit_texture, color = HitMark.settings.crit },
-    { name = "kill_head_confirm", texture = HitMark.settings.crit_texture, color = HitMark.settings.headshot }
+    { name = "hit_crit_confirm", texture = HitMark.settings.crit_texture, color = HitMark.settings.crit },
+    { name = "hit_head_confirm", texture = HitMark.settings.headshot_texture, color = HitMark.settings.headshot },
+    { name = "kill_body_confirm", texture = HitMark.settings.hit_texture, color = HitMark.settings.hit_kill },
+    { name = "kill_crit_confirm", texture = HitMark.settings.crit_texture, color = HitMark.settings.crit_kill },
+    { name = "kill_head_confirm", texture = HitMark.settings.headshot_texture, color = HitMark.settings.headshot_kill }
   }
   local hp = self._hud_panel
   local blend_mode = HitMark.settings.blend_mode

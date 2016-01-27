@@ -7,7 +7,7 @@ HitMark.settings = {
   crit_texture = "guis/textures/pd2/hitconfirm_crit",
   hit = "ff0000",
   crit = "ffff00",
-  headshot = "ff0000",
+  headshot = "00ff00",
   blend_mode = "normal"
 }
 
@@ -15,7 +15,8 @@ if RequiredScript then
   local hook_files = {
     ["lib/managers/hudmanagerpd2"] = "lib/hudmanagerpd2.lua",
     ["lib/managers/hud/hudhitconfirm"] = "lib/hudhitconfirm.lua",
-    ["lib/units/enemies/cop/copdamage"] = "lib/copdamage.lua"
+    ["lib/units/enemies/cop/copdamage"] = "lib/copdamage.lua",
+    ["lib/units/equipment/sentry_gun/sentrygundamage"] = "lib/sentrygundamage.lua"
   }
   local requiredScript = RequiredScript:lower()
 
