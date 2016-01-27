@@ -49,11 +49,8 @@ Hooks:PostHook(CopDamage, "damage_explosion", "hitmark_copdamage_explosion", Pos
 Hooks:PostHook(CopDamage, "damage_tase", "hitmark_copdamage_tase", PostHook)
 Hooks:PostHook(CopDamage, "damage_melee", "hitmark_copdamage_melee", PostHook)
 Hooks:PostHook(CopDamage, "sync_damage_explosion", "hitmark_copdamage_sync_explosion", function(...)
-  local args = { ... }
-  local death = args[5]
-
   if HitMark.direct_hit then
-    managers.hud:on_damage_confirmed(death, false)
+    managers.hud:on_damage_confirmed(arg[5], false)
   end
 
   HitMark.hooked = false
