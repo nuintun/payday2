@@ -1,3 +1,7 @@
+local head = Idstring("head"):key()
+local hit_head = Idstring("hit_Head"):key()
+local rag_head = Idstring("rag_Head"):key()
+
 local function PreHook()
   HitMark.hooked = true
   HitMark.critshot = false
@@ -5,14 +9,27 @@ local function PreHook()
 end
 
 local function PostHook(self, attack_data)
-  if HitMark.direct_hit then
-    local kill_confirmed = attack_data.result.type == "death"
-    local headshot = self._head_body_name
-      and attack_data.col_ray.body
-      and self._head_body_key
-      and attack_data.col_ray.body:key() == self._head_body_key
+  if not attack_data.attacker_unit
+    or attack_data.attacker_unit
+    and attack_data.attacker_unit ~= managers.player:player_unit() then
+    return
+  end
 
-    managers.hud:on_damage_confirmed(kill_confirmed, headshot)
+  if HitMark.direct_hit then
+    local death = attack_data.result.type == "death"
+    local body = attack_data.body_name or attack_data.col_ray.body:name()
+    local body_key = body:key()
+    local headshot = false
+
+    if body_key then
+      if body_key == head
+        or body_key == hit_head
+        or body_key == rag_head then
+        headshot = true
+      end
+    end
+
+    managers.hud:on_damage_confirmed(death, headshot)
   end
 end
 

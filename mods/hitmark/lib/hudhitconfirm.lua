@@ -57,8 +57,8 @@ local function AnimateToggle(self, mark)
   mark:animate(callback(self, self, "_animate_show"), callback(self, self, "show_done"), 0.25)
 end
 
-function HUDHitConfirm:on_damage_confirmed(kill_confirmed, headshot)
-  local index = (kill_confirmed and 4 or 1) + (HitMark.critshot and 1 or (headshot and 2 or 0))
+function HUDHitConfirm:on_damage_confirmed(death, headshot)
+  local index = (death and 4 or 1) + (HitMark.critshot and 1 or (headshot and 2 or 0))
 
   AnimateToggle(self, self.hitmark_bitmaps[index])
 end
