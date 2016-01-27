@@ -135,6 +135,7 @@ function NPCRaycastWeaponBase:set_flashlight_enabled(enabled)
   end
 
   log("set_flashlight_enabled")
+  
   self._flashlight_data.enabled = enabled
 
   if managers.game_play_central:flashlights_on() and enabled then
