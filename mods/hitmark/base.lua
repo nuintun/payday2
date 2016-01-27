@@ -13,10 +13,9 @@ HitMark.settings = {
 
 if RequiredScript then
   local hook_files = {
-    ["lib/managers/hudmanagerpd2"] = "lib/hudmanagerpd2.lua",
-    ["lib/managers/hud/hudhitconfirm"] = "lib/hudhitconfirm.lua",
     ["lib/units/enemies/cop/copdamage"] = "lib/copdamage.lua",
-    ["lib/units/equipment/sentry_gun/sentrygundamage"] = "lib/sentrygundamage.lua"
+    ["lib/managers/hud/hudhitconfirm"] = "lib/hudhitconfirm.lua",
+    ["lib/managers/hudmanagerpd2"] = "lib/hudmanagerpd2.lua"
   }
   local requiredScript = RequiredScript:lower()
 
