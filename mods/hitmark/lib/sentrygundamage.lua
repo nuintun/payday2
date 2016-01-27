@@ -6,13 +6,13 @@ end
 
 local function PostHook(self, attack_data)
   if HitMark.direct_hit then
-    local kill_confirmed = self:dead()
+    local death = self:dead()
     local hit_body_name = attack_data.col_ray.body and attack_data.col_ray.body:name()
     local headshot = hit_body_name
       and (hit_body_name == self._shield_body_name_ids
       or hit_body_name == self._bag_body_name_ids)
 
-    managers.hud:on_damage_confirmed(kill_confirmed, headshot)
+    managers.hud:on_damage_confirmed(death, headshot)
   end
 
   HitMark.hooked = false
