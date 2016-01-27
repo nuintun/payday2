@@ -194,6 +194,7 @@ function NPCWeap:setup_weapon(unit, name)
 
               if object and object:visibility() == true then
                 object:set_local_position(current_object)
+                
                 if current_weap.required[object_string] then
                   local required_table = current_weap.required[object_string]
                   for _, requiredItem in pairs(required_table) do
