@@ -1,6 +1,6 @@
 {
   "name": "hit mark",
-  "description": "击杀标志增强",
+  "description": "击杀标志增强，红色普攻，黄色暴击，绿色爆头，红色骷髅普攻击杀，黄色骷髅暴击击杀，绿色骷髅爆头击杀。",
   "author": "TdlQ & Malo & russian translation by chrom[K]a & korean translation by Yakumo Yukari & Undeadsewer & nuintun",
   "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=13436",
   "version": "2.4.0",
