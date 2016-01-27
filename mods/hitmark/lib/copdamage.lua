@@ -40,6 +40,7 @@ Hooks:PreHook(CopDamage, "damage_fire", "hitmark_copdamage_fire_pre", PreHook)
 Hooks:PreHook(CopDamage, "damage_explosion", "hitmark_copdamage_explosion_pre", PreHook)
 Hooks:PreHook(CopDamage, "damage_tase", "hitmark_copdamage_tase_pre", PreHook)
 Hooks:PreHook(CopDamage, "damage_melee", "hitmark_copdamage_melee_pre", PreHook)
+Hooks:PreHook(CopDamage, "sync_damage_explosion", "hitmark_copdamage_sync_explosion_pre", PreHook)
 
 --- 监听函数挂接后置钩子
 Hooks:PostHook(CopDamage, "damage_bullet", "hitmark_copdamage_bullet", PostHook)
@@ -47,3 +48,13 @@ Hooks:PostHook(CopDamage, "damage_fire", "hitmark_copdamage_fire", PostHook)
 Hooks:PostHook(CopDamage, "damage_explosion", "hitmark_copdamage_explosion", PostHook)
 Hooks:PostHook(CopDamage, "damage_tase", "hitmark_copdamage_tase", PostHook)
 Hooks:PostHook(CopDamage, "damage_melee", "hitmark_copdamage_melee", PostHook)
+Hooks:PostHook(CopDamage, "sync_damage_explosion", "hitmark_copdamage_sync_explosion", function(...)
+  local args = { ... }
+  local death = args[5]
+
+  if HitMark.direct_hit then
+    managers.hud:on_damage_confirmed(death, false)
+  end
+
+  HitMark.hooked = false
+end)
