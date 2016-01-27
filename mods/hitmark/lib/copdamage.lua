@@ -16,7 +16,7 @@ end
 local function PostHook(self, attack_data)
   if HitMark.direct_hit then
     local death = attack_data.result.type == "death"
-    local body = attack_data.body_name or attack_data.col_ray.body:name()
+    local body = attack_data.body_name or (attack_data.col_ray.body and attack_data.col_ray.body:name()) or false
     local body_key = body and body:key()
     local headshot = false
 
@@ -51,7 +51,7 @@ Hooks:PostHook(CopDamage, "damage_melee", "hitmark_copdamage_melee", PostHook)
 Hooks:PostHook(CopDamage, "sync_damage_explosion", "hitmark_copdamage_sync_explosion", function(...)
   if HitMark.direct_hit then
     local arguments = { ... }
-    
+
     managers.hud:on_damage_confirmed(arguments[5], false)
   end
 
