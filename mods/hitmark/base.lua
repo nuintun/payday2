@@ -1,7 +1,16 @@
+--- 模组命名空间
 _G.HitMark = _G.HitMark or {}
 
+--- 模组路径
 HitMark.ModPath = ModPath
 
+--- 配置
+-- @field hit_texture 击中标识图标
+-- @field crit_texture 击杀标识图标
+-- @field hit 普通伤害颜色
+-- @field crit 暴击伤害颜色
+-- @field headshot 爆头伤害颜色
+-- @field blend_mode
 HitMark.settings = {
   hit_texture = "guis/textures/pd2/hitconfirm",
   crit_texture = "guis/textures/pd2/hitconfirm_crit",
@@ -11,6 +20,7 @@ HitMark.settings = {
   blend_mode = "normal"
 }
 
+--- 添加钩子文件
 if RequiredScript then
   local hook_files = {
     ["lib/units/enemies/cop/copdamage"] = "lib/copdamage.lua",

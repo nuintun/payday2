@@ -1,3 +1,4 @@
+--- 监听函数挂接后置钩子
 Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(self)
   if self._hud_panel:child("hit_confirm") then
     self._hud_panel:remove(self._hud_panel:child("hit_confirm"))
@@ -52,17 +53,24 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
   end
 end)
 
+--- 显示动画
+-- @param self
+-- @param mark
 local function AnimateToggle(self, mark)
   mark:stop()
   mark:animate(callback(self, self, "_animate_show"), callback(self, self, "show_done"), 0.25)
 end
 
+--- 伤害回调
+-- @param death
+-- @param headshot
 function HUDHitConfirm:on_damage_confirmed(death, headshot)
   local index = (death and 4 or 1) + (HitMark.critshot and 1 or (headshot and 2 or 0))
 
   AnimateToggle(self, self.hitmark_bitmaps[index])
 end
 
+--- 击中回调
 function HUDHitConfirm:on_hit_confirmed()
   if HitMark.hooked then
     HitMark.direct_hit = true
@@ -71,6 +79,7 @@ function HUDHitConfirm:on_hit_confirmed()
   end
 end
 
+--- 暴击回调
 function HUDHitConfirm:on_crit_confirmed()
   if HitMark.hooked then
     HitMark.direct_hit = true
@@ -80,6 +89,7 @@ function HUDHitConfirm:on_crit_confirmed()
   end
 end
 
+--- 爆头回调
 function HUDHitConfirm:on_headshot_confirmed()
   if HitMark.hooked then
     HitMark.direct_hit = true

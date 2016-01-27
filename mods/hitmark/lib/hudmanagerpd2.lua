@@ -1,3 +1,6 @@
+--- 伤害回调
+-- @param death
+-- @param headshot
 function HUDManager:on_damage_confirmed(death, headshot)
   if not managers.user:get_setting("hit_indicator") then
     return

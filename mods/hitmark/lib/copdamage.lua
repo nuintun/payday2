@@ -1,13 +1,18 @@
+--- 爆头标识
 local head = Idstring("head"):key()
 local hit_head = Idstring("hit_Head"):key()
 local rag_head = Idstring("rag_Head"):key()
 
+--- 前置钩子函数
 local function PreHook()
   HitMark.hooked = true
   HitMark.critshot = false
   HitMark.direct_hit = false
 end
 
+--- 后置钩子函数
+-- @param self
+-- @param attack_data
 local function PostHook(self, attack_data)
   if not attack_data.attacker_unit
     or attack_data.attacker_unit
@@ -33,14 +38,14 @@ local function PostHook(self, attack_data)
   end
 end
 
--- PreHook
+--- 监听函数挂接前置钩子
 Hooks:PreHook(CopDamage, "damage_bullet", "hitmark_copdamage_bullet_pre", PreHook)
 Hooks:PreHook(CopDamage, "damage_fire", "hitmark_copdamage_fire_pre", PreHook)
 Hooks:PreHook(CopDamage, "damage_explosion", "hitmark_copdamage_explosion_pre", PreHook)
 Hooks:PreHook(CopDamage, "damage_tase", "hitmark_copdamage_tase_pre", PreHook)
 Hooks:PreHook(CopDamage, "damage_melee", "hitmark_copdamage_melee_pre", PreHook)
 
--- PostHook
+--- 监听函数挂接后置钩子
 Hooks:PostHook(CopDamage, "damage_bullet", "hitmark_copdamage_bullet", function(self, attack_data)
   HitMark.hooked = false
 
