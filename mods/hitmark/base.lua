@@ -10,7 +10,7 @@ HitMark.ModPath = ModPath
 -- @field hit 普通伤害颜色
 -- @field crit 暴击伤害颜色
 -- @field headshot 爆头伤害颜色
--- @field blend_mode
+-- @field blend_mode 颜色混合模式
 HitMark.settings = {
   hit_texture = "guis/textures/pd2/hitconfirm",
   crit_texture = "guis/textures/pd2/hitconfirm_crit",
