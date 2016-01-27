@@ -40,12 +40,6 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
       color = Color(hm.color),
       blend_mode = blend_mode
     })
-    local w = bmp:texture_width()
-
-    if w * 3 == bmp:texture_height() then
-      bmp:set_texture_rect(0, math.mod(i - 1, 3) * w, w, w)
-      bmp:set_height(w)
-    end
 
     bmp:set_center(hp:w() / 2, hp:h() / 2)
 
