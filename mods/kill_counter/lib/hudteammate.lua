@@ -44,12 +44,12 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       font_size = self._kill_counter:h()
     })
 
-    self._kill_counter:bitmap({
+    self._kill_counter_bg = self._kill_counter:bitmap({
+      layer = 0,
       name = "kill_counter_bg",
       texture = tabs_texture,
       texture_rect = bg_rect,
       visible = true,
-      layer = 0,
       color = bg_color,
       x = self._kill_counter:x(),
       y = self._kill_counter:y() - 1,
