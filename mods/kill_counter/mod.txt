@@ -1,26 +1,22 @@
 {
-  "name": "kill counter standalone",
+  "name": "kill counter",
   "description": "杀敌数目显示",
-  "author": "Iron Predator",
+  "author": "Iron Predator & nuintun",
   "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=13498",
   "version": "1.0.0",
   "priority": 10,
   "hooks": [
     {
-      "hook_id": "lib/units/equipment/sentry_gun/sentrygunbase",
-      "script_path": "killcounter.lua"
-    },
-    {
-      "hook_id": "lib/units/enemies/cop/copdamage",
-      "script_path": "killcounter.lua"
-    },
-    {
       "hook_id": "lib/managers/hudmanagerpd2",
-      "script_path": "killcounter.lua"
+      "script_path": "base.lua"
+    },
+    {
+      "hook_id": "lib/managers/statisticsmanager",
+      "script_path": "base.lua"
     },
     {
       "hook_id": "lib/managers/hud/hudteammate",
-      "script_path": "killcounter.lua"
+      "script_path": "base.lua"
     }
   ]
 }
