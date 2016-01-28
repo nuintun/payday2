@@ -34,7 +34,6 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       texture_rect = { 84, 0, 44, 32 },
       visible = true,
       color = Color.white / 3,
-      blend_mode = KillCounter.blend_mode,
       x = self._kill_counter:x(),
       y = self._kill_counter:y(),
       w = self._kill_counter:w(),
