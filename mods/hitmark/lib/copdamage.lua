@@ -3,6 +3,28 @@ local head = Idstring("head"):key()
 local hit_head = Idstring("hit_Head"):key()
 local rag_head = Idstring("rag_Head"):key()
 
+--- 是否爆头
+-- @param attack_data
+local function IsHeadshot(attack_data)
+  local headshot = false
+  local body_name = attack_data.body_name
+    or (attack_data.col_ray.body and attack_data.col_ray.body:name())
+
+  if body_name then
+    local body_key = body_name:key()
+
+    if body_key then
+      if body_key == head
+        or body_key == hit_head
+        or body_key == rag_head then
+        headshot = true
+      end
+    end
+  end
+
+  return headshot
+end
+
 --- 前置钩子函数
 local function PreHook()
   HitMark.hooked = true
@@ -13,20 +35,12 @@ end
 --- 后置钩子函数
 -- @param self
 -- @param attack_data
-local function PostHook(self, attack_data)
+local function PostHook(...)
   if HitMark.direct_hit then
+    local arguments = { ... }
+    local attack_data = arguments[2]
     local death = attack_data.result.type == "death"
-    local body = attack_data.body_name or (attack_data.col_ray.body and attack_data.col_ray.body:name()) or false
-    local body_key = body and body:key()
-    local headshot = false
-
-    if body_key then
-      if body_key == head
-        or body_key == hit_head
-        or body_key == rag_head then
-        headshot = true
-      end
-    end
+    local headshot = IsHeadshot(attack_data)
 
     managers.hud:on_damage_confirmed(death, headshot)
   end
