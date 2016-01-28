@@ -14,7 +14,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     self._kill_counter = self._panel:panel({
       name = kill_counter_name,
       visible = true,
-      w = cable_ties_panel:w(),
+      w = 64,
       h = name_label:h(),
       x = 0,
       halign = "right"
@@ -36,14 +36,14 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     self._kill_text = self._kill_counter:text({
       layer = 1,
       name = "kill_text",
-      text = "0/0 ",
+      text = "999/999 ",
       w = self._kill_counter:w() - 16,
       h = self._kill_counter:h(),
       align = "right",
       vertical = "center",
       color = Color(KillCounter.color),
       font = "fonts/font_medium_mf",
-      font_size = 16
+      font_size = 14
     })
 
     self._kill_text:set_right(self._kill_counter:w())
