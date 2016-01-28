@@ -9,7 +9,6 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
 
     local name_label = self._panel:child("name")
     local player_panel = self._panel:child("player")
-    local cable_ties_panel = player_panel:child("cable_ties_panel")
 
     self._kill_counter = self._panel:panel({
       name = kill_counter_name,
@@ -36,7 +35,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     self._kill_text = self._kill_counter:text({
       layer = 1,
       name = "kill_text",
-      text = "0/0 ",
+      text = "0/0",
       w = self._kill_counter:w() - 16,
       h = self._kill_counter:h(),
       align = "right",
@@ -46,7 +45,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       font_size = 14
     })
 
-    self._kill_text:set_right(self._kill_counter:w())
+    self._kill_text:set_right(self._kill_counter:w() - 2)
 
     self._kill_counter_bg = self._kill_counter:bitmap({
       layer = 0,
@@ -63,6 +62,27 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
   end
 end)
 
+Hooks:PostHook(HUDTeammate, "set_name", "killcounter_hudteammate_set_name", function(self)
+  local main_player = self._id == HUDManager.PLAYER_PANEL
+
+  if main_player then
+    local teammate_panel = self._panel
+    local name = teammate_panel:child("name")
+    local teammate_w = teammate_panel:w()
+    local max_w = teammate_w - 72
+    local name_w = name:w()
+
+    if name_w > max_w then
+      local name_bg = teammate_panel:child("name_bg")
+
+      name:set_w(max_w + 4)
+      managers.hud:make_fine_text(name)
+      name_bg:set_w(max_w)
+    end
+  end
+end)
+
 function HUDTeammate:update_kill_counter(headshots, total)
-  self._kill_text:set_text(headshots .. "/" .. total .. " ")
+  self._kill_text:set_text(headshots .. "/" .. total)
+  managers.hud:make_fine_text(self._kill_text)
 end
