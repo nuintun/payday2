@@ -36,7 +36,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     self._kill_text = self._kill_counter:text({
       layer = 1,
       name = "kill_text",
-      text = "999/999 ",
+      text = "0/0 ",
       w = self._kill_counter:w() - 16,
       h = self._kill_counter:h(),
       align = "right",
