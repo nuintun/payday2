@@ -75,9 +75,9 @@ Hooks:PostHook(HUDTeammate, "set_name", "killcounter_hudteammate_set_name", func
     if name_w > max_w then
       local name_bg = teammate_panel:child("name_bg")
 
-      name:set_w(max_w + 4)
+      name:set_w(max_w)
       managers.hud:make_fine_text(name)
-      name_bg:set_w(max_w)
+      name_bg:set_w(max_w + 4)
     end
   end
 end)
