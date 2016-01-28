@@ -71,5 +71,6 @@ end)
 
 function HUDTeammate:update_kill_counter(headshots, total)
   self._kill_text:set_text(headshots .. "/" .. total)
+  
   UpdateKillIcon(self)
 end
