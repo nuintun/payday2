@@ -1,3 +1,9 @@
+local function UpdateKillIcon(self)
+  local _, _, w, _ = self._kill_text:text_rect()
+
+  self._kill_icon:set_right(self._kill_counter:w() - w)
+end
+
 Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(self)
   local kill_counter_name = "kill_counter_" .. self._id
   local main_player = self._id == HUDManager.PLAYER_PANEL
@@ -20,6 +26,19 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     })
 
     self._kill_counter:set_rightbottom(player_panel:right(), name_label:bottom())
+
+    self._kill_counter_bg = self._kill_counter:bitmap({
+      layer = 0,
+      name = "kill_counter_bg",
+      texture = "guis/textures/pd2/hud_tabs",
+      texture_rect = { 84, 0, 44, 32 },
+      visible = true,
+      color = Color.white / 3,
+      x = self._kill_counter:x(),
+      y = self._kill_counter:y(),
+      w = self._kill_counter:w(),
+      h = self._kill_counter:h()
+    })
 
     self._kill_icon = self._kill_counter:bitmap({
       layer = 1,
@@ -45,30 +64,11 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     })
 
     self._kill_text:set_right(self._kill_counter:w())
-
-    local _, _, w, _ = self._kill_text:text_rect()
-
-    self._kill_icon:set_right(self._kill_counter:w() - w)
-
-    self._kill_counter_bg = self._kill_counter:bitmap({
-      layer = 0,
-      name = "kill_counter_bg",
-      texture = "guis/textures/pd2/hud_tabs",
-      texture_rect = { 84, 0, 44, 32 },
-      visible = true,
-      color = Color.white / 3,
-      x = self._kill_counter:x(),
-      y = self._kill_counter:y(),
-      w = self._kill_counter:w(),
-      h = self._kill_counter:h()
-    })
+    UpdateKillIcon(self)
   end
 end)
 
 function HUDTeammate:update_kill_counter(headshots, total)
   self._kill_text:set_text(headshots .. "/" .. total)
-
-  local _, _, w, _ = self._kill_text:text_rect()
-
-  self._kill_icon:set_right(self._kill_counter:w() - w)
+  UpdateKillIcon(self)
 end
