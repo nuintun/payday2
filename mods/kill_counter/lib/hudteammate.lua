@@ -8,6 +8,10 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       teammates_panel:remove(teammates_panel:child(kill_counter_name))
     end
 
+    local tabs_texture = "guis/textures/pd2/hud_tabs"
+    local bg_rect = { 84, 0, 44, 32 }
+    local bg_color = Color.white / 3
+
     self._kill_counter = self._hud_panel:panel({
       name = kill_counter_name,
       visible = true,
@@ -38,6 +42,19 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       color = Color(KillCounter.color),
       font = "fonts/font_medium_mf",
       font_size = self._kill_counter:h()
+    })
+
+    self._kill_counter:bitmap({
+      name = "kill_counter_bg",
+      texture = tabs_texture,
+      texture_rect = bg_rect,
+      visible = true,
+      layer = 0,
+      color = bg_color,
+      x = self._kill_counter:x(),
+      y = self._kill_counter:y() - 1,
+      w = self._kill_counter:w() + 4,
+      h = self._kill_counter:h()
     })
 
     self._kill_counter.set_righttop(teammate_panel:right(), teammate_panel:bottom())
