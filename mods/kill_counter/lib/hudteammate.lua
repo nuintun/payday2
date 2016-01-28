@@ -1,9 +1,3 @@
-local function UpdateKillIconAndBG(self)
-  local _, _, w, _ = self._kill_text:text_rect()
-
-  self._kill_icon:set_right(self._kill_counter:w() - w)
-end
-
 Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(self)
   local kill_counter_name = "kill_counter_" .. self._id
   local main_player = self._id == HUDManager.PLAYER_PANEL
@@ -32,23 +26,24 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       layer = 1,
       name = "kill_icon",
       texture = "guis/textures/pd2/risklevel_blackscreen",
-      w = self._kill_counter:h(),
-      h = self._kill_counter:h(),
+      w = 16,
+      h = 16,
+      y = (self._kill_counter:h() - 16) / 2,
       blend_mode = KillCounter.blend_mode,
       color = Color(KillCounter.color)
     })
 
     self._kill_text = self._kill_counter:text({
-      layer = 2,
+      layer = 1,
       name = "kill_text",
       text = "0/0 ",
-      w = self._kill_counter:w() - self._kill_icon:w(),
+      w = self._kill_counter:w() - 16,
       h = self._kill_counter:h(),
       align = "right",
       vertical = "center",
       color = Color(KillCounter.color),
       font = "fonts/font_medium_mf",
-      font_size = self._kill_counter:h()
+      font_size = 16
     })
 
     self._kill_text:set_right(self._kill_counter:w())
@@ -65,13 +60,9 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       w = self._kill_counter:w(),
       h = self._kill_counter:h()
     })
-
-    UpdateKillIconAndBG(self)
   end
 end)
 
 function HUDTeammate:update_kill_counter(headshots, total)
   self._kill_text:set_text(headshots .. "/" .. total .. " ")
-
-  UpdateKillIconAndBG(self)
 end
