@@ -64,6 +64,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     })
 
     self._kill_text:set_right(self._kill_counter:w())
+
     UpdateKillIcon(self)
   end
 end)
