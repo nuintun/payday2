@@ -41,7 +41,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     self._kill_text = self._kill_counter:text({
       layer = 2,
       name = "kill_text",
-      text = "0/0",
+      text = "0/0 ",
       w = self._kill_counter:w() - self._kill_icon:w(),
       h = self._kill_counter:h(),
       align = "right",
@@ -60,8 +60,8 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       texture_rect = { 84, 0, 44, 32 },
       visible = true,
       color = Color.white / 3,
-      x = self._kill_counter:x(),
-      y = self._kill_counter:y(),
+      x = 0,
+      y = 0,
       w = self._kill_counter:w(),
       h = self._kill_counter:h()
     })
@@ -71,7 +71,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
 end)
 
 function HUDTeammate:update_kill_counter(headshots, total)
-  self._kill_text:set_text(headshots .. "/" .. total)
+  self._kill_text:set_text(headshots .. "/" .. total .. " ")
 
   UpdateKillIconAndBG(self)
 end
