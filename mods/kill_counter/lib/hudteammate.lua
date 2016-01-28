@@ -84,5 +84,4 @@ end)
 
 function HUDTeammate:update_kill_counter(headshots, total)
   self._kill_text:set_text(headshots .. "/" .. total)
-  managers.hud:make_fine_text(self._kill_text)
 end
