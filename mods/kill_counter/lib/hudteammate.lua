@@ -2,7 +2,6 @@ local function UpdateKillIconAndBG(self)
   local _, _, w, _ = self._kill_text:text_rect()
 
   self._kill_icon:set_right(self._kill_counter:w() - w)
-  self._kill_counter_bg:set_h(self._kill_icon:w() + w)
 end
 
 Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(self)
