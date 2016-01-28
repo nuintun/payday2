@@ -7,7 +7,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     if teammates_panel:child(kill_counter_name) then
       teammates_panel:remove(teammates_panel:child(kill_counter_name))
     end
-    
+
     self._kill_counter = self._hud_panel:panel({
       name = kill_counter_name,
       visible = true,
@@ -44,8 +44,8 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
   end
 end)
 
-function HUDTeammate:update_kill_counter(headshot, total)
-  self._kill_text:set_text(headshot .. "/" .. total)
+function HUDTeammate:update_kill_counter(headshots, total)
+  self._kill_text:set_text(headshots .. "/" .. total)
 
   local _, _, w, _ = self._kill_text:text_rect()
 
