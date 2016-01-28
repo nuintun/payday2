@@ -21,6 +21,8 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       halign = "right"
     })
 
+    self._kill_counter.set_righttop(teammate_panel:right(), teammate_panel:bottom() + 1)
+
     self._kill_icon = self._kill_counter:bitmap({
       layer = 1,
       name = "kill_icon",
@@ -52,12 +54,10 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       visible = true,
       color = bg_color,
       x = self._kill_counter:x(),
-      y = self._kill_counter:y() - 1,
-      w = self._kill_counter:w() + 4,
+      y = self._kill_counter:y(),
+      w = self._kill_counter:w(),
       h = self._kill_counter:h()
     })
-
-    self._kill_counter.set_righttop(teammate_panel:right(), teammate_panel:bottom())
   end
 end)
 
