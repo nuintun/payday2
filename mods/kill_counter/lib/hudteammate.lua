@@ -1,43 +1,54 @@
 Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(self)
-  local kill_counter_name = "kill_counter_" .. self._id
+  local kill_counter_panel_name = "kill_counter_panel"
   local main_player = self._id == HUDManager.PLAYER_PANEL
+  local deployable_equipment_panel = self._player_panel:child("deployable_equipment_panel")
+  local cable_ties_panel = self._player_panel:child("cable_ties_panel")
+  local grenades_panel = self._player_panel:child("grenades_panel")
+
 
   if main_player then
-    if self._panel:child(kill_counter_name) then
-      self._panel:remove(self._panel:child(kill_counter_name))
+    if self._panel:child(kill_counter_panel_name) then
+      self._panel:remove(self._panel:child(kill_counter_panel_name))
     end
 
-    local name_label = self._panel:child("name")
-    local player_panel = self._panel:child("player")
+    local name = self._panel:child("name")
+    local player = self._panel:child("player")
+    local equipment = deployable_equipment_panel:child("equipment")
+    local cable_ties = cable_ties_panel:child("cable_ties")
+    local grenades = grenades_panel:child("grenades")
 
-    self._kill_counter = self._panel:panel({
-      name = kill_counter_name,
+    equipment:set_x(equipment:x() + 4)
+    cable_ties:set_x(cable_ties:x() + 4)
+    grenades:set_x(grenades:x() + 4)
+
+    self._kill_counter_panel = self._panel:panel({
+      name = kill_counter_panel_name,
       visible = true,
       w = 64,
-      h = name_label:h(),
+      h = name:h(),
       x = 0,
       halign = "right"
     })
 
-    self._kill_counter:set_rightbottom(player_panel:right(), name_label:bottom())
+    self._kill_counter_panel:set_rightbottom(player:right(), name:bottom())
 
-    self._kill_icon = self._kill_counter:bitmap({
+    self._kill_icon = self._kill_counter_panel:bitmap({
       layer = 1,
       name = "kill_icon",
       texture = "guis/textures/pd2/risklevel_blackscreen",
       w = 16,
       h = 16,
-      y = (self._kill_counter:h() - 16) / 2,
+      y = (self._kill_counter_panel:h() - 16) / 2,
       blend_mode = KillCounter.blend_mode,
       color = Color(KillCounter.color)
     })
 
-    self._kill_text = self._kill_counter:text({
+    self._kill_text = self._kill_counter_panel:text({
       layer = 1,
       name = "kill_text",
       text = "0/0",
-      w = self._kill_counter:w() - 16,
-      h = self._kill_counter:h(),
+      w = self._kill_counter_panel:w() - 16,
+      h = self._kill_counter_panel:h(),
       align = "right",
       vertical = "center",
       color = Color(KillCounter.color),
@@ -45,9 +56,9 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       font_size = 14
     })
 
-    self._kill_text:set_right(self._kill_counter:w() - 2)
+    self._kill_text:set_right(self._kill_counter_panel:w() - 4)
 
-    self._kill_counter_bg = self._kill_counter:bitmap({
+    self._kill_counter_bg = self._kill_counter_panel:bitmap({
       layer = 0,
       name = "kill_counter_bg",
       texture = "guis/textures/pd2/hud_tabs",
@@ -56,9 +67,17 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       color = Color.white / 3,
       x = 0,
       y = 0,
-      w = self._kill_counter:w(),
-      h = self._kill_counter:h()
+      w = self._kill_counter_panel:w(),
+      h = self._kill_counter_panel:h()
     })
+  else
+    local equipment_amount = deployable_equipment_panel:child("amount")
+    local cable_ties_amount = cable_ties_panel:child("amount")
+    local grenades_amount = grenades_panel:child("amount")
+
+    equipment_amount:set_vertical("top")
+    cable_ties_amount:set_vertical("top")
+    grenades_amount:set_vertical("top")
   end
 end)
 
