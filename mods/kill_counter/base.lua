@@ -2,8 +2,6 @@ _G.KillCounter = _G.KillCounter or {}
 
 KillCounter.ModPath = ModPath
 
-KillCounter.width = 100
-KillCounter.height = 20
 KillCounter.blend_mode = 'normal'
 KillCounter.color = 'ffff00'
 
