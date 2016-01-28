@@ -1,23 +1,25 @@
-Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(self, i, teammates_panel)
-  local kill_counter_name = "kill_counter_" .. i
-  local main_player = i == HUDManager.PLAYER_PANEL
-  local teammate_panel = teammates_panel:child("" .. i)
+Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(self)
+  local kill_counter_name = "kill_counter_" .. self._id
+  local main_player = self._id == HUDManager.PLAYER_PANEL
 
   if main_player then
-    if teammates_panel:child(kill_counter_name) then
-      teammates_panel:remove(teammates_panel:child(kill_counter_name))
+    if self._panel:child(kill_counter_name) then
+      self._panel:remove(self._panel:child(kill_counter_name))
     end
 
-    self._kill_counter = self._hud_panel:panel({
+    local name_label = self._panel:child("name")
+    local player_panel = self._panel:child("player")
+
+    self._kill_counter = self._panel:panel({
       name = kill_counter_name,
       visible = true,
-      w = teammate_panel:w(),
+      w = KillCounter.width,
       h = KillCounter.height,
       x = 0,
       halign = "right"
     })
 
-    self._kill_counter.set_righttop(teammate_panel:right(), teammate_panel:bottom() + 1)
+    self._kill_counter:set_rightbottom(player_panel:right(), name_label:bottom())
 
     self._kill_icon = self._kill_counter:bitmap({
       layer = 1,
@@ -41,6 +43,12 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       font = "fonts/font_medium_mf",
       font_size = self._kill_counter:h()
     })
+
+    self._kill_text:set_right(self._kill_counter:w())
+
+    local _, _, w, _ = self._kill_text:text_rect()
+
+    self._kill_icon:set_right(self._kill_counter:w() - w)
 
     self._kill_counter_bg = self._kill_counter:bitmap({
       layer = 0,
