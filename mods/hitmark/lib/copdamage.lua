@@ -8,7 +8,8 @@ local rag_head = Idstring("rag_Head"):key()
 local function IsHeadshot(attack_data)
   local headshot = false
   local body_name = attack_data.body_name
-    or (attack_data.col_ray.body and attack_data.col_ray.body:name())
+    or (attack_data.col_ray.body
+    and attack_data.col_ray.body:name())
 
   if body_name then
     local body_key = body_name:key()
