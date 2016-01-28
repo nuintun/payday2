@@ -15,13 +15,13 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
 
     local name_label = self._panel:child("name")
     local player_panel = self._panel:child("player")
-    local cable_ties_panel = self._panel:child("cable_ties_panel")
+    local cable_ties_panel = player_panel:child("cable_ties_panel")
 
     self._kill_counter = self._panel:panel({
       name = kill_counter_name,
       visible = true,
       w = cable_ties_panel:w(),
-      h = name_label.h(),
+      h = name_label:h(),
       x = 0,
       halign = "right"
     })
