@@ -3,7 +3,7 @@ _G.KillCounter = _G.KillCounter or {}
 KillCounter.ModPath = ModPath
 
 KillCounter.icon_color = 'ffff00'
-KillCounter.text_color = 'ffff00'
+KillCounter.text_color = 'ff0000'
 KillCounter.blend_mode = 'normal'
 
 if RequiredScript then
