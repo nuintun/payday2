@@ -39,9 +39,9 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       layer = 1,
       name = "kill_icon",
       texture = "guis/textures/pd2/risklevel_blackscreen",
-      w = 16,
-      h = 16,
-      y = (kh - 16) / 2,
+      w = 15,
+      h = 15,
+      y = (kh - 15) / 2,
       color = Color(KillCounter.icon_color),
       blend_mode = KillCounter.blend_mode
     })
@@ -49,13 +49,13 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     self._kill_text = self._kill_counter_panel:text({
       layer = 1,
       name = "kill_text",
-      text = "0/0-0",
-      w = kw - 20,
+      text = "0/0/0",
+      w = kw - 19,
       h = kh,
       align = "right",
       vertical = "center",
-      font_size = 14,
-      font = "fonts/font_medium_mf",
+      font_size = 13,
+      font = "fonts/font_small_mf",
       color = Color(KillCounter.text_color),
       blend_mode = KillCounter.blend_mode
     })
