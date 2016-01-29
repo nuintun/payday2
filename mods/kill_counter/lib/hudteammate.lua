@@ -4,8 +4,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
   local deployable_equipment_panel = self._player_panel:child("deployable_equipment_panel")
   local cable_ties_panel = self._player_panel:child("cable_ties_panel")
   local grenades_panel = self._player_panel:child("grenades_panel")
-
-
+  
   if main_player then
     if self._panel:child(kill_counter_panel_name) then
       self._panel:remove(self._panel:child(kill_counter_panel_name))
