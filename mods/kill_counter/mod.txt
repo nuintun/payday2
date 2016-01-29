@@ -1,7 +1,7 @@
 {
   "name": "kill counter",
   "description": "杀敌数目显示",
-  "author": "nuintun",
+  "author": "Iron Predator & nuintun",
   "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=13498",
   "version": "1.0.0",
   "priority": 10,
