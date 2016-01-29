@@ -4,7 +4,6 @@
   "author": "Iron Predator & nuintun",
   "contact": "nuintun@gmail.com",
   "version": "1.0.0",
-  "priority": 10,
   "hooks": [
     {
       "hook_id": "lib/managers/hudmanagerpd2",
