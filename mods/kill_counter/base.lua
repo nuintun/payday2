@@ -2,6 +2,9 @@ _G.KillCounter = _G.KillCounter or {}
 
 KillCounter.ModPath = ModPath
 
+--- icon_color 图标颜色
+-- text_color 文字颜色
+-- blend_mode 颜色混合模式
 KillCounter.icon_color = 'ffff00'
 KillCounter.text_color = 'ff0000'
 KillCounter.blend_mode = 'normal'

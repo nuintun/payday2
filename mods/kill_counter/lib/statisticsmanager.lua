@@ -1,3 +1,4 @@
+--- 注册数据统计击杀回掉
 Hooks:PostHook(StatisticsManager, "killed", "killcounter_statisticsmanager_killed", function(self)
   local headshots = self:session_total_head_shots()
   local total = self:session_total_kills()

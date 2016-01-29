@@ -1,10 +1,11 @@
+--- 注册HUD初始化回调
 Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(self)
   local kill_counter_panel_name = "kill_counter_panel"
   local main_player = self._id == HUDManager.PLAYER_PANEL
   local deployable_equipment_panel = self._player_panel:child("deployable_equipment_panel")
   local cable_ties_panel = self._player_panel:child("cable_ties_panel")
   local grenades_panel = self._player_panel:child("grenades_panel")
-  
+
   if main_player then
     if self._panel:child(kill_counter_panel_name) then
       self._panel:remove(self._panel:child(kill_counter_panel_name))
@@ -84,6 +85,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
   end
 end)
 
+--- 注册设置名字回调，防止名字过长和击杀统计叠屏
 Hooks:PostHook(HUDTeammate, "set_name", "killcounter_hudteammate_set_name", function(self)
   local main_player = self._id == HUDManager.PLAYER_PANEL
 
@@ -104,6 +106,10 @@ Hooks:PostHook(HUDTeammate, "set_name", "killcounter_hudteammate_set_name", func
   end
 end)
 
+--- 击杀统计更新回掉，展示方式：爆头数目/特殊敌人击杀数目-总共击杀数目
+-- @param headshots
+-- @param specials
+-- @param total
 function HUDTeammate:update_kill_counter(headshots, specials, total)
   self._kill_text:set_text(headshots .. "/" .. specials .. "-" .. total)
 end
