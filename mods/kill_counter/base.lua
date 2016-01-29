@@ -2,8 +2,9 @@ _G.KillCounter = _G.KillCounter or {}
 
 KillCounter.ModPath = ModPath
 
+KillCounter.icon_color = 'ffff00'
+KillCounter.text_color = 'ffff00'
 KillCounter.blend_mode = 'normal'
-KillCounter.color = 'ffff00'
 
 if RequiredScript then
   local hook_files = {

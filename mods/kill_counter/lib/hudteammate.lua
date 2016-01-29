@@ -39,8 +39,8 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       w = 16,
       h = 16,
       y = (self._kill_counter_panel:h() - 16) / 2,
-      blend_mode = KillCounter.blend_mode,
-      color = Color(KillCounter.color)
+      color = Color(KillCounter.icon_color),
+      blend_mode = KillCounter.blend_mode
     })
 
     self._kill_text = self._kill_counter_panel:text({
@@ -51,9 +51,10 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       h = self._kill_counter_panel:h(),
       align = "right",
       vertical = "center",
-      color = Color(KillCounter.color),
+      font_size = 14,
       font = "fonts/font_medium_mf",
-      font_size = 14
+      color = Color(KillCounter.text_color),
+      blend_mode = KillCounter.blend_mode
     })
 
     self._kill_text:set_right(self._kill_counter_panel:w() - 4)
