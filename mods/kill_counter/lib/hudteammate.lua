@@ -47,7 +47,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       layer = 1,
       name = "kill_text",
       text = "0/0",
-      w = self._kill_counter_panel:w() - 16,
+      w = self._kill_counter_panel:w() - 20,
       h = self._kill_counter_panel:h(),
       align = "right",
       vertical = "center",
