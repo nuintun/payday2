@@ -41,6 +41,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       texture = "guis/textures/pd2/risklevel_blackscreen",
       w = 15,
       h = 15,
+      x = -1,
       y = (kh - 15) / 2,
       color = Color(KillCounter.icon_color),
       blend_mode = KillCounter.blend_mode
@@ -49,8 +50,8 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     self._kill_text = self._kill_counter_panel:text({
       layer = 1,
       name = "kill_text",
-      text = "0/0/0",
-      w = kw - 19,
+      text = "0/0-0",
+      w = kw - 16,
       h = kh,
       align = "right",
       vertical = "center",
@@ -60,7 +61,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       blend_mode = KillCounter.blend_mode
     })
 
-    self._kill_text:set_right(kw - 4)
+    self._kill_text:set_right(kw - 2)
 
     self._kill_counter_bg = self._kill_counter_panel:bitmap({
       layer = 0,
@@ -106,10 +107,10 @@ Hooks:PostHook(HUDTeammate, "set_name", "killcounter_hudteammate_set_name", func
   end
 end)
 
---- 击杀统计更新回掉，展示方式：爆头数目/特殊敌人击杀数目/总共击杀数目
+--- 击杀统计更新回掉，展示方式：爆头数目/特殊敌人击杀数目-总共击杀数目
 -- @param headshots
 -- @param specials
 -- @param total
 function HUDTeammate:update_kill_counter(headshots, specials, total)
-  self._kill_text:set_text(headshots .. "/" .. specials .. "/" .. total)
+  self._kill_text:set_text(headshots .. "/" .. specials .. "-" .. total)
 end
