@@ -46,7 +46,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     self._kill_text = self._kill_counter_panel:text({
       layer = 1,
       name = "kill_text",
-      text = "0/0",
+      text = "0/0-0",
       w = self._kill_counter_panel:w() - 20,
       h = self._kill_counter_panel:h(),
       align = "right",
@@ -101,6 +101,6 @@ Hooks:PostHook(HUDTeammate, "set_name", "killcounter_hudteammate_set_name", func
   end
 end)
 
-function HUDTeammate:update_kill_counter(headshots, total)
-  self._kill_text:set_text(headshots .. "/" .. total)
+function HUDTeammate:update_kill_counter(headshots, specials, total)
+  self._kill_text:set_text(headshots .. "/" .. specials .. "-" .. total)
 end
