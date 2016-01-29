@@ -106,10 +106,10 @@ Hooks:PostHook(HUDTeammate, "set_name", "killcounter_hudteammate_set_name", func
   end
 end)
 
---- 击杀统计更新回掉，展示方式：爆头数目/特殊敌人击杀数目-总共击杀数目
+--- 击杀统计更新回掉，展示方式：爆头数目/特殊敌人击杀数目/总共击杀数目
 -- @param headshots
 -- @param specials
 -- @param total
 function HUDTeammate:update_kill_counter(headshots, specials, total)
-  self._kill_text:set_text(headshots .. "/" .. specials .. "-" .. total)
+  self._kill_text:set_text(headshots .. "/" .. specials .. "/" .. total)
 end
