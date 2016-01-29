@@ -32,13 +32,16 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
 
     self._kill_counter_panel:set_rightbottom(player:right(), name:bottom())
 
+    local kw = self._kill_counter_panel:w()
+    local kh = self._kill_counter_panel:h()
+
     self._kill_icon = self._kill_counter_panel:bitmap({
       layer = 1,
       name = "kill_icon",
       texture = "guis/textures/pd2/risklevel_blackscreen",
       w = 16,
       h = 16,
-      y = (self._kill_counter_panel:h() - 16) / 2,
+      y = (kh - 16) / 2,
       color = Color(KillCounter.icon_color),
       blend_mode = KillCounter.blend_mode
     })
@@ -47,8 +50,8 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       layer = 1,
       name = "kill_text",
       text = "0/0-0",
-      w = self._kill_counter_panel:w() - 20,
-      h = self._kill_counter_panel:h(),
+      w = kw - 20,
+      h = kh,
       align = "right",
       vertical = "center",
       font_size = 14,
@@ -57,7 +60,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       blend_mode = KillCounter.blend_mode
     })
 
-    self._kill_text:set_right(self._kill_counter_panel:w() - 4)
+    self._kill_text:set_right(kw - 4)
 
     self._kill_counter_bg = self._kill_counter_panel:bitmap({
       layer = 0,
@@ -68,8 +71,8 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       color = Color.white / 3,
       x = 0,
       y = 0,
-      w = self._kill_counter_panel:w(),
-      h = self._kill_counter_panel:h()
+      w = kw,
+      h = kh
     })
   else
     local equipment_amount = deployable_equipment_panel:child("amount")
