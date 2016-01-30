@@ -23,7 +23,6 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
   local hp = self._hud_panel
   local x = hp:w() / 2
   local y = hp:h() / 2
-  local color = Color(hm.color)
   local blend_mode = HitMark.settings.blend_mode
 
   self.hitmark_bitmaps = {}
@@ -42,7 +41,7 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
       valign = "center",
       halign = "center",
       texture = hm.texture,
-      color = color,
+      color = Color(hm.color),
       blend_mode = blend_mode
     })
 
