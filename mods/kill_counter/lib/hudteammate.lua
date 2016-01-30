@@ -24,7 +24,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     self._kill_counter_panel = self._panel:panel({
       name = kill_counter_panel_name,
       visible = true,
-      w = 64,
+      w = 75,
       h = name:h(),
       x = 0,
       halign = "right"
@@ -55,8 +55,8 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
       h = kh,
       align = "right",
       vertical = "center",
-      font_size = 13,
-      font = "fonts/font_small_mf",
+      font_size = 15,
+      font = "fonts/font_medium_mf",
       color = Color(KillCounter.text_color),
       blend_mode = KillCounter.blend_mode
     })
@@ -94,7 +94,7 @@ Hooks:PostHook(HUDTeammate, "set_name", "killcounter_hudteammate_set_name", func
     local teammate_panel = self._panel
     local name = teammate_panel:child("name")
     local teammate_w = teammate_panel:w()
-    local max_w = teammate_w - 72
+    local max_w = teammate_w - 83
     local name_w = name:w()
 
     if name_w > max_w then
