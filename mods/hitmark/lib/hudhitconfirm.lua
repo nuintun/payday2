@@ -21,6 +21,9 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
     { name = "kill_head_confirm", texture = HitMark.settings.kill_texture, color = HitMark.settings.headshot }
   }
   local hp = self._hud_panel
+  local x = hp:w() / 2
+  local y = hp:h() / 2
+  local color = Color(hm.color)
   local blend_mode = HitMark.settings.blend_mode
 
   self.hitmark_bitmaps = {}
@@ -39,11 +42,11 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
       valign = "center",
       halign = "center",
       texture = hm.texture,
-      color = Color(hm.color),
+      color = color,
       blend_mode = blend_mode
     })
 
-    bmp:set_center(hp:w() / 2, hp:h() / 2)
+    bmp:set_center(x, y)
 
     self.hitmark_bitmaps[i] = bmp
   end
