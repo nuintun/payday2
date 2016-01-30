@@ -17,9 +17,9 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
     local cable_ties = cable_ties_panel:child("cable_ties")
     local grenades = grenades_panel:child("grenades")
 
-    equipment:set_x(equipment:x() + 4)
-    cable_ties:set_x(cable_ties:x() + 4)
-    grenades:set_x(grenades:x() + 4)
+    equipment:set_x(equipment:x() + 2)
+    cable_ties:set_x(cable_ties:x() + 2)
+    grenades:set_x(grenades:x() + 2)
 
     self._kill_counter_panel = self._panel:panel({
       name = kill_counter_panel_name,
