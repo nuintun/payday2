@@ -32,6 +32,8 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
 
     local bmp = hp:bitmap({
       layer = 1,
+      w = 13,
+      h = 13,
       name = hm.name,
       visible = false,
       valign = "center",
