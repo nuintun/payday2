@@ -3,5 +3,5 @@
   "description": "高清商店商品",
   "author": "Master Indigo",
   "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=14943",
-  "version": "1.1.0"
+  "version": "1.2.0"
 }
