@@ -1,0 +1,7 @@
+{
+  "name": "hd bank",
+  "description": "高清银行贴图",
+  "author": "Master Indigo",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=15254",
+  "version": "1.0.0"
+}
