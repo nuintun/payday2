@@ -93,9 +93,8 @@ Hooks:PostHook(HUDTeammate, "set_name", "killcounter_hudteammate_set_name", func
   if main_player then
     local teammate_panel = self._panel
     local name = teammate_panel:child("name")
-    local teammate_w = teammate_panel:w()
-    local max_w = teammate_w - 83
     local name_w = name:w()
+    local max_w = teammate_panel:w() - teammate_panel:h() - 83
 
     if name_w > max_w then
       local name_bg = teammate_panel:child("name_bg")
