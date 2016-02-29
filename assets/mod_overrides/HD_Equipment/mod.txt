@@ -1,0 +1,7 @@
+{
+  "name": "hd equipment",
+  "author": "LemonCatHD",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=15542",
+  "version": "0.0.1",
+  "description": "高清装备材质"
+}
