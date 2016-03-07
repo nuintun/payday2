@@ -442,6 +442,7 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
             if object_incompat then
               if object_incompat:visibility() == true then
                 NPCWeap.incompat_categories[item:name()] = NPCWeap.incompat_categories[item:name()] or {}
+
                 if not table.contains(NPCWeap.incompat_categories[item:name()], category) then
                   table.insert(NPCWeap.incompat_categories[item:name()], category)
                 end
@@ -579,7 +580,7 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
 
     local params = {
       name = item:name(),
-      text_id = "Refresh weapon",
+      text_id = "刷新武器模型",
       localize = false,
       callback = "refresh_weapon_action",
       localize_help = false,
