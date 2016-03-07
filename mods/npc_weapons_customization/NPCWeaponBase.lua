@@ -1,6 +1,7 @@
 --CloneClass(NPCRaycastWeaponBase)
 function NPCRaycastWeaponBase:init(unit)
   RaycastWeaponBase.super.init(self, unit, false)
+
   self._unit = unit
   self._name_id = self.name_id or "m4_npc"
   self.name_id = nil
@@ -79,9 +80,7 @@ function NPCRaycastWeaponBase:init(unit)
   NPCWeap:setup_weapon(self._unit, self._name_id)
 
   if NPCWeap.weapons[self._name_id] then
-    --noinspection UnusedDef
     local truee = true
-    --noinspection UnusedDef
     local falsee = false
     local object = self._unit:get_object(Idstring("g_attachment_peqbox"))
 

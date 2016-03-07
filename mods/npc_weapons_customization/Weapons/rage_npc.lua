@@ -1,5 +1,4 @@
 log("raging_bull_npc loaded")
---noinspection UnusedDef
 Hooks:Add("LocalizationManagerPostInit", "NPCWeap_raging_bull_Localization", function(loc)
   LocalizationManager:add_localized_strings({
     ["random"] = "Random",

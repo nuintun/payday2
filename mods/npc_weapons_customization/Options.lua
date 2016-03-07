@@ -19,7 +19,6 @@ function NPCWeap:Load_options()
     end
 
     NPCWeap:Save()
-
     return
   end
 
@@ -40,7 +39,6 @@ function NPCWeap:Load_options_old()
 
   if file == nil then
     NPCWeap:Save()
-
     return
   end
 

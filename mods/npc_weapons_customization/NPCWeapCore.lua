@@ -201,6 +201,7 @@ function NPCWeap:setup_weapon(unit, name)
 
                   for _, requiredItem in pairs(required_table) do
                     local object_req = unit:get_object(Idstring(requiredItem))
+
                     if object_req then
                       object_req:set_local_position(current_object)
                     end
@@ -309,11 +310,11 @@ function NPCWeap:get_random(current_weap, category, weap_name, unit)
       end
     end
   end
+
   return random_object
 end
 
 function NPCWeap:AddToggle(toggle_data, node)
-
   local data = {
     type = "CoreMenuItemToggle.ItemToggle",
     {
@@ -356,6 +357,7 @@ function NPCWeap:AddToggle(toggle_data, node)
   }
 
   local item = node:create_item(data, params)
+
   item:set_value(toggle_data.value and "on" or "off")
 
   if toggle_data.disabled then
@@ -440,7 +442,6 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
             if object_incompat then
               if object_incompat:visibility() == true then
                 NPCWeap.incompat_categories[item:name()] = NPCWeap.incompat_categories[item:name()] or {}
-
                 if not table.contains(NPCWeap.incompat_categories[item:name()], category) then
                   table.insert(NPCWeap.incompat_categories[item:name()], category)
                 end
@@ -477,7 +478,6 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
       local node_items = item._parameters.gui_node.row_items
 
       NPCWeap:update_compatibility_item(node_items, this)
-
       return
     end
 
@@ -529,6 +529,7 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
       NPCWeap._title_text:set_visible(false)
     end
   end
+
   MenuCallbackHandler.npc_weap_toggle_customization = function(this, item)
     NPCWeap.loaded_options[NPCWeap.current_weapon].enabled = item:value() == "on" and true or false
 
@@ -578,7 +579,7 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
 
     local params = {
       name = item:name(),
-      text_id = "刷新武器",
+      text_id = "Refresh weapon",
       localize = false,
       callback = "refresh_weapon_action",
       localize_help = false,
@@ -590,6 +591,7 @@ Hooks:Add("MenuManagerPopulateCustomMenus", "Base_PopulateNPCWeapMenu", function
 
     local make_fine_text = function(text)
       local x, y, w, h = text:text_rect()
+
       text:set_size(w, h)
       text:set_position(math.round(text:x()), math.round(text:y()))
     end
@@ -636,7 +638,6 @@ function NPCWeap:update_category(unit, current_weap, current_value, category)
     object_name = string.sub(current_value, current_weap.object_sub, string.len(current_value))
   else
     local random_object = NPCWeap:get_random(current_weap, category, NPCWeap.current_weapon, unit)
-
     object_name = string.sub(random_object, current_weap.object_sub, string.len(random_object))
   end
 
@@ -691,10 +692,8 @@ function NPCWeap:update_category(unit, current_weap, current_value, category)
 
                 if object and object:visibility() == true then
                   object:set_local_position(vector)
-
                   --if pos_category == "barrel" then
                   --log("fire pos: " .. unit:get_object(Idstring("fire")).position)
-
                   --log("fire after pos: " .. unit:get_object(Idstring("fire")).position)
                   --end
                   if current_weap.required[object_name] then
@@ -702,6 +701,7 @@ function NPCWeap:update_category(unit, current_weap, current_value, category)
 
                     for p, d in pairs(required_table) do
                       local object_req = unit:get_object(Idstring(d))
+
                       if object_req then
                         object_req:set_local_position(vector)
                       end

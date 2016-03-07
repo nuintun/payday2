@@ -1,5 +1,4 @@
 log("scar_npc loaded")
---noinspection UnusedDef
 Hooks:Add("LocalizationManagerPostInit", "NPCWeap_scar_Localization", function(loc)
   LocalizationManager:add_localized_strings({
     ["random"] = "Random",

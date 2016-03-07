@@ -1,5 +1,4 @@
 log("m249_npc loaded")
---noinspection UnusedDef
 Hooks:Add("LocalizationManagerPostInit", "NPCWeap_m249_Localization", function(loc)
   LocalizationManager:add_localized_strings({
     ["random"] = "Random",
