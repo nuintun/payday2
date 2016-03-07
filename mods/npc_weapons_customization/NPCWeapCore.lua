@@ -639,6 +639,7 @@ function NPCWeap:update_category(unit, current_weap, current_value, category)
     object_name = string.sub(current_value, current_weap.object_sub, string.len(current_value))
   else
     local random_object = NPCWeap:get_random(current_weap, category, NPCWeap.current_weapon, unit)
+    
     object_name = string.sub(random_object, current_weap.object_sub, string.len(random_object))
   end
 
