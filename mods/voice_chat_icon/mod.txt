@@ -2,7 +2,7 @@
   "name": "voice chat icon",
   "description": "使用游戏内置语音说话时添加语音图标",
   "author": "Seven",
-  "version": "1.0",
+  "version": "2016.03.12",
   "hooks": [
     {
       "hook_id": "lib/managers/hudmanagerpd2",
