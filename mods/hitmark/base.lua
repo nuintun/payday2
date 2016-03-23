@@ -16,8 +16,8 @@ HitMark.settings = {
   kill_texture = "guis/textures/pd2/hitconfirm_crit",
   hit = "ff5500",
   crit = "ffff00",
-  headshot = "57ff00",
-  blend_mode = "add"
+  headshot = "55ff00",
+  blend_mode = "normal"
 }
 
 --- 添加钩子文件
