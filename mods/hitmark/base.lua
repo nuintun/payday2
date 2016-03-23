@@ -15,7 +15,7 @@ HitMark.settings = {
   hit_texture = "guis/textures/pd2/hitconfirm",
   kill_texture = "guis/textures/pd2/hitconfirm_crit",
   hit = "ff5500",
-  crit = "ff0000",
+  crit = "ffff00",
   headshot = "57ff00",
   blend_mode = "add"
 }
