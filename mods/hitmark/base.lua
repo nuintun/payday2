@@ -17,7 +17,7 @@ HitMark.settings = {
   hit = "ff8081",
   crit = "ffff00",
   headshot = "00ff00",
-  blend_mode = "normal"
+  blend_mode = "add"
 }
 
 --- 添加钩子文件
