@@ -1,5 +1,5 @@
 --- 注册HUD初始化回调
-Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(self)
+Hooks:PostHook(HUDTeammate, "init", "kill_counter_hudteammate_init", function(self)
   local kill_counter_panel_name = "kill_counter_panel"
   local main_player = self._id == HUDManager.PLAYER_PANEL
   local deployable_equipment_panel = self._player_panel:child("deployable_equipment_panel")
@@ -87,7 +87,7 @@ Hooks:PostHook(HUDTeammate, "init", "killcounter_hudteammate_init", function(sel
 end)
 
 --- 注册设置名字回调，防止名字过长和击杀统计叠屏
-Hooks:PostHook(HUDTeammate, "set_name", "killcounter_hudteammate_set_name", function(self)
+Hooks:PostHook(HUDTeammate, "set_name", "kill_counter_hudteammate_set_name", function(self)
   local main_player = self._id == HUDManager.PLAYER_PANEL
 
   if main_player then
