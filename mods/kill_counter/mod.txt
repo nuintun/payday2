@@ -3,7 +3,7 @@
   "description": "杀敌数目显示，爆头数目/特殊敌人击杀数目-总共击杀数目",
   "author": "Iron Predator & nuintun",
   "contact": "nuintun@gmail.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "hooks": [
     {
       "hook_id": "lib/managers/hudmanagerpd2",
