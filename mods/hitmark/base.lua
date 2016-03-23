@@ -14,10 +14,10 @@ HitMark.ModPath = ModPath
 HitMark.settings = {
   hit_texture = "guis/textures/pd2/hitconfirm",
   kill_texture = "guis/textures/pd2/hitconfirm_crit",
-  hit = "ff8081",
-  crit = "ffff00",
-  headshot = "00ff00",
-  blend_mode = "normal"
+  hit = "ff5500",
+  crit = "ff00ff",
+  headshot = "57ff00",
+  blend_mode = "add"
 }
 
 --- 添加钩子文件
