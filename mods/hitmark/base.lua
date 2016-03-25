@@ -14,9 +14,9 @@ HitMark.ModPath = ModPath
 HitMark.settings = {
   hit_texture = "guis/textures/pd2/hitconfirm",
   kill_texture = "guis/textures/pd2/hitconfirm_crit",
-  hit = "ff5500",
+  hit = "00ffff",
   crit = "ffff00",
-  headshot = "55ff00",
+  headshot = "00ff00",
   blend_mode = "normal"
 }
 
