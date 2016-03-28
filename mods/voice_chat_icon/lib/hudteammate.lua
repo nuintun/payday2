@@ -7,7 +7,7 @@ Hooks:PostHook(HUDTeammate, "init", "voice_chat_hudteammate_init", function(self
     texture = "guis/textures/pd2/jukebox_playing",
     texture_rect = { 0, 0, 16, 16 },
     layer = 1,
-    color = tweak_data.chat_colors[self._id]:with_alpha(1),
+    color = Color.white,
     w = 11,
     h = 11,
     visible = false,
