@@ -19,11 +19,11 @@ Hooks:PostHook(HUDTeammate, "init", "voice_chat_hudteammate_init", function(self
   voice_icon:set_center(x, y)
 end)
 
-function HUDTeammate:set_voice_com(status)
+function HUDTeammate:set_voice_icon(active)
   local callsign = self._panel:child("callsign")
   local voice_icon = self._panel:child("voice_icon")
 
-  if status then
+  if active then
     callsign:set_visible(false)
     voice_icon:set_visible(true)
   else
