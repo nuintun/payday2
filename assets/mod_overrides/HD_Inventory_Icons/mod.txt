@@ -2,6 +2,6 @@
   "name": "hd inventory icons",
   "author": "Legendary_Majahet",
   "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=14174",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "description": "高清装备库图标"
 }
