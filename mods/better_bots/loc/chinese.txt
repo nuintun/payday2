@@ -1,4 +1,4 @@
-w{
+{
 	"bb_menu_title" : "Better Bots"
 	"bb_menu_desc" : "修改 Better Bots 设置"
 	"number_choice_title" : "AI数目"

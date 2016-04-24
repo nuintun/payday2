@@ -23,16 +23,18 @@ function BBMenu:Load()
 end
 
 Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_BBMenu", function(loc)
-  for _, filename in pairs(file.GetFiles(BBMenu._path .. "loc/")) do
-    local str = filename:match('^(.*).txt$')
+  --  for _, filename in pairs(file.GetFiles(BBMenu._path .. "loc/")) do
+  --    local str = filename:match('^(.*).txt$')
+  --
+  --    if str and Idstring(str) and Idstring(str):key() == SystemInfo:language():key() then
+  --      loc:load_localization_file(BBMenu._path .. "loc/" .. filename)
+  --      break
+  --    end
+  --  end
+  --
+  --  loc:load_localization_file(BBMenu._path .. "loc/english.txt", false)
 
-    if str and Idstring(str) and Idstring(str):key() == SystemInfo:language():key() then
-      loc:load_localization_file(BBMenu._path .. "loc/" .. filename)
-      break
-    end
-  end
-
-  loc:load_localization_file(BBMenu._path .. "loc/english.txt", false)
+  loc:load_localization_file(BBMenu._path .. "loc/chinese.txt", false)
 end)
 
 Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_BBMenu", function(menu_manager)
