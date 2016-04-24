@@ -1,107 +1,107 @@
 {
-  "menu_id": "bb_menu",
-  "parent_menu_id": "lua_mod_options_menu",
-  "title": "bb_menu_title",
-  "description": "bb_menu_desc",
-  "items": [
-    {
-      "type": "multiple_choice",
-      "id": "number_choice",
-      "title": "number_choice_title",
-      "description": "number_choice_desc",
-      "callback": "callback_number_choice",
-      "items": [
-        "number_choice_one",
-        "number_choice_two",
-        "number_choice_three"
-      ],
-      "value": "number",
-      "default_value": 2
-    },
-    {
-      "type": "multiple_choice",
-      "id": "health_choice",
-      "title": "health_choice_title",
-      "description": "health_choice_desc",
-      "callback": "callback_health_choice",
-      "items": [
-        "health_choice_default",
-        "health_choice_no_scale",
-        "health_choice_realtech",
-        "health_choice_realsuit",
-        "health_choice_realgrind",
-        "health_choice_grey",
-        "health_choice_tan",
-        "health_choice_taser",
-        "health_choice_cloaker"
-      ],
-      "value": "health",
-      "default_value": 1
-    },
-    {
-      "type": "multiple_choice",
-      "id": "speed_choice",
-      "title": "speed_choice_title",
-      "description": "speed_choice_desc",
-      "callback": "callback_speed_choice",
-      "items": [
-        "speed_choice_very_slow",
-        "speed_choice_slow",
-        "speed_choice_normal",
-        "speed_choice_fast",
-        "speed_choice_very_fast",
-        "speed_choice_lightning"
-      ],
-      "value": "speed",
-      "default_value": 4
-    },
-    {
-      "type": "multiple_choice",
-      "id": "move_choice",
-      "title": "move_choice_title",
-      "description": "move_choice_desc",
-      "callback": "callback_move_choice",
-      "items": [
-        "move_choice_default",
-        "move_choice_dodge",
-        "move_choice_no_crouching"
-      ],
-      "value": "move",
-      "default_value": 1
-    },
-    {
-      "type": "multiple_choice",
-      "id": "weaprof_choice",
-      "title": "weaprof_choice_title",
-      "description": "weaprof_choice_desc",
-      "callback": "callback_weaprof_choice",
-      "items": [
-        "weaprof_choice_default",
-        "weaprof_choice_normal",
-        "weaprof_choice_good",
-        "weaprof_choice_expert",
-        "weaprof_choice_deathwish"
-      ],
-      "value": "weaprof",
-      "default_value": 1
-    },
-    {
-      "type": "toggle",
-      "id": "ak_toggle",
-      "title": "ak_toggle_title",
-      "description": "ak_toggle_desc",
-      "callback": "callback_ak_toggle",
-      "value": "akrifles",
-      "default_value": false
-    },
-    {
-      "type": "toggle",
-      "id": "path_toggle",
-      "title": "path_toggle_title",
-      "description": "path_toggle_desc",
-      "callback": "callback_path_toggle",
-      "value": "coppath",
-      "default_value": false
-    }
-  ]
+	"menu_id" : "bb_menu",
+	"parent_menu_id" : "lua_mod_options_menu",
+	"title" : "bb_menu_title",
+	"description" : "bb_menu_desc",
+	"items" : [
+		{
+			"type" : "multiple_choice",
+			"id" : "number_choice",
+			"title" : "number_choice_title",
+			"description" : "number_choice_desc",
+			"callback" : "callback_number_choice",
+			"items" : [
+				"number_choice_one",
+				"number_choice_two",
+				"number_choice_three"
+			],
+			"value" : "number",
+			"default_value" : 2,
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "health_choice",
+			"title" : "health_choice_title",
+			"description" : "health_choice_desc",
+			"callback" : "callback_health_choice",
+			"items" : [
+				"health_choice_default",
+				"health_choice_no_scale",
+				"health_choice_realtech",
+				"health_choice_realsuit",
+				"health_choice_realgrind",
+				"health_choice_grey",
+				"health_choice_tan",
+				"health_choice_taser",
+				"health_choice_cloaker"
+			],
+			"value" : "health",
+			"default_value" : 1,
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "speed_choice",
+			"title" : "speed_choice_title",
+			"description" : "speed_choice_desc",
+			"callback" : "callback_speed_choice",
+			"items" : [
+				"speed_choice_very_slow",
+				"speed_choice_slow",
+				"speed_choice_normal",
+				"speed_choice_fast",
+				"speed_choice_very_fast",
+				"speed_choice_lightning"
+			],
+			"value" : "speed",
+			"default_value" : 4,
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "move_choice",
+			"title" : "move_choice_title",
+			"description" : "move_choice_desc",
+			"callback" : "callback_move_choice",
+			"items" : [
+				"move_choice_default",
+				"move_choice_dodge",
+				"move_choice_no_crouching"
+			],
+			"value" : "move",
+			"default_value" : 1,
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "weaprof_choice",
+			"title" : "weaprof_choice_title",
+			"description" : "weaprof_choice_desc",
+			"callback" : "callback_weaprof_choice",
+			"items" : [
+				"weaprof_choice_default",
+				"weaprof_choice_normal",
+				"weaprof_choice_good",
+				"weaprof_choice_expert",
+				"weaprof_choice_deathwish"
+			],
+			"value" : "weaprof",
+			"default_value" : 1,
+		},
+		{
+			"type" : "toggle",
+			"id" : "ak_toggle",
+			"title" : "ak_toggle_title",
+			"description" : "ak_toggle_desc",
+			"callback" : "callback_ak_toggle",
+			"value" : "akrifles",
+			"default_value" : false,
+		},
+		{
+			"type" : "toggle",
+			"id" : "path_toggle",
+			"title" : "path_toggle_title",
+			"description" : "path_toggle_desc",
+			"callback" : "callback_path_toggle",
+			"value" : "coppath",
+			"default_value" : false,
+		}
+	]
 }

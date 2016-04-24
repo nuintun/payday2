@@ -1,4 +1,5 @@
 _G.BBMenu = _G.BBMenu or {}
+
 BBMenu._path = ModPath
 BBMenu._data_path = ModPath .. "bb_data.txt"
 BBMenu._data = {}
@@ -22,7 +23,16 @@ function BBMenu:Load()
 end
 
 Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_BBMenu", function(loc)
-  loc:load_localization_file(BBMenu._path .. "cn.txt")
+  for _, filename in pairs(file.GetFiles(BBMenu._path .. "loc/")) do
+    local str = filename:match('^(.*).txt$')
+
+    if str and Idstring(str) and Idstring(str):key() == SystemInfo:language():key() then
+      loc:load_localization_file(BBMenu._path .. "loc/" .. filename)
+      break
+    end
+  end
+
+  loc:load_localization_file(BBMenu._path .. "loc/english.txt", false)
 end)
 
 Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_BBMenu", function(menu_manager)
@@ -168,6 +178,7 @@ if RequiredScript == "lib/managers/criminalsmanager" then
       v.move_speed = movespeed
 
       local original_weapon_choice = v.weapon.weapons_of_choice
+
       v.weapon = deep_clone(tweak_data.character.presets.weapon.gang_member)
       v.weapon.weapons_of_choice = BBMenu._data.akrifles and { primary = Idstring("units/payday2/weapons/wpn_npc_ak47/wpn_npc_ak47") } or original_weapon_choice
 
@@ -217,7 +228,11 @@ if RequiredScript == "lib/units/player_team/logics/teamailogicassault" then
       end
     end
 
-    to_mark:contour():add("mark_enemy", true)
+    if managers.player:has_category_upgrade("player", "special_enemy_highlight") and Global.game_settings.single_player then
+      to_mark:contour():add(managers.player:has_category_upgrade("player", "marked_enemy_extra_damage") and "mark_enemy_damage_bonus" or "mark_enemy", true)
+    else
+      to_mark:contour():add("mark_enemy", true)
+    end
   end
 end
 
@@ -280,13 +295,18 @@ if RequiredScript == "lib/units/player_team/logics/teamailogicidle" then
           local enemy_type = att_unit:base()._tweak_table
 
           if visible then
-            if enemy_type == "shield" or enemy_type == "phalanx_minion" then
+            if enemy_type == "shield" then
               local target_vec = data.m_pos - att_unit:movement():m_pos()
               local spin = target_vec:to_polar_with_reference(att_unit:movement():m_rot():y(), math.UP).spin
 
               target_priority_slot = math.abs(spin) > 90 and 1 or 7
             else
-              if enemy_type == "sniper" or (enemy_type == "spooc" and distance < 2500) then
+              if enemy_type == "tank" and near then
+                local target_vec = data.m_pos - att_unit:movement():m_pos()
+                local spin = target_vec:to_polar_with_reference(att_unit:movement():m_rot():y(), math.UP).spin
+
+                target_priority_slot = math.abs(spin) < 90 and 1 or 3
+              elseif enemy_type == "sniper" or (enemy_type == "phalanx_minion" and near) then
                 target_priority_slot = 1
               elseif (dangerous_special or been_marked) and distance < 1600 then
                 target_priority_slot = 2
@@ -338,6 +358,10 @@ end
 
 if RequiredScript == "lib/units/beings/player/states/playerbleedout" then
   function PlayerBleedOut._register_revive_SO(revive_SO_data, variant)
+    if managers.player:has_category_upgrade("player", "revive_interaction_speed_multiplier") and Global.game_settings.single_player then
+      tweak_data.interaction.revive.timer = 3
+    end
+
     if revive_SO_data.SO_id or not managers.navigation:is_data_ready() then
       return
     end
@@ -358,7 +382,6 @@ if RequiredScript == "lib/units/beings/player/states/playerbleedout" then
         }
       }
     }
-
     local objective = {
       type = "revive",
       follow_unit = revive_SO_data.unit,
@@ -406,11 +429,77 @@ if RequiredScript == "lib/units/beings/player/states/playerbleedout" then
     local so_id = "Playerrevive"
 
     revive_SO_data.SO_id = so_id
+
     managers.groupai:state():add_special_objective(so_id, so_descriptor)
 
     if not revive_SO_data.deathguard_SO_id then
       revive_SO_data.deathguard_SO_id = PlayerBleedOut._register_deathguard_SO(revive_SO_data.unit)
     end
+  end
+end
+
+if RequiredScript == "lib/units/player_team/logics/teamailogicdisabled" then
+  function TeamAILogicDisabled._register_revive_SO(data, my_data, rescue_type)
+    local followup_objective = {
+      type = "act",
+      scan = true,
+      action = {
+        type = "act",
+        body_part = 1,
+        variant = "crouch",
+        blocks = {
+          action = -1,
+          walk = -1,
+          hurt = -1,
+          heavy_hurt = -1,
+          aim = -1
+        }
+      }
+    }
+    local objective = {
+      type = "revive",
+      follow_unit = data.unit,
+      called = true,
+      scan = true,
+      destroy_clbk_key = false,
+      nav_seg = data.unit:movement():nav_tracker():nav_segment(),
+      fail_clbk = callback(TeamAILogicDisabled, TeamAILogicDisabled, "on_revive_SO_failed", data),
+      interrupt_dis = 0,
+      interrupt_health = 0,
+      interrupt_suppression = false,
+      action = {
+        type = "act",
+        variant = rescue_type,
+        body_part = 1,
+        blocks = {
+          action = -1,
+          walk = -1,
+          light_hurt = -1,
+          hurt = -1,
+          heavy_hurt = -1,
+          aim = -1
+        },
+        align_sync = true
+      },
+      action_duration = tweak_data.interaction[data.name == "surrender" and "free" or "revive"].timer,
+      followup_objective = followup_objective
+    }
+    local so_descriptor = {
+      objective = objective,
+      base_chance = 1,
+      chance_inc = 0,
+      interval = 0,
+      search_dis_sq = 1000000,
+      search_pos = mvector3.copy(data.m_pos),
+      usage_amount = 1,
+      AI_group = "friendlies",
+      admin_clbk = callback(TeamAILogicDisabled, TeamAILogicDisabled, "on_revive_SO_administered", data)
+    }
+    local so_id = "TeamAIrevive" .. tostring(data.key)
+
+    my_data.SO_id = so_id
+    managers.groupai:state():add_special_objective(so_id, so_descriptor)
+    my_data.deathguard_SO_id = PlayerBleedOut._register_deathguard_SO(data.unit)
   end
 end
 
@@ -443,6 +532,7 @@ if RequiredScript == "lib/managers/mission/elementmissionend" then
     elseif Application:editor() then
       managers.editor:output_error("Cant change to state " .. self._values.state .. " in mission end element " .. self._editor_name .. ".")
     end
+
     ElementMissionEnd.super.on_executed(self, instigator)
   end
 end
@@ -461,7 +551,7 @@ if RequiredScript == "lib/units/enemies/cop/copbrain" then
     }
 
     if not managers.groupai:state():whisper_mode() and BBMenu._data.coppath == true then
-      params.access_pos = (tweak_data.character.heavy_swat.access)
+      params.access_pos = (tweak_data.character.spooc.access)
     end
 
     self._logic_data.active_searches[search_id] = true
@@ -483,7 +573,7 @@ if RequiredScript == "lib/units/enemies/cop/copbrain" then
     }
 
     if not managers.groupai:state():whisper_mode() and BBMenu._data.coppath == true then
-      params.access_pos = (tweak_data.character.heavy_swat.access)
+      params.access_pos = (tweak_data.character.spooc.access)
     end
 
     self._logic_data.active_searches[search_id] = true
@@ -505,7 +595,7 @@ if RequiredScript == "lib/units/enemies/cop/copbrain" then
     }
 
     if not managers.groupai:state():whisper_mode() and BBMenu._data.coppath == true then
-      params.access_pos = (tweak_data.character.heavy_swat.access)
+      params.access_pos = (tweak_data.character.spooc.access)
     end
 
     self._logic_data.active_searches[search_id] = true
@@ -525,7 +615,7 @@ if RequiredScript == "lib/units/enemies/cop/copbrain" then
     }
 
     if not managers.groupai:state():whisper_mode() and BBMenu._data.coppath == true then
-      params.access_pos = (tweak_data.character.heavy_swat.access)
+      params.access_pos = (tweak_data.character.spooc.access)
     end
 
     self._logic_data.active_searches[search_id] = true
@@ -547,7 +637,7 @@ if RequiredScript == "lib/units/enemies/cop/copbrain" then
     }
 
     if not managers.groupai:state():whisper_mode() and BBMenu._data.coppath == true then
-      params.access_pos = (tweak_data.character.heavy_swat.access)
+      params.access_pos = (tweak_data.character.spooc.access)
     end
 
     self._logic_data.active_searches[search_id] = 2
@@ -557,10 +647,91 @@ if RequiredScript == "lib/units/enemies/cop/copbrain" then
   end
 end
 
+if RequiredScript == "lib/units/player_team/teamaimovement" then
+  function TeamAIMovement:tased()
+    if managers.player:has_category_upgrade("player", "taser_malfunction") and Global.game_settings.single_player then
+      return
+    else
+      return self._unit:anim_data().tased
+    end
+  end
+
+  function TeamAIMovement:on_SPOOCed(enemy_unit)
+    if managers.player:has_category_upgrade("player", "counter_strike_spooc") and Global.game_settings.single_player then
+      return "countered"
+    else
+      self._unit:character_damage():on_incapacitated()
+    end
+  end
+end
+
+if RequiredScript == "lib/units/civilians/logics/civilianlogicsurrender" then
+  local old_cls = CivilianLogicSurrender.on_alert
+
+  function CivilianLogicSurrender.on_alert(data, alert_data)
+    old_cls(self, data, alert_data)
+    if CopLogicBase.is_alert_aggressive(alert_data[1]) then
+      local aggressor = alert_data[5]
+      if aggressor and aggressor:base() then
+        local is_intimidation
+
+        if Global.game_settings.single_player then
+          if managers.player:has_category_upgrade("player", "civ_calming_alerts") then
+            is_intimidation = true
+          end
+        else
+          if aggressor:base().is_local_player then
+            if managers.player:has_category_upgrade("player", "civ_calming_alerts") then
+              is_intimidation = true
+            end
+          elseif aggressor:base().is_husk_player and aggressor:base():upgrade_value("player", "civ_calming_alerts") then
+            is_intimidation = true
+          end
+        end
+        if is_intimidation and not data.is_tied then
+          data.unit:brain():on_intimidated(1, aggressor)
+          return
+        end
+      end
+    end
+  end
+end
+
+function getNode(id)
+  for name, script in pairs(managers.mission:scripts()) do
+    if script:element(id) then
+      return script:element(id)
+    end
+  end
+end
+
+function executeNode(id)
+  local node = getNode(id)
+
+  if node then
+    node._values.trigger_times = 2
+  else
+    io.write("NODE DOES NOT EXIST")
+  end
+end
+
+if RequiredScript == "lib/units/enemies/cop/actions/full_body/copactionwarp" then
+  local old_caw = CopActionWarp.init
+
+  function CopActionWarp:init(action_desc, common_data)
+    old_caw(self, action_desc, common_data)
+
+    if Global.game_settings.level_id == "pbr2" then
+      executeNode(101020)
+      executeNode(101021)
+    end
+  end
+end
+
 Hooks:Add("NetworkManagerOnPeerAdded", "NetworkManagerOnPeerAdded_BB", function(peer, peer_id)
   if Network:is_server() then
     DelayedCalls:Add("DelayedWarnModBB" .. tostring(peer_id), 2, function()
-      local message = "主机已运行 Better Bots: AI队友将得到调整和改进。"
+      local message = "Host is running 'Better Bots': AI teammates will be tweaked and improved."
       local peer2 = managers.network:session() and managers.network:session():peer(peer_id)
 
       if peer2 then

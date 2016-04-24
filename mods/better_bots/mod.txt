@@ -1,12 +1,20 @@
 {
   "name": "Better Bots",
   "description": "自定义AI队友",
-  "author": "Schmuddel, Spruebox, TdlQ",
+  "author": "Schmuddel",
   "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=12736",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "hooks": [
     {
       "hook_id": "lib/managers/menumanager",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/managers/criminalsmanager",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/managers/mission/elementmissionend",
       "script_path": "betterbots.lua"
     },
     {
@@ -14,7 +22,31 @@
       "script_path": "betterbots.lua"
     },
     {
-      "hook_id": "lib/managers/criminalsmanager",
+      "hook_id": "lib/units/beings/player/states/playerbleedout",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/units/civilians/logics/civilianlogicsurrender",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/units/enemies/cop/actions/full_body/copactionwarp",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/units/enemies/cop/copbrain",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/units/enemies/cop/copdamage",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/units/player_team/logics/teamailogicassault",
+      "script_path": "betterbots.lua"
+    },
+    {
+      "hook_id": "lib/units/player_team/logics/teamailogicdisabled",
       "script_path": "betterbots.lua"
     },
     {
@@ -23,26 +55,6 @@
     },
     {
       "hook_id": "lib/units/player_team/teamaimovement",
-      "script_path": "betterbots.lua"
-    },
-    {
-      "hook_id": "lib/managers/mission/elementmissionend",
-      "script_path": "betterbots.lua"
-    },
-    {
-      "hook_id": "lib/units/beings/player/states/playerbleedout",
-      "script_path": "betterbots.lua"
-    },
-    {
-      "hook_id": "lib/units/player_team/logics/teamailogicassault",
-      "script_path": "betterbots.lua"
-    },
-    {
-      "hook_id": "lib/units/enemies/cop/copdamage",
-      "script_path": "betterbots.lua"
-    },
-    {
-      "hook_id": "lib/units/enemies/cop/copbrain",
       "script_path": "betterbots.lua"
     }
   ]
