@@ -1,0 +1,5 @@
+<merged_font>
+      <font name="fonts/font_small_shadow"/>
+	  <font name="fonts/font_small_cyrillic"/>
+      <font name="fonts/font_small_buttons_old_ps3" color="ffffff"/>
+</merged_font>
