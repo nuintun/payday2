@@ -1,0 +1,7 @@
+{
+  "name": "planks outline",
+  "author": "d¡ve_boмber",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=15444",
+  "version": "1.0.0",
+  "description": "木板高亮显示"
+}

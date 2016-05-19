@@ -1,0 +1,7 @@
+{
+  "name": "keycards outline",
+  "author": "FeelAlive",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=16109",
+  "version": "1.0.0",
+  "description": "钥匙卡高亮显示"
+}

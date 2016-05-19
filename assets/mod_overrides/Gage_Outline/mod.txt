@@ -1,0 +1,7 @@
+{
+  "name": "gage outline",
+  "author": "Corphix",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=15104",
+  "version": "1.0.3",
+  "description": "盖奇包裹高亮显示"
+}

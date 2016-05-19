@@ -1,0 +1,7 @@
+{
+  "name": "chemicals outline",
+  "author": "FeelAlive",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=16110",
+  "version": "1.0.0",
+  "description": "制毒材料高亮显示"
+}

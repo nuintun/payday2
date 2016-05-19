@@ -1,0 +1,7 @@
+{
+  "name": "crowbars outline",
+  "author": "FeelAlive",
+  "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=15746",
+  "version": "1.1.0",
+  "description": "撬棍高亮显示"
+}
