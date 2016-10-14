@@ -23,6 +23,8 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
   local hp = self._hud_panel
   local x = hp:w() / 2
   local y = hp:h() / 2
+  local w = HitMarks.settings.width
+  local h = HitMarks.settings.height
   local blend_mode = HitMarks.settings.blend_mode
 
   self.hitmark_bitmaps = {}
@@ -34,8 +36,8 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
 
     local bmp = hp:bitmap({
       layer = 1,
-      w = 15,
-      h = 15,
+      w = w,
+      h = h,
       name = hm.name,
       visible = false,
       valign = "center",
