@@ -1,0 +1,7 @@
+{
+  "name": "hd gadgets",
+  "author": "LemonCatHD",
+  "contact": "http://lastbullet.net/mydownloads.php?action=view_down&did=16777",
+  "version": "0.0.2",
+  "description": "高清盖奇配件包"
+}
