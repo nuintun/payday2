@@ -82,8 +82,8 @@ end
 --- 暴击回调
 function HUDHitConfirm:on_crit_confirmed()
   if HitMarks.hooked then
-    HitMarks.direct_hit = true
     HitMarks.critshot = true
+    HitMarks.direct_hit = true
   else
     AnimateToggle(self, self.hitmark_bitmaps[2])
   end
