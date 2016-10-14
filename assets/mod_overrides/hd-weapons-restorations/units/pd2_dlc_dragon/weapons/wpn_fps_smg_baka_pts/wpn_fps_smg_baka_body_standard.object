@@ -1,0 +1,17 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_dragon/weapons/wpn_fps_smg_baka_pts/wpn_fps_smg_baka_body_standard" orientation_object="rp_wpn_fps_smg_baka_body_standard" />
+	<animations>
+		<animation_group name="reload">
+			<object name="a_reload" enabled="true" />
+		</animation_group>
+		<animation_group name="recoil">
+			<object name="a_recoil" enabled="true" />
+		</animation_group>
+	</animations>
+	<graphics>
+		<object name="g_bolt" enabled="true" />
+		<object name="g_top" enabled="true" />
+		<object name="g_body" enabled="true" />
+		<object name="g_sights" enabled="true" />
+	</graphics>
+</dynamic_object>

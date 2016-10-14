@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_dragon/weapons/wpn_fps_smg_baka_pts/wpn_fps_smg_baka_s_standard" orientation_object="rp_wpn_fps_smg_baka_s_standard" />
+	<graphics>
+		<object name="g_stock" enabled="true" />
+	</graphics>
+</dynamic_object>

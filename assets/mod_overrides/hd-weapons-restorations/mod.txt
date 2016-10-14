@@ -1,0 +1,7 @@
+{
+  "name": "hd-weapons-restorations",
+  "author": "AdayDr1en",
+  "contact": "http://lastbullet.net/mydownloads.php?action=view_down&did=12333",
+  "version": "1.4.0",
+  "description": "收获日2高清武器模组"
+}

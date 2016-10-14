@@ -1,7 +1,0 @@
-{
-  "name": "hd-weapons",
-  "author": "Abiii",
-  "contact": "http://lastbullet.net/mydownloads.php?action=view_down&did=16904",
-  "version": "1.0.0",
-  "description": "收获日2 NPC 高清武器模组，依赖 BeardLib 库"
-}
