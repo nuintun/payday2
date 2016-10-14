@@ -1,5 +1,5 @@
 {
-  "name": "hd npc weapons",
+  "name": "npc-weapons-customization",
   "author": "I am not a spy... & LASTBULLET_GREAT BIG BUSHY BEARD",
   "contact": "http://forums.lastbullet.net/mydownloads.php?action=view_down&did=12413",
   "version": "2.0.0",
