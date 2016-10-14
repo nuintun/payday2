@@ -1,0 +1,7 @@
+{
+  "name": "hd atm",
+  "author": "LemonCatHD",
+  "contact": "http://lastbullet.net/mydownloads.php?action=view_down&did=15735",
+  "version": "0.0.2",
+  "description": "高清ATM机，有三个版本，自行切换，df.texture为生效版本"
+}
