@@ -1,0 +1,7 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_clover/weapons/wpn_third_ass_l85a2_pts/wpn_third_ass_l85a2_fg_long" orientation_object="rp_wpn_fps_ass_l85a2_fg_long" />
+	<graphics>
+		<object name="g_fg" enabled="true" />
+		<object name="g_vg" enabled="true" />
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,8 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_casino/weapons/wpn_third_ass_sub2000_pts/wpn_third_ass_sub2000_o_back_down" orientation_object="rp_wpn_fps_ass_sub2000_o_back_down" />
+	<graphics>
+		<object name="g_rear_down" enabled="true" />
+		
+		<object name="g_back_sight" enabled="true" />
+	</graphics>
+</dynamic_object>

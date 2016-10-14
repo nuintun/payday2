@@ -1,0 +1,19 @@
+<materials version="3">
+    <material name="mtr_third_body" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_snp/weapons/wpn_third_snp_msr_pts/third_body_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_snp/weapons/wpn_third_snp_msr_pts/third_body_nm"/>
+    </material>
+    <material name="mtr_third_bolt" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_snp/weapons/wpn_third_snp_msr_pts/third_bolt_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_snp/weapons/wpn_third_snp_msr_pts/third_bolt_nm"/>
+    </material>
+    
+    <material name="mtr_body_msr" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_msr_pts/body_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_msr_pts/body_nm"/>
+    </material>
+    <material name="mtr_receiver" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_msr_pts/receiver_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_msr_pts/receiver_nm"/>
+    </material>
+</materials>

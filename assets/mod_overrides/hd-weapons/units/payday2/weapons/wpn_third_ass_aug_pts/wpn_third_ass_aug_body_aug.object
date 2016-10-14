@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_ass_aug_pts/wpn_third_ass_aug_body_aug" orientation_object="rp_wpn_fps_aug_body_aug" />
+    <graphics>
+        <object name="g_body" enabled="true" />
+        <object name="g_handle" enabled="true" />
+    </graphics>
+</dynamic_object>

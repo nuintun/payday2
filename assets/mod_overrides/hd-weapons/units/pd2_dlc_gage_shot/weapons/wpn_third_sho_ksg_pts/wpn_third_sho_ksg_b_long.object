@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_sho_ksg_b_long" materials="units/pd2_dlc_gage_shot/weapons/wpn_third_sho_ksg_pts/wpn_third_sho_ksg_b_long" />
+    <graphics>
+        <object enabled="true" name="g_barrel_long" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_upg_ns_ass_smg_small/wpn_third_upg_ns_ass_smg_small" orientation_object="rp_wpn_fps_upg_ns_ass_smg_small" />
+    <graphics>
+        <object name="g_small" enabled="true" />
+    </graphics>
+</dynamic_object>

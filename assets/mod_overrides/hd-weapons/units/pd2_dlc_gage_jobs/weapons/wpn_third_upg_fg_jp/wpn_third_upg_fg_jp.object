@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_upg_fg_jp" materials="units/pd2_dlc_gage_jobs/weapons/wpn_third_upg_fg_jp/wpn_third_upg_fg_jp" />
+    <graphics>
+        <object enabled="true" name="g_jp" />
+    </graphics>
+</dynamic_object>

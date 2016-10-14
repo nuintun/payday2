@@ -1,0 +1,6 @@
+<materials version="3">
+    <material name="molotov" render_template="generic:DIFFUSE_TEXTURE:DOUBLE_SIDED:GLOBAL_ENVIRONMENT_MAPPING:NORMALMAP:RL_3RD_WEAPONS" version="2">
+        <diffuse_texture file="units/pd2_dlc_bbq/weapons/molotov_cocktail/textures/molotov_df"/>
+        <bump_normal_texture file="units/pd2_dlc_bbq/weapons/molotov_cocktail/textures/molotov_nm"/>
+    </material>
+</materials>

@@ -1,0 +1,14 @@
+<dynamic_object>
+	<diesel materials="units/pd2_hw_boxing/weapons/wpn_fps_mel_boxing_gloves/wpn_third_mel_boxing_gloves" orientation_object="rp_wpn_fps_mel_boxing_gloves" />
+	<animations>
+		<animation_group name="menu">
+		<object name="anim_glove_1" enabled="false" />
+		<object name="anim_glove_2" enabled="false" />
+		</animation_group>    
+	</animations>
+
+	<graphics>
+		<object name="g_glove_1" enabled="true" />
+		<object name="g_glove_2" enabled="true" />
+	</graphics>
+</dynamic_object>

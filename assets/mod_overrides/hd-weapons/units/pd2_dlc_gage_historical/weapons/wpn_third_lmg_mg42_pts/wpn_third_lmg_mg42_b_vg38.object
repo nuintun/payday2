@@ -1,0 +1,12 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_lmg_mg42_b_vg38" materials="units/pd2_dlc_gage_historical/weapons/wpn_third_lmg_mg42_pts/wpn_third_lmg_mg42_b_vg38" />
+    <animations>
+        <animation_group name="anim_grp0" >
+            <object enabled="false" name="a_ns" />
+        </animation_group>
+    </animations>
+    <graphics>
+        <object enabled="true" name="g_folded_legs" />
+        <object enabled="true" name="g_barrel_mg34" />
+    </graphics>
+</dynamic_object>

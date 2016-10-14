@@ -1,0 +1,8 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_pis_g26_g_laser" materials="units/pd2_crimefest_2014/oct22/weapons/wpn_third_pis_g26_pts/wpn_third_pis_g26_g_laser" />
+    <graphics>
+        <object enabled="true" name="g_grip" />
+        <object enabled="false" name="g_indicator" />
+        <object enabled="false" name="g_laser" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,11 @@
+<materials version="3">
+    <material name="mtr_s_4_third" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_assault/weapons/wpn_third_ass_galil_pts/third_s04_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_assault/weapons/wpn_third_ass_galil_pts/third_s04_nm"/>
+    </material>
+    
+    <material name="mtr_s_4" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_assault/weapons/wpn_fps_ass_galil_pts/s_4_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_assault/weapons/wpn_fps_ass_galil_pts/s_4_nm"/>
+    </material>
+</materials>

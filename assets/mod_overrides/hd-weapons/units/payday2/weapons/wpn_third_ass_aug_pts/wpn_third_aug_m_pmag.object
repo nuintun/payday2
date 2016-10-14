@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_aug_m_pmag" materials="units/payday2/weapons/wpn_third_ass_aug_pts/wpn_third_aug_m_pmag" />
+  <animations>
+    <animation_group name="reload">
+      <object name="mag_align" enabled="false" />
+    </animation_group>    
+	<animation_group name="reload_not_empty">
+      <object name="mag_align_2" enabled="false" />
+    </animation_group>
+  </animations>
+  <graphics>
+        <object  name="g_wpn_fps_upg_m4_m_pmag" enabled="true" />
+  </graphics>
+</dynamic_object>

@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_m4_uupg_o_flipup" materials="units/payday2/weapons/wpn_third_ass_m4_pts/wpn_third_m4_uupg_o_flipup" />
+  <graphics>
+        <object  name="g_flipup" enabled="true" />
+        <object  name="g_no_blurr" enabled="false" />
+  </graphics>
+</dynamic_object>

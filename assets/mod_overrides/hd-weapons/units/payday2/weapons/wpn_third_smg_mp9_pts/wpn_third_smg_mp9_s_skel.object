@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_smg_mp9_pts/wpn_third_smg_mp9_s_skel" orientation_object="rp_wpn_fps_smg_mp9_s_skel" />
+    <graphics>
+        <object name="g_skeletal" enabled="true" />
+    </graphics>
+</dynamic_object>

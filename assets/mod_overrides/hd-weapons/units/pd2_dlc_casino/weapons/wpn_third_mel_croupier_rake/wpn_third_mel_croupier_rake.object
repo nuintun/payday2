@@ -1,0 +1,8 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_mel_croupier_rake" materials="units/pd2_dlc_casino/weapons/wpn_third_mel_croupier_rake/wpn_third_mel_croupier_rake" />
+    <graphics>
+        <object name="g_wpn_third_mel_croupier_rake" enabled="true" />
+        
+        <object name="g_wpn_fps_mel_croupier_rake" enabled="true" />
+    </graphics>
+</dynamic_object>

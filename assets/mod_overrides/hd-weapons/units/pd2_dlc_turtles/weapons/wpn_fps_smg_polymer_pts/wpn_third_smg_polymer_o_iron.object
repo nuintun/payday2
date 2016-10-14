@@ -1,0 +1,7 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_turtles/weapons/wpn_fps_smg_polymer_pts/wpn_third_smg_polymer_o_iron" orientation_object="rp_wpn_fps_smg_polymer_o_iron" />
+	<graphics>
+		<object name="g_sights" enabled="true" />
+		<object name="g_sight" enabled="true" />
+	</graphics>
+</dynamic_object>

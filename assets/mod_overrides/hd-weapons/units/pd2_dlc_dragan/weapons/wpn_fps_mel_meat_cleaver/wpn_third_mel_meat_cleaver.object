@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_dragan/weapons/wpn_fps_mel_meat_cleaver/wpn_third_mel_meat_cleaver" orientation_object="rp_wpn_fps_mel_meat_cleaver" />
+	<graphics>
+		<object name="g_cleaver" enabled="true" />
+	</graphics>
+</dynamic_object>

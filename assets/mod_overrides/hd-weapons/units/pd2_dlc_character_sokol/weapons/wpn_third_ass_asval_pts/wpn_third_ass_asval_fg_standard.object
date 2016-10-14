@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_character_sokol/weapons/wpn_third_ass_asval_pts/wpn_third_ass_asval_fg_standard" orientation_object="rp_wpn_fps_ass_asval_fg_standard" />
+	<graphics>
+		<object name="g_foregrip" enabled="true" />
+	</graphics>
+</dynamic_object>

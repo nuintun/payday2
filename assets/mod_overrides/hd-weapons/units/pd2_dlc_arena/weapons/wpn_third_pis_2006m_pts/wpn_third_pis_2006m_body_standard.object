@@ -1,0 +1,25 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_arena/weapons/wpn_third_pis_2006m_pts/wpn_third_pis_2006m_body_standard" orientation_object="rp_wpn_fps_pis_2006m_body_standard" />
+	
+	<animations>
+    <animation_group name="reload">
+		<object name="a_reload_hammer" enabled="true" />
+		<object name="a_reload_mag_release" enabled="true" />
+    </animation_group>
+	
+    <animation_group name="reload_not_empty">
+		<object name="a_reload_not_empty_hammer" enabled="true" />		
+		<object name="a_reload_not_empty_mag_release" enabled="true" />
+    </animation_group>
+
+    <animation_group name="recoil">
+		<object name="a_recoil_hammer" enabled="true" />
+    </animation_group>
+  </animations>
+  
+	<graphics>
+		<object name="g_hammer" enabled="true" />
+		<object name="g_mag_release" enabled="true" />
+		<object name="g_body" enabled="true" />
+	</graphics>
+</dynamic_object>

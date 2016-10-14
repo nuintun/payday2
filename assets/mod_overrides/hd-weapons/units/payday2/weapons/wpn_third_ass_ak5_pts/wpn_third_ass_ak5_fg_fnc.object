@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_ass_ak5_pts/wpn_third_ass_ak5_fg_fnc" orientation_object="rp_wpn_fps_ass_ak5_fg_fnc" />
+    <graphics>
+        <object name="g_fg_fnc" enabled="true" />
+    </graphics>
+</dynamic_object>

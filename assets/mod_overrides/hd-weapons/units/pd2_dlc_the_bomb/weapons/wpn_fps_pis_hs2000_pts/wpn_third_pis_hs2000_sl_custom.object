@@ -1,0 +1,18 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_the_bomb/weapons/wpn_fps_pis_hs2000_pts/wpn_third_pis_hs2000_sl_custom" orientation_object="rp_wpn_fps_pis_hs2000_sl_custom" />
+	<animations>		
+		<animation_group name="reload" enabled="false" >
+			<object name="anim_bolt_reload" />
+			<object name="anim_barrel_reload" />
+		</animation_group>
+		<animation_group name="recoil" enabled="false" >
+			<object name="anim_bolt_recoil" />
+			<object name="anim_barrel_recoil" />
+		</animation_group>
+	</animations>
+	<graphics>
+		<object name="g_static_barrel_piece" enabled="true" />
+		<object name="g_slide_custom" enabled="true" />
+		<object name="g_barrel" enabled="true" />
+	</graphics>
+</dynamic_object>

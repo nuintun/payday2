@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_pis_b92fs_pts/wpn_third_pis_beretta" orientation_object="rp_wpn_fps_pis_beretta_m_std"/>
+    <animations>
+		<animation_group name="reload">
+			<object name="mag_align" enabled="false" />
+		</animation_group>
+		<animation_group name="reload_not_empty">
+			<object name="mag_align_2" enabled="false" />
+		</animation_group>
+	</animations>
+  <graphics>
+        <object enabled="true" name="g_mag" />
+    </graphics>
+</dynamic_object>

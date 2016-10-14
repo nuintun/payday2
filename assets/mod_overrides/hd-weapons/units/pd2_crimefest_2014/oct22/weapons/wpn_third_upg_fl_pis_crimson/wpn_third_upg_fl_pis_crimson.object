@@ -1,0 +1,8 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_upg_fl_pis_crimson" materials="units/pd2_crimefest_2014/oct22/weapons/wpn_third_upg_fl_pis_crimson/wpn_third_upg_fl_pis_crimson" />
+    <graphics>
+        <object enabled="false" name="g_laser" />
+        <object enabled="false" name="g_indicator" />
+        <object enabled="true" name="g_g" />
+    </graphics>
+</dynamic_object>

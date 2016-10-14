@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_turtles/weapons/wpn_third_bow_hunter_pts/wpn_third_bow_hunter_g_camo" orientation_object="rp_wpn_fps_bow_dragon_g_camo" />
+	<graphics>
+		<object name="g_camo" enabled="true" />
+	</graphics>
+</dynamic_object>

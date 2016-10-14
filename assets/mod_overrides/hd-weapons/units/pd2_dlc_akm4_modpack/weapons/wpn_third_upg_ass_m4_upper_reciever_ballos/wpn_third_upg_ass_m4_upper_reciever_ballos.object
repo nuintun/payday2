@@ -1,0 +1,12 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_akm4_modpack/weapons/wpn_third_upg_ass_m4_upper_reciever_ballos/wpn_third_upg_ass_m4_upper_reciever_ballos" orientation_object="rp_wpn_fps_upg_ass_m4_upper_reciever_ballos" />
+	<animations>		
+		<animation_group name="reload" enabled="false" >
+			<object name="a_anim_reciever" />
+		</animation_group>
+	</animations>
+  <graphics>
+        <object  name="g_upper" enabled="true" />
+        <object  name="g_bolt" enabled="true" />
+  </graphics>
+</dynamic_object>

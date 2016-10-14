@@ -1,0 +1,15 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_butcher_mods/weapons/wpn_third_aug_body_f90/wpn_third_aug_body_f90" orientation_object="rp_wpn_fps_aug_body_f90" />
+	 <animations>
+		<animation_group name="reload">
+			<object name="anim_bolt_reload" enabled="false" />
+		</animation_group>
+  </animations>
+  
+	<graphics>
+		<object name="g_body" enabled="true" />
+		<object name="g_handle" enabled="true" />
+		<object name="g_body_f90" enabled="true" />
+	</graphics>
+	
+</dynamic_object> 

@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_casino/weapons/wpn_third_ass_sub2000_pts/wpn_third_ass_sub2000_o_adapter" orientation_object="rp_wpn_fps_ass_sub2000_o_adapter" />
+	<graphics>
+		<object name="g_adapter" enabled="true" />
+	</graphics>
+</dynamic_object>

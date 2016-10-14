@@ -1,0 +1,11 @@
+<materials version="3">
+    <material name="mtr_third_akgrip" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_jobs/weapons/wpn_third_upg_ak_g_pgrip/uspalm_third_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_jobs/weapons/wpn_third_upg_ak_g_pgrip/uspalm_third_nm"/>
+    </material>
+    
+    <material name="mtr_akgrip" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_jobs/weapons/wpn_fps_upg_ak_g_pgrip/uspalm_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_jobs/weapons/wpn_fps_upg_ak_g_pgrip/uspalm_nm"/>
+    </material>
+</materials>

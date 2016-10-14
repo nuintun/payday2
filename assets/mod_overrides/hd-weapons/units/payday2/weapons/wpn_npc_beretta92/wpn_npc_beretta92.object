@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/payday2/weapons/wpn_npc_beretta92/wpn_npc_beretta92" orientation_object="rp_beretta" />
+  <sequence_manager file="units/payday2/weapons/wpn_npc_beretta92/wpn_npc_beretta92" />
+  <bodies>
+	<body name="body" enabled="false" template="debris" pushed_by_mover="false">
+		<object name="rp_beretta" />
+		<object name="c_box" collision_type="box" mass="2.8" />
+	</body>
+  </bodies>
+  <graphics>
+    <!-- Disabled vanilla game meshes -->
+    <object enabled="false" name="g_body" />
+    <object enabled="false" name="g_body_lod1" />
+    <!-- Custom -->
+    <!-- Barrels -->
+    <object enabled="true" name="g_barrel_standard" />
+    <object enabled="false" name="g_barrel_co1" />
+    <object enabled="false" name="g_barrel_co2" />
+    <!-- Barrel Extensions -->
+    <object enabled="false" name="g_ns_large" />
+    <object enabled="false" name="g_ns_large_kac" />
+    <object enabled="false" name="g_ns_meatgrinder" />
+    <object enabled="false" name="g_ns_medium" />
+    <object enabled="false" name="g_ns_medium_gem" />
+    <object enabled="false" name="g_ns_medium_slim" />
+    <object enabled="false" name="g_ns_small" />
+    <!-- Body -->
+    <object enabled="true" name="g_body_beretta" />
+    <object enabled="true" name="g_body_hammer" />
+    <object enabled="true" name="g_body_rail" />
+    <!-- Grip -->
+    <object enabled="true" name="g_grip_std" />
+    <object enabled="false" name="g_grip_ergo" />
+    <!-- Magazines -->
+    <object enabled="true" name="g_mag_std" />
+    <object enabled="false" name="g_mag_extended" />
+    <!-- Optics -->
+    <object enabled="true" name="g_optics_ironsight" />
+    <object enabled="false" name="g_optics_marksmansight_rear" />
+    <object enabled="false" name="g_optics_rmr" />
+    <object enabled="false" name="g_optics_rmr_gfx_lens" />
+    <!-- Slide -->
+    <object enabled="true" name="g_slide_std" />
+    <object enabled="false" name="g_slide_brigadier" />
+    <!-- Attachments -->
+    <object enabled="true" name="g_attachment_tlr1" />
+    <object enabled="false" name=
+    "g_attachment_crimson" />
+    <object enabled="false" name=
+    "g_attachment_pistol_laser" />
+    <object enabled="false" name=
+    "g_attachment_x400w" />
+  </graphics>
+  
+</dynamic_object>

@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_upg_ak_reusable/wpn_third_ak" orientation_object="rp_wpn_upg_saiga_fg_standard"/>
+    <graphics>
+        <object enabled="true" name="g_handguard" />
+    </graphics>
+</dynamic_object>

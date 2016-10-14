@@ -1,0 +1,16 @@
+<dynamic_object>
+    <diesel materials="units/pd2_dlc_miami/weapons/wpn_third_smg_scorpion/wpn_third_smg_scorpion_body_standard" orientation_object="rp_wpn_fps_smg_scorpion_body_standard" />
+    <animations>		
+		<animation_group name="reload" enabled="false" >
+			<object name="a_reload" />
+		</animation_group>
+		<animation_group name="recoil" enabled="false" >
+			<object name="a_recoil" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_bolt" />
+        <object enabled="true" name="g_body" />
+        <object enabled="true" name="g_rail" />
+    </graphics>
+</dynamic_object>

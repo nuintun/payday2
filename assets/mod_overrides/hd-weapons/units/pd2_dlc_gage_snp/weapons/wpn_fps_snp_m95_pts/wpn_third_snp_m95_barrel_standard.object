@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_snp_m95_barrel_standard" materials="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_m95_pts/wpn_third_snp_m95_barrel_standard" />
+    <graphics>
+			<object enabled="true" inherit_bounding_volume="co_culling" name="g_medium" />
+    </graphics>
+</dynamic_object>

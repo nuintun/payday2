@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_upg_fl_pis_tlr1/wpn_third_upg_fl_pis_tlr1" orientation_object="rp_wpn_fps_upg_fl_pis_tlr1" />
+    <graphics>
+        <object name="g_tlr1" enabled="true" />
+        <object name="g_light" enabled="false" />
+    </graphics>
+</dynamic_object>

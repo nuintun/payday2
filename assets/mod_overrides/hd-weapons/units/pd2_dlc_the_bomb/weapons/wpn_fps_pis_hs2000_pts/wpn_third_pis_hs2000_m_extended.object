@@ -1,0 +1,17 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_the_bomb/weapons/wpn_fps_pis_hs2000_pts/wpn_third_pis_hs2000_m_extended" orientation_object="rp_wpn_fps_pis_hs2000_m_extended" />
+	<animations>		
+		<animation_group name="reload" enabled="false" >
+			<object name="mag_align" />
+		</animation_group>
+		<animation_group name="reload_not_empty" enabled="false" >
+			<object name="mag_align2" />
+		</animation_group>
+	</animations>
+	<graphics>
+		<object name="g_bullet_3" enabled="true" />
+		<object name="g_bullet_2" enabled="true" />
+		<object name="g_bullet_1" enabled="true" />
+		<object name="g_mag" enabled="true" />
+	</graphics> 
+</dynamic_object>

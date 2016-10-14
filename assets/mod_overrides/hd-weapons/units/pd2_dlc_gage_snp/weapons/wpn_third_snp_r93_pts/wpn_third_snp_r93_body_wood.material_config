@@ -1,0 +1,27 @@
+<materials version="3">
+    <material name="mtr_pouch_third" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_snp/weapons/wpn_third_snp_r93_pts/pouch_third_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_snp/weapons/wpn_third_snp_r93_pts/pouch_third_nm"/>
+    </material>
+    <material name="mtr_upper_third" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_snp/weapons/wpn_third_snp_r93_pts/upper_third_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_snp/weapons/wpn_third_snp_r93_pts/upper_third_nm"/>
+    </material>
+    <material name="mtr_wooden_third" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_snp/weapons/wpn_third_snp_r93_pts/wooden_third_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_snp/weapons/wpn_third_snp_r93_pts/wooden_third_nm"/>
+    </material>
+    
+    <material name="mtr_pouch" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_r93_pts/pouch_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_r93_pts/pouch_nm"/>
+    </material>
+    <material name="mtr_upper" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_r93_pts/upper_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_r93_pts/upper_nm"/>
+    </material>
+    <material name="mtr_wooden" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_r93_pts/wooden_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_r93_pts/wooden_nm"/>
+    </material>
+</materials>

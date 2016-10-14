@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_mel_firepoker" materials="units/pd2_dlc_bbq/weapons/poker/wpn_third_mel_poker" />
+    <graphics>
+        <object name="g_poker_fps" enabled="true" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/pd2_dlc1/weapons/wpn_third_pis_ppk_pts/wpn_third_pis_ppk_g_standard" orientation_object="rp_wpn_fps_pis_ppk_g_standard" />
+    <graphics>
+        <object enabled="true" name="g_grip" />
+    </graphics>
+</dynamic_object>

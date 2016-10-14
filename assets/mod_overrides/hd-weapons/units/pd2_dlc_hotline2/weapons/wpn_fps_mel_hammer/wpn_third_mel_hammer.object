@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_hotline2/weapons/wpn_fps_mel_hammer/wpn_third_mel_hammer" orientation_object="rp_wpn_fps_mel_hammer" />
+	<graphics>
+		<object name="g_hammer" enabled="true" />
+	</graphics>
+</dynamic_object> 

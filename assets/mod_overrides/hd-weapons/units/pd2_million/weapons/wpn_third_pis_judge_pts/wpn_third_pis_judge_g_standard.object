@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_pis_judge_g_standard" materials="units/pd2_million/weapons/wpn_third_pis_judge_pts/wpn_third_pis_judge_g_standard" />
+    <graphics>
+        <object enabled="true" name="g_grip" />
+    </graphics>
+</dynamic_object>

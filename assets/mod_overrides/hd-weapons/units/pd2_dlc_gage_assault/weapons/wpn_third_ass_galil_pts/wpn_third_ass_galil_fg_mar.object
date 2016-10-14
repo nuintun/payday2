@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_ass_galil_fg_mar" materials="units/pd2_dlc_gage_assault/weapons/wpn_third_ass_galil_pts/wpn_third_ass_galil_fg_mar" />
+    <graphics>
+        <object enabled="true" name="g_fg3" />
+        <object enabled="true" name="g_b" />
+    </graphics>
+</dynamic_object>

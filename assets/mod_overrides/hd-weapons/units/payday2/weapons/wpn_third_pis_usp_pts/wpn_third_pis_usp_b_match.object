@@ -1,0 +1,17 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_pis_usp_pts/wpn_third_pis_usp_b_match" orientation_object="rp_wpn_fps_pis_usp_b_match" />
+    <animations>
+		<animation_group name="reload">
+			<object name="anim_bolt_reload" enabled="false" />
+		</animation_group>
+		<animation_group name="recoil">
+			<object name="anim_bolt_recoil" enabled="false" />
+		</animation_group>
+    </animations>
+    <graphics>
+        <object enabled="true" name="g_slide" />
+        <object enabled="true" name="g_sights" />
+        <object enabled="true" name="g_comp" />
+        <object enabled="true" name="g_barrel" />
+    </graphics>
+</dynamic_object>

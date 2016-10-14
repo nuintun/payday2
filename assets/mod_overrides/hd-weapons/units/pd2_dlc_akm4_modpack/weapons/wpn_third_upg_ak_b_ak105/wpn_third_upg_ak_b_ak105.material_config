@@ -1,0 +1,10 @@
+<materials version="3">
+	<material name="mtr_third_ak105" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_akm4_modpack/weapons/wpn_third_upg_ak_b_ak105/third_ak105_df" />
+		<bump_normal_texture file="units/pd2_dlc_akm4_modpack/weapons/wpn_third_upg_ak_b_ak105/third_ak105_nm" />
+	</material>
+  <material name="mtr_ak105" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_akm4_modpack/weapons/wpn_fps_upg_ak_b_ak105/ak105_df" />
+		<bump_normal_texture file="units/pd2_dlc_akm4_modpack/weapons/wpn_fps_upg_ak_b_ak105/ak105_nm" />
+	</material>
+</materials>

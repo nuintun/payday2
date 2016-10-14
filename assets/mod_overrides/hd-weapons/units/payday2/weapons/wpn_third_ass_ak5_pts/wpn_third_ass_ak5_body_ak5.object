@@ -1,0 +1,15 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_ass_ak5_pts/wpn_third_ass_ak5_body_ak5" orientation_object="rp_wpn_fps_ass_ak5_body_ak5" />
+    <animations>
+		<animation_group name="reload">
+			<object name="anim_reload" enabled="false" />
+		</animation_group>
+		<animation_group name="recoil">
+			<object name="anim_recoil" enabled="false" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object name="g_body" enabled="true" />
+        <object name="g_draghandle" enabled="true" />
+    </graphics>
+</dynamic_object>

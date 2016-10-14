@@ -1,0 +1,32 @@
+<materials version="3">
+    <material name="barrel" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/barrel_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/barrel_nm"/>
+    </material>
+    <material name="dmr1" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/dmr_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/dmr_nm"/>
+    </material>
+    <material name="ebr" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/ebr_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/ebr_nm"/>
+    </material>
+    <material name="jae" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/jae_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/jae_nm"/>
+    </material>
+    <material name="lower" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/lower_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/lower_nm"/>
+    </material>
+    <material name="base" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/base_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/base_nm"/>
+    </material>
+    <material name="mag" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/mag_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_m14_pts/mag_nm"/>
+        <reflection_texture type="cubemap" global_texture="current_global_texture"/>
+        <variable value="5.3499999046326 0.25300002098083 14.5" type="vector3" name="environment_settings"/>
+    </material>
+</materials>

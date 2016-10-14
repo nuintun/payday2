@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_smg_sterling_s_nostock" materials="units/pd2_dlc_gage_historical/weapons/wpn_third_smg_sterling_pts/wpn_third_smg_sterling_s_nostock" />
+    <graphics>
+        <object enabled="true" name="g_s" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,16 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_pis_p226_b_standard" materials="units/pd2_dlc_dec5/weapons/wpn_fps_pis_p226_pts/wpn_third_pis_p226_b_standard"  />
+    <animations>
+		<animation_group name="reload">
+			<object name="anim_bolt_reload" enabled="false" />	
+		</animation_group>
+		<animation_group name="recoil">
+			<object name="anim_bolt_recoil" enabled="false" />	
+		</animation_group>
+	</animations>
+    <graphics>
+        <object name="g_slide" enabled="true" />
+        <object name="g_barrel" enabled="true" />
+        <object name="g_no_blurr" enabled="false" />
+    </graphics>
+</dynamic_object>

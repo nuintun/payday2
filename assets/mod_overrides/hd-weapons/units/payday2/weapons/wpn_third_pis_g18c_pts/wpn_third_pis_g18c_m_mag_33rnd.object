@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_pis_g18c_pts/wpn_third_pis_g18c" orientation_object="rp_extended_33nd"/>
+    <animations>
+		<animation_group name="reload">
+			<object name="mag_align" enabled="false" />
+		</animation_group>
+		<animation_group name="reload_not_empty">
+			<object name="mag_align_2" enabled="false" />
+        </animation_group>
+    </animations>
+    <graphics>
+        <object enabled="true" name="g_magazine" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_bbq/weapons/wpn_fps_sho_aa12_pts/wpn_third_sho_aa12_barrel_silenced" orientation_object="rp_wpn_fps_sho_aa12_barrel_silenced" />
+	<graphics>
+		<object name="g_silencer" enabled="true" />
+	</graphics>
+</dynamic_object> 

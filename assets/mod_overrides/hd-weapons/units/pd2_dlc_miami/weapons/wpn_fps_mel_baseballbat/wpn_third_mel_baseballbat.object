@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_mel_baseballbat" materials="units/pd2_dlc_miami/weapons/wpn_fps_mel_baseballbat/wpn_third_mel_baseballbat" />
+    <graphics>
+        <object enabled="true" name="g_bat" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,15 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_shot_huntsman_pts/wpn_third_shot_huntsman" orientation_object="rp_wpn_fps_shot_huntsman_b_short"/>
+    <animations>
+	    <animation_group name="reload">
+		    <object name="anim_barrel" enabled="false" />
+		    <object name="anim_slug_right" enabled="false" />
+		    <object name="anim_slug_left" enabled="false" />
+	    </animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_slug_left" />
+        <object enabled="true" name="g_slug_right" />
+        <object enabled="true" name="g_short_barrel" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,11 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_m4_uupg_draghandle" materials="units/payday2/weapons/wpn_third_ass_m4_pts/wpn_third_m4_uupg_draghandle" />
+  <animations>
+    <animation_group name="reload">
+      <object name="a_anim_draghandle" enabled="false" />
+    </animation_group>
+  </animations>
+  <graphics>
+        <object  name="g_draghandle" enabled="true" />
+  </graphics>
+</dynamic_object>

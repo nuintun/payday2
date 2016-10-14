@@ -1,0 +1,31 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_pis_rage_pts/wpn_third_pis_rage" orientation_object="rp_wpn_fps_pis_rage_body_smooth"/>
+    <animations>
+    <animation_group name="reload">
+		<object name="clip_ejection_reload" enabled="false" />
+		<object name="align_house_reload" enabled="false" />
+		<object name="anim_cocking_lever_non" enabled="false" />
+		<object name="anim_bullets_reload" enabled="false" />
+    </animation_group>
+	
+    <animation_group name="reload_not_empty">
+		<object name="clip_ejection_reload_not_empty" enabled="false" />		
+		<object name="align_house_reload_not_empty" enabled="false" />
+		<object name="anim_bullets_reload_not_empty" enabled="false" />
+    </animation_group>
+
+    <animation_group name="recoil">
+		<object name="anim_bolt_recoil" enabled="false" />
+		<object name="align_house_recoil" enabled="false" />
+		<object name="anim_cocking_lever_recoil" enabled="false" />
+    </animation_group>
+  </animations>
+  <graphics>
+        <object enabled="true" name="g_hammer" />
+        <object enabled="true" name="g_lock" />
+        <object enabled="true" name="g_bullets" />
+        <object enabled="true" name="g_cylinder_smooth" />
+        <object enabled="true" name="g_body" />
+        <object enabled="true" name="g_sight" />
+    </graphics>
+</dynamic_object>

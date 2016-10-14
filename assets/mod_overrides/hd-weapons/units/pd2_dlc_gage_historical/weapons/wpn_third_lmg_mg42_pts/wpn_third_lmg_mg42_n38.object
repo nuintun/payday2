@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_lmg_mg42_nozzle_38" materials="units/pd2_dlc_gage_historical/weapons/wpn_third_lmg_mg42_pts/wpn_third_lmg_mg42_b_mg34" />
+    <graphics>
+        <object enabled="true" name="g_nozzle_mg38" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,8 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_west/weapons/wpn_third_snp_winchester/wpn_third_snp_winchester_b_standard" orientation_object="rp_wpn_fps_snp_winchester_b_standard" />
+	<graphics>
+		<object name="g_g" enabled="true" />
+		
+		<object name="g_b" inherit_bounding_volume="co_culling" enabled="true" />
+	</graphics>
+</dynamic_object>

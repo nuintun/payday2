@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_pis_rage_pts/wpn_third_pis_rage" orientation_object="rp_wpn_fps_pis_rage_b_short"/>
+    <graphics>
+        <object enabled="true" name="g_short" />
+    </graphics>
+</dynamic_object>

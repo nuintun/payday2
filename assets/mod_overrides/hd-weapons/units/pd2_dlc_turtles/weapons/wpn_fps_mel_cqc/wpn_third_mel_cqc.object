@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_turtles/weapons/wpn_fps_mel_cqc/wpn_third_mel_cqc" orientation_object="rp_wpn_fps_mel_cqc" />
+	<graphics>
+		<object name="g_kunai" enabled="true" />
+	</graphics>
+</dynamic_object>

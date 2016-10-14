@@ -1,0 +1,18 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_turtles/weapons/wpn_third_bow_hunter_pts/wpn_third_bow_hunter_b_skeletal" orientation_object="rp_wpn_fps_bow_dragon_b_skeletal" />
+	<animations>
+		<animation_group name="recoil">
+			<object name="a_root" enabled="true" />
+			<object name="a_l_1" enabled="true" />
+			<object name="a_l_2" enabled="true" />
+			<object name="a_l_3" enabled="true" />
+			<object name="a_r_1" enabled="true" />
+			<object name="a_r_2" enabled="true" />
+			<object name="a_r_3" enabled="true" />
+			<object name="a_knock" enabled="true" />
+		</animation_group>
+	</animations>
+	<graphics>
+		<object name="g_b" enabled="true" />
+	</graphics>
+</dynamic_object>

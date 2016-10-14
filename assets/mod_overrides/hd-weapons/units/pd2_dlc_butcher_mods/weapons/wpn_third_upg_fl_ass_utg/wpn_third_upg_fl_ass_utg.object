@@ -1,0 +1,9 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_butcher_mods/weapons/wpn_third_upg_fl_ass_utg/wpn_third_upg_fl_ass_utg" orientation_object="rp_wpn_fps_upg_fl_ass_utg" />
+	<graphics>
+		<object name="g_light" enabled="false" />
+		<object name="g_laser" enabled="false" />
+		<object name="g_g" enabled="true" />
+		<object name="g_indicator" enabled="false" />
+	</graphics>
+</dynamic_object> 

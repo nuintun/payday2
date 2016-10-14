@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fork" materials="units/pd2_dlc_bbq/weapons/fork/wpn_third_mel_fork" />
+    <graphics>
+        <object name="g_fork" enabled="true" />
+    </graphics>
+</dynamic_object>

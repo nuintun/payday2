@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_flag" materials="units/pd2_dlc_gage_historical/weapons/wpn_third_mel_freedom/wpn_third_mel_freedom" />
+    <graphics>
+        <object enabled="true" name="g_freedom" />
+    </graphics>
+</dynamic_object>

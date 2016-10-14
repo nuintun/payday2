@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_clover/weapons/wpn_fps_mel_shillelagh/wpn_third_mel_shillelagh" orientation_object="rp_wpn_fps_mel_shillelagh" />
+	<graphics>
+		<object name="g_shillelagh" enabled="true" />
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_aug_ris_special" materials="units/payday2/weapons/wpn_third_ass_aug_pts/wpn_third_ass_aug_body_aug" />
+    <graphics>
+        <object enabled="true" name="g_ris" />
+    </graphics>
+</dynamic_object>

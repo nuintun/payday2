@@ -1,0 +1,14 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_dragan/weapons/wpn_fps_ass_vhs_pts/wpn_third_ass_vhs_body" orientation_object="rp_wpn_fps_ass_vhs_body" />
+	<animations>		
+		<animation_group name="reload" enabled="false" >
+			<object name="anim_reload" />
+		</animation_group>
+	</animations>
+	<graphics>
+		<object name="g_body_stock" enabled="true" />
+		<object name="g_body" enabled="true" />
+		<object name="g_body1" enabled="true" />
+		<object name="g_dh" enabled="true" />
+	</graphics>
+</dynamic_object>

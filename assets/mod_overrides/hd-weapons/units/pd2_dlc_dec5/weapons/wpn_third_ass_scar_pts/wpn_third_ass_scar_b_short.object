@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_ass_scar_b_short" materials="units/pd2_dlc_dec5/weapons/wpn_third_ass_scar_pts/wpn_third_ass_scar_b_short" />
+    <graphics>
+        <object enabled="true" name="g_short" />
+    </graphics>
+</dynamic_object>

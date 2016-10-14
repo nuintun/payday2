@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/payday2/weapons/wpn_npc_smg_mp9/wpn_npc_smg_mp9" orientation_object="rp_wpn_npc_smg_mp9" />
+  <sequence_manager file="units/payday2/weapons/wpn_npc_smg_mp9/wpn_npc_smg_mp9" />
+  <bodies>
+	<body name="body" enabled="false" template="debris" pushed_by_mover="false">
+		<object name="rp_wpn_npc_smg_mp9" />
+		<object name="c_box" collision_type="box" mass="1.5" />
+	</body>
+  </bodies>
+  <effects>
+  	<effect_spawner name="flashlight" object="ls_flashlight" effect="effects/particles/weapons/flashlight/flashlight" enabled="false" assign_parent="true"/>
+  </effects>
+  <graphics>
+    <!-- Disabled vanilla game meshes -->
+    <object enabled="false" name="g_foldable" />
+    <object enabled="false" name="g_body" />
+    <object enabled="false" name="g_mag_long" />
+    <!-- Custom -->
+    <!-- Barrel Extensions -->
+    <object enabled="false" name="g_ns_firepig" />
+    <object enabled="false" name="g_ns_jprifles" />
+    <object enabled="false" name="g_ns_linear" />
+    <object enabled="false" name="g_ns_medium" />
+    <object enabled="false" name="g_ns_silencer_large" />
+    <object enabled="false" name="g_ns_small" />
+    <object enabled="false" name="g_ns_stubby" />
+    <object enabled="false" name="g_ns_surefire" />
+    <object enabled="false" name="g_ns_tank" />
+    <!-- Body -->
+    <object enabled="true" name="g_body_charging_handle" />
+    <object enabled="true" name="g_body_mp9" />
+    <object enabled="true" name="g_body_cover" />
+    <!-- Vertical Grip -->
+    <object enabled="false" name="g_vertical_grip" />
+    <object enabled="false" name="g_vg_stubby" />
+    <!-- Magazines -->
+    <object enabled="false" name="g_mag_short" />
+    <object enabled="true" name="g_mag_extended" />
+    <!-- Optics -->
+    <object enabled="true" name="g_optics_flipup" />
+    <object enabled="false" name="g_optics_flipup_down" />
+    <object enabled="true" name="g_optics_flipup_up" />
+    <object enabled="false" name="g_optics_eotech" />
+    <object enabled="false" name="g_optics_eotech_gfx_lens" />
+    <object enabled="false" name="g_optics_acog" />
+    <object enabled="false" name="g_optics_acog_lens" />
+    <object enabled="false" name="g_optics_aimpoint" />
+    <object enabled="false" name="g_optics_aimpoint_glass" />
+    <object enabled="false" name="g_optics_aimpoint_preorder" />
+    <object enabled="false" name="g_optics_aimpoint_preorder_glass" />
+    <object enabled="false" name="g_optics_cmore" />
+    <object enabled="false" name="g_optics_cmore_lens" />
+    <object enabled="false" name="g_optics_cs" />
+    <object enabled="false" name="g_optics_cs_lens" />
+    <object enabled="false" name="g_optics_docter" />
+    <object enabled="false" name="g_optics_docter_lens" />
+    <object enabled="false" name="g_optics_eotech_xps" />
+    <object enabled="false" name="g_optics_eotech_xps_lens" />
+    <object enabled="false" name="g_optics_reflex" />
+    <object enabled="false" name="g_optics_reflex_lens" />
+    <object enabled="false" name="g_optics_rx01" />
+    <object enabled="false" name="g_optics_rx01_lens" />
+    <object enabled="false" name="g_optics_rx30" />
+    <object enabled="false" name="g_optics_rx30_lens" />
+    <object enabled="false" name="g_optics_specter" />
+    <object enabled="false" name="g_optics_specter_glass" />
+    <object enabled="false" name="g_optics_t1micro" />
+    <object enabled="false" name="g_optics_t1micro_glass" />
+    <!-- Stock -->
+    <object enabled="false" name="g_stock_skeletal" />
+    <object enabled="true" name="g_stock_foldable" />
+    <!-- Attachments -->
+    <object enabled="false" name="g_attachment_peqbox" />
+    <object enabled="false" name="g_attachment_surefire" />
+    <object enabled="false" name="g_attachment_laser" />
+    <object enabled="false" name="g_attachment_peq" />
+  </graphics>
+  
+  <lights>
+    <light multiplier="identity" far_range="1000" name="ls_flashlight" enabled="false" type="spot|specular" />
+  </lights>
+</dynamic_object>

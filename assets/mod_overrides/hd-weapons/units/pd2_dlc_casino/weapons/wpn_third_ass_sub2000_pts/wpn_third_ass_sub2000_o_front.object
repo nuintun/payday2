@@ -1,0 +1,18 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_casino/weapons/wpn_third_ass_sub2000_pts/wpn_third_ass_sub2000_o_front" orientation_object="rp_wpn_fps_ass_sub2000_o_front" />
+	<animations>
+	
+		<animation_group name="equip">
+		    <object name="anim_front_equip" enabled="false" />
+	    </animation_group> 		
+
+	    <animation_group name="unequip">
+		    <object name="anim_front_unequip" enabled="false" />
+	    </animation_group>
+		
+	</animations>
+	
+	<graphics>
+		<object name="g_front_sight" enabled="true" />
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_mel_tenderizer" materials="units/pd2_dlc_bbq/weapons/wpn_mel_tenderizer/wpn_third_mel_tenderizer" />
+    <graphics>
+        <object name="g_tenderizer" enabled="true" />
+    </graphics>
+</dynamic_object>

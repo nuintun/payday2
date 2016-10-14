@@ -1,0 +1,8 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_ass_s552_b_long" materials="units/pd2_dlc1/weapons/wpn_third_ass_s552_pts/wpn_third_ass_s552_b_long" />
+    <graphics>
+        <object enabled="true" name="g_barrel" />
+        <object enabled="true" name="g_flashhider" />
+        <object enabled="false" name="g_no_blurr" />
+    </graphics>
+</dynamic_object>

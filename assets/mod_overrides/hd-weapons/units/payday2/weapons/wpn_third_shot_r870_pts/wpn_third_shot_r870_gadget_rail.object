@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_shot_r870_gadget_rail" materials="units/payday2/weapons/wpn_third_shot_r870_pts/wpn_third_shot_r870" />
+    <graphics>
+        <object enabled="true" name="g_rail" />
+    </graphics>
+</dynamic_object>

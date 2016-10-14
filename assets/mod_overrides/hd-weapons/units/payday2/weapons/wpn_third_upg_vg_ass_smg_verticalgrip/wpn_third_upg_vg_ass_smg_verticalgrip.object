@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_upg_vg_ass_smg_verticalgrip/wpn_third_upg_vg_ass_smg_verticalgrip" orientation_object="rp_vertical_grip" />
+    <graphics>
+        <object name="g_vertical_grip" enabled="true" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,17 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_smg_sterling_m_medium" materials="units/pd2_dlc_gage_historical/weapons/wpn_third_smg_sterling_pts/wpn_third_smg_sterling_m_medium" />
+    <animations>		
+		<animation_group name="reload" enabled="false" >
+			<object name="a_reload" />
+		</animation_group>
+		<animation_group name="reload_not_empty" enabled="false" > 
+			<object name="a_reload_not_empty" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_m" />
+        <object enabled="true" name="g_bullet_1" />
+        <object enabled="true" name="g_bullet_2" />
+        <object enabled="true" name="g_bullet_3" />
+    </graphics>
+</dynamic_object>

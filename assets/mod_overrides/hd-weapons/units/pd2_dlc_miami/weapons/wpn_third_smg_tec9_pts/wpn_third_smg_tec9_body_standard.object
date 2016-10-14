@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_smg_tec9_body_standard" materials="units/pd2_dlc_miami/weapons/wpn_third_smg_tec9_pts/wpn_third_smg_tec9_body_standard" />
+    <graphics>
+        <object enabled="true" name="g_base" />
+    </graphics>
+</dynamic_object>

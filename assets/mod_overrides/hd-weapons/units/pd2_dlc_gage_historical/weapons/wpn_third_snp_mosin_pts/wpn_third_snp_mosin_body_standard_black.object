@@ -1,0 +1,23 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_snp_mosin_body_black" materials="units/pd2_dlc_gage_historical/weapons/wpn_third_snp_mosin_pts/wpn_third_snp_mosin_body_standard_black" />
+    <animations>		
+		<animation_group name="reload" enabled="false" >
+			<object name="a_reload_bolt" />
+			<object name="a_reload_handle" />
+		</animation_group>
+		<animation_group name="reload_not_empty" enabled="false" > 
+			<object name="a_reload_not_empty_bolt" />
+			<object name="a_reload_not_empty_handle" />
+		</animation_group>
+		<animation_group name="recoil" enabled="false" > 
+			<object name="anim_bolt_recoil" />
+			<object name="a_reload_handle_recoil" />
+		</animation_group>
+	</animations>
+	<graphics>
+        <object enabled="true" name="g_bolt" />
+        <object enabled="true" name="g_handle" />
+        <object enabled="true" name="g_body" />
+        <object enabled="true" name="g_upper" />
+    </graphics>
+</dynamic_object>

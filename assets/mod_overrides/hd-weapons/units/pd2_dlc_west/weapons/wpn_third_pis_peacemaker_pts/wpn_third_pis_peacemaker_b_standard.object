@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_west/weapons/wpn_third_pis_peacemaker_pts/wpn_third_pis_peacemaker_b_standard" orientation_object="rp_wpn_fps_pis_peacemaker_b_standard" />
+	<graphics>
+		<object name="g_standard" enabled="true" />
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,19 @@
+<materials version="3">
+    <material name="mat_barell_lod" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_big/weapons/wpn_third_ass_fal_pts/third_barrel_standard_df"/>
+        <bump_normal_texture file="units/pd2_dlc_big/weapons/wpn_third_ass_fal_pts/third_barrel_standard_nm"/>
+    </material>
+    <material name="mat_foregrip_lod" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_big/weapons/wpn_third_ass_fal_pts/third_handguard_dsa58_df"/>
+        <bump_normal_texture file="units/pd2_dlc_big/weapons/wpn_third_ass_fal_pts/third_handguard_dsa58_nm"/>
+    </material>
+    
+    <material name="mat_barell" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_big/weapons/wpn_fps_ass_fal_pts/barrel_standard_df"/>
+        <bump_normal_texture file="units/pd2_dlc_big/weapons/wpn_fps_ass_fal_pts/barrel_standard_nm"/>
+    </material>
+    <material name="mat_frontgrip" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_big/weapons/wpn_fps_ass_fal_pts/handguard_dsa58_df"/>
+        <bump_normal_texture file="units/pd2_dlc_big/weapons/wpn_fps_ass_fal_pts/handguard_dsa58_nm"/>
+    </material>
+</materials>

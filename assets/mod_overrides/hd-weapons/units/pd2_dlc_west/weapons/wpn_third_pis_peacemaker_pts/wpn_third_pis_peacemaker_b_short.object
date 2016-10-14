@@ -1,0 +1,8 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_west/weapons/wpn_third_pis_peacemaker_pts/wpn_third_pis_peacemaker_b_short" orientation_object="rp_wpn_fps_pis_peacemaker_b_short" />
+	<graphics>
+		<object name="g_b" enabled="true" />
+		
+		<object name="g_short" enabled="true" />
+	</graphics>
+</dynamic_object>

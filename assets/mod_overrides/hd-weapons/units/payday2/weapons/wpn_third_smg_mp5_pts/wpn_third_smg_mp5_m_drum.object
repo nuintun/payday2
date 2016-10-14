@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_smg_mp5_pts/wpn_third_smg_mp5_m_drum" orientation_object="rp_wpn_fps_smg_mp5_m_drum" />
+	<animations>
+		<animation_group name="reload_not_empty">
+			<object name="mag_align" enabled="false" />
+		</animation_group>	
+		<animation_group name="reload" >
+			<object name="mag_align_2" enabled="false" />
+		</animation_group>
+	</animations>
+	<graphics>
+        <object  name="g_drum" enabled="true" />
+	</graphics>
+</dynamic_object>

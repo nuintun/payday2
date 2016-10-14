@@ -1,0 +1,18 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_bbq/weapons/wpn_fps_gre_m32_pts/wpn_third_gre_m32_lower_reciever" orientation_object="rp_wpn_third_gre_m32_lower_reciever" />
+	<graphics>
+		<object name="g_body" enabled="false" />
+    <object name="g_casing_07" enabled="true" />
+    <object name="g_casing_1" enabled="true" />
+    <object name="g_casing_2" enabled="true" />
+    <object name="g_casing_3" enabled="true" />
+    <object name="g_casing_4" enabled="true" />
+    <object name="g_casing_5" enabled="true" />
+    <object name="g_casing_6" enabled="true" />
+    <object name="g_cylinder" enabled="true" />
+    <object name="g_gre" enabled="true" />
+    <object name="g_handle" enabled="true" />
+    <object name="g_lower" enabled="true" />
+    <object name="g_upper" enabled="true" />
+	</graphics>
+</dynamic_object> 

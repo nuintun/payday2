@@ -1,0 +1,12 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_pis_usp_pts/wpn_third_pis_usp_body_standard" orientation_object="rp_wpn_fps_pis_usp_body_standard" />
+    <animations>
+		<animation_group name="recoil">
+			<object name="anim_hammer_recoil" enabled="false" />	
+		</animation_group>
+	</animations>
+  <graphics>
+        <object enabled="true" name="g_hammer" />
+        <object enabled="true" name="g_body" />
+    </graphics>
+</dynamic_object>

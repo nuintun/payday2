@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_smg_m45_s_folded" materials="units/pd2_dlc1/weapons/wpn_third_smg_m45_pts/wpn_third_smg_m45_s_folded" />
+    <graphics>
+        <object enabled="true" name="g_stock" />
+    </graphics>
+</dynamic_object>

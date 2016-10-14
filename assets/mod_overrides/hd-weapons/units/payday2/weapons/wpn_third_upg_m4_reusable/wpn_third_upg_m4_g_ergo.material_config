@@ -1,0 +1,10 @@
+<materials version="3">
+    <material name="ergo" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_m4_reusable/wpn_third_upg_m4_g_ergo_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_m4_reusable/wpn_third_upg_m4_g_ergo_nm"/>
+    </material>
+    <material name="ergo_grip" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_m4_reusable/wpn_fps_upg_m4_g_ergo_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_m4_reusable/wpn_fps_upg_m4_g_ergo_nm"/>
+    </material>
+</materials>

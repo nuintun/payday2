@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_mel_km2000" materials="units/pd2_dlc_gage_lmg/weapons/wpn_third_mel_km2000/wpn_third_mel_km2000" />
+    <graphics>
+        <object enabled="true" name="g_km" />
+    </graphics>
+</dynamic_object>

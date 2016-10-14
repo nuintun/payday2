@@ -1,0 +1,7 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_butcher_mods/weapons/wpn_third_saw_body_silent/wpn_third_saw_body_silent" orientation_object="rp_wpn_fps_saw_body_silent" />
+	<graphics>
+		<object name="g_body" enabled="true" />
+		<object name="g_motor" enabled="true" />
+	</graphics>
+</dynamic_object> 

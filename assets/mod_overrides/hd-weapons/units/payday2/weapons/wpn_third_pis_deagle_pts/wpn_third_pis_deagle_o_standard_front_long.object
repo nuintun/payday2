@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_pis_deagle_pts/wpn_third_pis_deagle" orientation_object="rp_wpn_fps_pis_deagle_o_standard_front_long"/>
+    <graphics>
+        <object enabled="true" name="g_front" />
+        <object  name="g_no_blurr" enabled="false" /> 
+    </graphics>
+</dynamic_object>

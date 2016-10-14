@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_shot_r870_pts/wpn_third_shot_r870" orientation_object="rp_wpn_fps_shot_r870_s_nostock_single"/>
+    <graphics>
+        <object enabled="true" name="g_folding" />
+        <object enabled="true" name="g_rail_single" />
+    </graphics>
+</dynamic_object>

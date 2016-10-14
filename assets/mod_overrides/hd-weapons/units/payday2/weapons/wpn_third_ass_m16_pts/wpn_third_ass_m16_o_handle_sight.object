@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_ass_m16_pts/wpn_third_ass_m16_o_handle_sight" orientation_object="rp_wpn_fps_ass_m16_o_handle_sight" />
+  <graphics>
+        <object  name="g_handlesight" enabled="true" />
+  </graphics>
+</dynamic_object>

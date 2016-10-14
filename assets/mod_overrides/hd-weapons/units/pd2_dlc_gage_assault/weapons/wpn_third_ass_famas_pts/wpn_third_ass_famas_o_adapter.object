@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_ass_famas_o_adapter" materials="units/pd2_dlc_gage_assault/weapons/wpn_third_ass_famas_pts/wpn_third_ass_famas_o_adapter" />
+    <graphics>
+        <object enabled="true" name="g_adapter" />
+    </graphics>
+</dynamic_object>

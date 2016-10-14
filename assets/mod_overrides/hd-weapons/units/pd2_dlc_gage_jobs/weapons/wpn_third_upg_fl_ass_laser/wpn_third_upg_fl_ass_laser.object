@@ -1,0 +1,8 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_upg_fl_ass_laser" materials="units/pd2_dlc_gage_jobs/weapons/wpn_third_upg_fl_ass_laser/wpn_third_upg_fl_ass_laser" />
+    <graphics>
+        <object enabled="true" name="g_g" />
+        <object enabled="false" name="g_indicator" />
+        <object enabled="false" name="g_laser" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,10 @@
+<materials version="3">
+	<material name="mtr_third_stag" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_akm4_modpack/weapons/wpn_third_upg_ass_m16_fg_stag/third_stag_df" />
+		<bump_normal_texture file="units/pd2_dlc_akm4_modpack/weapons/wpn_third_upg_ass_m16_fg_stag/third_stag_nm" />
+	</material>
+  <material name="mtr_stag" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_akm4_modpack/weapons/wpn_fps_upg_ass_m16_fg_stag/stag_df" />
+		<bump_normal_texture file="units/pd2_dlc_akm4_modpack/weapons/wpn_fps_upg_ass_m16_fg_stag/stag_nm" />
+	</material>
+</materials>

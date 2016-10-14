@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_turtles/weapons/wpn_fps_smg_polymer_pts/wpn_third_smg_polymer_extra_sling" orientation_object="rp_wpn_fps_smg_polymer_extra_sling" />
+	<graphics>
+		<object name="g_sling" enabled="true" />
+	</graphics>
+</dynamic_object>

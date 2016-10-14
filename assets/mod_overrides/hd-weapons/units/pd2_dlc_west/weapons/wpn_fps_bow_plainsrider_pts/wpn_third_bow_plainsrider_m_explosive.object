@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_west/weapons/wpn_fps_bow_plainsrider_pts/wpn_third_bow_plainsrider_m_explosive" orientation_object="rp_wpn_fps_bow_plainsrider_m_explosive" />
+	<graphics>
+		<object name="g_bullet_1" enabled="true" />
+	</graphics>
+</dynamic_object>

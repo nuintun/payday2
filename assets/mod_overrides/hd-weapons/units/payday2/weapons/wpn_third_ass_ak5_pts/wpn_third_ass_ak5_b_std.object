@@ -1,0 +1,11 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_ass_ak5_pts/wpn_third_ass_ak5_b_std" orientation_object="rp_wpn_fps_ass_ak5_b_std" />
+    <animations>
+        <animation_group name="anim_grp0" >
+            <object name="a_ns" enabled="false" />
+        </animation_group>
+    </animations>
+    <graphics>
+        <object name="g_barrel" enabled="true" />
+    </graphics>
+</dynamic_object>

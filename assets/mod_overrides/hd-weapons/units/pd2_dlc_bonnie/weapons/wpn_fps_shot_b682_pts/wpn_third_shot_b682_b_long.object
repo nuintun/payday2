@@ -1,0 +1,24 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_bonnie/weapons/wpn_fps_shot_b682_pts/wpn_third_shot_b682_b_long" orientation_object="rp_wpn_fps_shot_b682_b_long" />
+	<animations>
+	    <animation_group name="reload" enabled="false" >
+		    <object name="anim_barrel_reload" enabled="false" />
+		    <object name="anim_slug_lower_reload" enabled="false" />
+		    <object name="anim_slug_upper_reload" enabled="false" />
+		    <object name="anim_ejector_reload" enabled="false" />
+	    </animation_group>
+	    <animation_group name="reload_not_empty" enabled="false" >
+		    <object name="anim_barrel_reload_not_empty" enabled="false" />
+		    <object name="anim_slug_lower_reload_not_empty" enabled="false" />
+		    <object name="anim_slug_upper_reload_not_empty" enabled="false" />
+		    <object name="anim_ejector_reload_not_empty" enabled="false" />
+	    </animation_group>
+	</animations>
+	<graphics>
+		<object name="g_slug_lower" enabled="true" />
+		<object name="g_slug_upper" enabled="true" />
+		<object name="g_fg" enabled="true" />
+		<object name="g_ejector" enabled="true" />
+		<object name="g_barrel" enabled="true" />
+	</graphics>
+</dynamic_object> 

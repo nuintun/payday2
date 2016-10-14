@@ -1,0 +1,24 @@
+<unit type="wpn" slot="1" >
+    <object file="units/pd2_dlc_gage_snp/weapons/wpn_fps_upg_o_leupold/wpn_third_upg_o_leupold" />
+    <dependencies>
+		<depends_on font="fonts/font_digital" />
+	</dependencies>	
+	
+	<extensions>
+		<extension class="ScriptUnitData" name="unit_data" />
+		<extension class="DigitalGui" name="digital_gui" >
+			<var name="TYPE" value="number" />
+			<var name="COLOR_TYPE" value="red" />
+			<var name="HEIGHT" value="200" />
+			<var name="_gui_object" value="g_display" />		
+		</extension>
+		<extension class="DigitalGui" name="digital_gui_upper" >
+			<var name="TYPE" value="number" />
+			<var name="COLOR_TYPE" value="green" />
+			<var name="HEIGHT" value="200" />
+			<var name="_gui_object" value="g_display_upper" />
+			<var name="RENDER_TEMPLATE" value="OverlayVertexColorTextured" />
+			<var name="BLEND_MODE" value="add" />
+		</extension>
+	</extensions>
+</unit>

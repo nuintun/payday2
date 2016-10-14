@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_ass_g36_pts/wpn_third_upg_g36" orientation_object="rp_wpn_upg_g36_b_long"/>
+    <graphics>
+        <object enabled="true" name="g_gas_block_l" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/pd2_dlc1/weapons/wpn_third_ass_s552_pts/wpn_third_ass_s552_fg_standard" orientation_object="rp_wpn_fps_ass_s552_fg_standard" />
+    <graphics>
+        <object enabled="true" name="g_handguard" />
+    </graphics>
+</dynamic_object>

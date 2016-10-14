@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_ass_m14_pts/wpn_third_ass_m14" orientation_object="rp_wpn_fps_ass_m14_m_standard"/>
+    <animations>
+		<animation_group name="reload">
+		  <object name="mag_align_reload" enabled="false" />
+		</animation_group>    
+		<animation_group name="reload_not_empty">
+		  <object name="mag_align_reload_tactical" enabled="false" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_mag" />
+    </graphics>
+</dynamic_object>

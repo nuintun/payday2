@@ -1,0 +1,15 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_smg_sterling_b_suppressed" materials="units/pd2_dlc_gage_historical/weapons/wpn_third_smg_sterling_pts/wpn_third_smg_sterling_b_suppressed" />
+    <animations>		
+		<animation_group name="reload" enabled="false" >
+			<object name="a_reload" />
+		</animation_group>
+		<animation_group name="recoil" enabled="false" > 
+			<object name="a_recoil" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_b" />
+        <object enabled="true" name="g_bolt" />
+    </graphics>
+</dynamic_object>

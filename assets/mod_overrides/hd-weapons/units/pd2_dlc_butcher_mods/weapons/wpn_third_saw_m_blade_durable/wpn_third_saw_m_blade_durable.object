@@ -1,0 +1,24 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_butcher_mods/weapons/wpn_third_saw_m_blade_durable/wpn_third_saw_m_blade_durable" orientation_object="rp_wpn_fps_saw_m_blade_durable" />
+	<animations>
+	
+		<animation_group name="reload">
+			<object name="anim_blade_reload" enabled="false" />
+			<object name="anim_handle_upper_blade" enabled="false" />
+			<object name="anim_handle_lower_blade" enabled="false" />
+		</animation_group>
+		
+		<animation_group name="recoil">
+			<object name="anim_blade_recoil" enabled="false" />
+		</animation_group>
+		
+    </animations>
+	
+    <graphics>
+        <object enabled="true" name="g_blade" />
+        <object enabled="true" name="g_core" />
+        <object enabled="true" name="g_handle_upper" />
+        <object enabled="true" name="g_handle_lower" />
+    </graphics>
+	
+</dynamic_object> 

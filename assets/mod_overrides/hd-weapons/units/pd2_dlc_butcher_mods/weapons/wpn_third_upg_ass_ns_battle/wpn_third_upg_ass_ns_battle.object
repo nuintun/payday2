@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_butcher_mods/weapons/wpn_third_upg_ass_ns_battle/wpn_third_upg_ass_ns_battle" orientation_object="rp_wpn_fps_upg_ass_ns_battle" />
+	<graphics>
+		<object name="g_battle" enabled="true" />
+	</graphics>
+</dynamic_object> 

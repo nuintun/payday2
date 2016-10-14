@@ -1,0 +1,26 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_pis_g26_b_standard" materials="units/pd2_crimefest_2014/oct22/weapons/wpn_third_pis_g26_pts/wpn_third_pis_g26_b_standard" />
+    <animations>
+		<animation_group name="reload">
+		  <object name="anim_bolt_reload" enabled="false" />
+		  <object name="anim_reload" enabled="false" />
+		</animation_group>
+		<animation_group name="reload_right">
+		  <object name="anim_bolt_reload_right" enabled="false" />
+		  <object name="anim_barrel_reload_right" enabled="false" />
+		</animation_group>
+		<animation_group name="reload_left">
+		  <object name="anim_bolt_reload_left" enabled="false" />
+		  <object name="anim_barrel_reload_left" enabled="false" />
+		</animation_group>
+		
+		<animation_group name="recoil">
+		  <object name="anim_bolt_recoil" enabled="false" />
+		</animation_group>		
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_slide" />
+        <object enabled="true" name="g_barrel" />
+        <object enabled="true" name="g_no_blurr" />
+    </graphics>
+</dynamic_object>

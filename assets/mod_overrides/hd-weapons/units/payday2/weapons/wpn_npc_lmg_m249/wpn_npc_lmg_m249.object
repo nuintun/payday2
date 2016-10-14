@@ -1,0 +1,84 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_npc_lmg_m249" materials="units/payday2/weapons/wpn_npc_lmg_m249/wpn_npc_lmg_m249" />
+	<sequence_manager file="units/payday2/weapons/wpn_npc_lmg_m249/wpn_npc_lmg_m249" />
+    <bodies>
+        <body name="body" enabled="false" template="debris" pushed_by_mover="false" >
+        	<object name="rp_wpn_npc_lmg_m249" />
+            <object name="c_box" collision_type="box" mass="2" />
+            <object name="c_box_1" collision_type="box" mass="4" />
+        </body>
+    </bodies>
+	<effects>
+  	<effect_spawner name="flashlight" object="a_effect_flashlight" effect="effects/particles/weapons/flashlight/flashlight" enabled="false" assign_parent="true"/>
+  </effects>
+  <graphics>
+    <!-- Disabled vanilla game meshes -->
+    <object enabled="false" name="g_body" />
+    <object enabled="false" name="g_body_lod1" />
+    <!-- Custom -->
+    <!-- Barrels -->
+    <object enabled="true" name="g_barrel_short" />
+    <object enabled="false" name="g_barrel_long" />
+    <!-- Barrel Extensions -->
+    <object enabled="false" name="g_ns_firepig" />
+    <object enabled="false" name="g_ns_jprifles" />
+    <object enabled="false" name="g_ns_medium" />
+    <object enabled="false" name="g_ns_pbs1" />
+    <object enabled="false" name="g_ns_silencer_large" />
+    <object enabled="false" name="g_ns_small" />
+    <object enabled="false" name="g_ns_stubby" />
+    <object enabled="false" name="g_ns_surefire" />
+    <object enabled="false" name="g_ns_tank" />
+    <object enabled="false" name="g_ns_linear" />
+    <!-- Body -->
+    <object enabled="true" name="g_body_bipod" />
+    <object enabled="true" name="g_body_bolt" />
+    <object enabled="true" name="g_body_carryhandle" />
+    <object enabled="true" name="g_body_dustcover" />
+    <object enabled="true" name="g_body_rearsight" />
+    <object enabled="true" name="g_body_standard" />
+    <!-- Foregrip -->
+    <object enabled="true" name="g_fg_std" />
+    <object enabled="false" name="g_fg_mk46" />
+    <!-- Magazines -->
+    <object enabled="true" name="g_mag" />
+    <object enabled="true" name="g_mag_lid" />
+    <object enabled="true" name="g_mag_band_1" />
+    <object enabled="true" name="g_mag_band_2" />
+    <object enabled="true" name="g_mag_band_3" />
+    <object enabled="true" name="g_mag_band_4" />
+    <object enabled="true" name="g_mag_bullet_1" />
+    <object enabled="true" name="g_mag_bullet_2" />
+    <object enabled="true" name="g_mag_bullet_3" />
+    <object enabled="true" name="g_mag_bullet_4" />
+    <object enabled="true" name="g_mag_bullet_5" />
+    <object enabled="true" name="g_mag_bullet_6" />
+    <object enabled="true" name="g_mag_bullet_7" />
+    <object enabled="true" name="g_mag_bullet_8" />
+    <object enabled="true" name="g_mag_bullet_9" />
+    <object enabled="true" name="g_mag_bullet_10" />
+    <object enabled="true" name="g_mag_bullet_11" />
+    <object enabled="true" name="g_mag_bullet_12" />
+    <object enabled="true" name="g_mag_bullet_13" />
+    <object enabled="true" name="g_mag_bullet_14" />
+    <object enabled="true" name="g_mag_bullet_15" />
+    <!-- Stock -->
+    <object enabled="true" name="g_stock_solid" />
+    <object enabled="false" name="g_stock_para" />
+    <object enabled="false" name="g_stock_para_sling" />
+    <object enabled="false" name="g_stock_m4_adapter" />
+    <object enabled="false" name="g_stock_m4_crane" />
+    <object enabled="false" name="g_stock_m4_mk46" />
+    <object enabled="false" name="g_stock_m4_pts" />
+    <object enabled="false" name="g_stock_m4_std" />
+    <object enabled="false" name="g_stock_m4_ubr" />
+    <!-- Attachments -->
+    <object enabled="false" name="g_attachment_laser" />
+    <object enabled="false" name="g_attachment_peq" />
+    <object enabled="false" name="g_attachment_peqbox" />
+    <object enabled="false" name="g_attachment_surefire" />
+  </graphics>
+	<lights>
+		<light multiplier="identity" far_range="1000" name="a_effect_flashlight" enabled="false" type="spot|specular" />
+  </lights>
+</dynamic_object>

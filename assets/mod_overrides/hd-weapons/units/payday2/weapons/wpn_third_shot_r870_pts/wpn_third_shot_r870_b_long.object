@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_shot_r870_pts/wpn_third_shot_r870" orientation_object="rp_wpn_fps_shot_r870_b_long"/>
+    <graphics>
+        <object enabled="true" name="g_long_barrel" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,13 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_smg_mp5_pts/wpn_third_smg_mp5_fg_mp5a5" orientation_object="rp_wpn_fps_smg_mp5_fg_mp5a5" />
+	<animations>
+		<animation_group name="reload" >
+			<object name="anim_draghandle_reload" enabled="false" />
+		</animation_group>
+	</animations>
+	<graphics>
+        <object  name="g_mp5a5" enabled="true" />
+        <object  name="g_draghandle" enabled="true" />
+        <object  name="g_no_blurr" enabled="false" />
+	</graphics>
+</dynamic_object>

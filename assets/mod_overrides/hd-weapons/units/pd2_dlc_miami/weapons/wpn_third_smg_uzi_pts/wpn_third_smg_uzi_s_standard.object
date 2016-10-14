@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_smg_uzi_s_standard" materials="units/pd2_dlc_miami/weapons/wpn_third_smg_uzi_pts/wpn_third_smg_uzi_s_standard" />
+    <graphics>
+        <object enabled="true" name="g_stock" />
+    </graphics>
+</dynamic_object>

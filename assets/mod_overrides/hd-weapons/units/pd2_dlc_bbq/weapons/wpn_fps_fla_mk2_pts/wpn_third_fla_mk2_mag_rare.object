@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_bbq/weapons/wpn_fps_fla_mk2_pts/wpn_third_fla_mk2_mag_rare" orientation_object="rp_wpn_fps_fla_mk2_mag" />
+	<graphics>
+		<object name="g_mag" enabled="true" />
+	</graphics>
+</dynamic_object> 

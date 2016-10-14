@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_spatula" materials="units/pd2_dlc_bbq/weapons/spatula/wpn_third_mel_spatula" />
+    <graphics>
+        <object name="g_spatula" enabled="true" />
+    </graphics>
+</dynamic_object>

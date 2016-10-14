@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_ass_m16_pts/wpn_third_m16_fg_railed" orientation_object="rp_wpn_fps_m16_fg_railed" />
+  <graphics>
+        <object name="g_railed" enabled="true" />
+  </graphics>
+</dynamic_object>

@@ -1,0 +1,20 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_pis_c96_b_standard" materials="units/pd2_dlc_gage_historical/weapons/wpn_third_pis_c96_pts/wpn_third_pis_c96_b_standard" />
+    <animations>		
+		<animation_group name="reload" enabled="false" >
+			<object name="a_reload_not_empty" />
+		</animation_group>
+		<animation_group name="reload_not_empty" enabled="false" >
+			<object name="a_reload" />
+		</animation_group>
+		<animation_group name="recoil" enabled="false" >
+			<object name="a_recoil" />
+			<object name="a_recoil_hammer" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_bolt" />
+        <object enabled="true" name="g_hammer" />
+        <object enabled="true" name="g_barrel" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_upg_ns_pis_medium_slim" materials="units/pd2_dlc_gage_jobs/weapons/wpn_third_upg_ns_pis_medium_slim/wpn_third_upg_ns_pis_medium_slim" />
+    <graphics>
+        <object enabled="true" name="g_silencer" />
+    </graphics>
+</dynamic_object>

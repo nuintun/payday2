@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_ass_scar_o_flipups_down" materials="units/pd2_dlc_dec5/weapons/wpn_third_ass_scar_pts/wpn_third_ass_scar_o_flipups_down" />
+    <graphics>
+        <object enabled="true" name="g_down" />
+    </graphics>
+</dynamic_object>

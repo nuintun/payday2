@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_upg_vg_ass_smg_afg/wpn_third_upg_vg_ass_smg_afg" orientation_object="rp_wpn_fps_upg_ass_smg_sho_vg_afg" />
+    <graphics>
+        <object name="g_afg" enabled="true" />
+    </graphics>
+</dynamic_object>

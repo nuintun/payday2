@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_mel_baseballbat" materials="units/pd2_washington_reveal/weapons/wpn_fps_mel_barbedwire/wpn_third_mel_barbedwire" />
+    <graphics>
+        <object enabled="true" name="g_bat" />
+    </graphics>
+</dynamic_object>

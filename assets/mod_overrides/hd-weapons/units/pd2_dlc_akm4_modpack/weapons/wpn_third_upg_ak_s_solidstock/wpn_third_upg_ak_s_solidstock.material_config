@@ -1,0 +1,10 @@
+<materials version="3">
+	<material name="mtr_third_stock" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_akm4_modpack/weapons/wpn_third_upg_ak_s_solidstock/third_solidstock_df" />
+		<bump_normal_texture file="units/pd2_dlc_akm4_modpack/weapons/wpn_third_upg_ak_s_solidstock/third_solidstock_nm" />
+	</material>
+  <material name="mtr_solid" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_akm4_modpack/weapons/wpn_fps_upg_ak_s_solidstock/solidstock_df" />
+		<bump_normal_texture file="units/pd2_dlc_akm4_modpack/weapons/wpn_fps_upg_ak_s_solidstock/solidstock_nm" />
+	</material>
+</materials>

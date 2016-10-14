@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_dragon/weapons/wpn_third_smg_baka_pts/wpn_third_smg_baka_fl_adapter" orientation_object="rp_wpn_fps_smg_baka_fl_adapter" />
+	<graphics>
+		<object name="g_rail" enabled="true" />
+	</graphics>
+</dynamic_object>

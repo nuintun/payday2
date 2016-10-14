@@ -1,0 +1,25 @@
+<materials version="3">
+    <material name="mtr_third_x400v" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_crimefest_2014/oct22/weapons/wpn_third_upg_fl_pis_x400v/third_x400v_df"/>
+        <bump_normal_texture file="units/pd2_crimefest_2014/oct22/weapons/wpn_third_upg_fl_pis_x400v/third_x400v_nm"/>
+    </material>
+    
+    <material name="laser" version="2" render_template="effect:BLEND_ADD:DIFFUSE0_TEXTURE:FPS:VIEW_ANGLE_FALLOFF_OP">
+        <variable value="match" type="scalar" name="intensity"/>
+        <diffuse_texture file="units/payday2/weapons/wpn_effects_textures/wpn_effect_green_il"/>
+        <variable value="1" type="scalar" name="falloff_exp"/>
+    </material>
+    <material name="indicator" version="2" render_template="effect:BLEND_ADD:DIFFUSE0_TEXTURE:FPS:VIEW_ANGLE_FALLOFF_OP">
+        <variable value="match" type="scalar" name="intensity"/>
+        <diffuse_texture file="units/payday2/weapons/wpn_effects_textures/wpn_effect_green_il"/>
+        <variable value="1" type="scalar" name="falloff_exp"/>
+    </material>
+    <material name="light" render_template="generic:SELF_ILLUMINATION" version="2">
+        <variable value="streetlight" type="scalar" name="il_multiplier"/>
+        <self_illumination_texture file="units/payday2/weapons/wpn_effects_textures/wpn_effect_flashlight_il"/>
+    </material>
+    <material name="mtr_x400v" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_crimefest_2014/oct22/weapons/wpn_fps_upg_fl_pis_x400v/x400v_df"/>
+        <bump_normal_texture file="units/pd2_crimefest_2014/oct22/weapons/wpn_fps_upg_fl_pis_x400v/x400v_nm"/>
+    </material>
+</materials>

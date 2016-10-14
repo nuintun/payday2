@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_smg_scorpion_extra_rail_gadget" materials="units/pd2_dlc_miami/weapons/wpn_third_smg_scorpion/wpn_third_smg_scorpion_extra_rail_gadget" />
+    <graphics>
+        <object enabled="true" name="g_rail" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,13 @@
+<materials version="3">
+	<material name="mtr_third_arm" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_turtles/weapons/wpn_third_bow_hunter_pts/third_arm_df" />
+		<bump_normal_texture file="units/pd2_dlc_turtles/weapons/wpn_third_bow_hunter_pts/third_arm_nm" />
+	</material>
+	
+	<material name="mtr_arm_carbon" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_turtles/weapons/wpn_fps_bow_hunter_pts/arm_carbon_df"/>
+        <bump_normal_texture file="units/pd2_dlc_turtles/weapons/wpn_fps_bow_hunter_pts/arm_nm"/>
+        <reflection_texture type="cubemap" file="environments/cubemaps/cubemap_midday_lcm"/>
+        <variable value="1 0 5.6999998092651" type="vector3" name="environment_settings"/>
+    </material>
+</materials>

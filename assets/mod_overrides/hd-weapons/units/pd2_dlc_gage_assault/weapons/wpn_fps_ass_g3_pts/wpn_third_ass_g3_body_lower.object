@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_ass_g3_body_lower" materials="units/pd2_dlc_gage_assault/weapons/wpn_fps_ass_g3_pts/wpn_third_ass_g3_body_lower" />
+    <graphics>
+        <object enabled="true" name="g_lower" />
+    </graphics>
+</dynamic_object>

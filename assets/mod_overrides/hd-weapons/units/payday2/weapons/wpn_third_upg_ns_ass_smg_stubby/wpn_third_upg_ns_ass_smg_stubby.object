@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_upg_ns_ass_smg_stubby/wpn_third_upg_ns_ass_smg_stubby" orientation_object="rp_wpn_fps_upg_ns_ass_smg_stubby" />
+    <graphics>
+        <object name="g_stubby" enabled="true" />
+    </graphics>
+</dynamic_object>

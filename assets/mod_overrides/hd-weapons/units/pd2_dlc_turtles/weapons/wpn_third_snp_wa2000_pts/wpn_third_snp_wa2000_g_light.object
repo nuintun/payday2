@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_turtles/weapons/wpn_third_snp_wa2000_pts/wpn_third_snp_wa2000_g_light" orientation_object="rp_wpn_fps_snp_wa2000_g_light" />
+	<graphics>
+		<object name="g_light" enabled="true" />
+	</graphics>
+</dynamic_object>

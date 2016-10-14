@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/payday2/weapons/wpn_npc_sniper/wpn_npc_sniper" orientation_object="rp_m4" />
+  <sequence_manager file="units/payday2/weapons/wpn_npc_sniper/wpn_npc_sniper" />
+  <bodies>
+    <body name="body" enabled="false" template="debris" pushed_by_mover="false">
+		<object name="rp_m4" />
+		<object name="c_box" collision_type="box" mass="2.5" />
+    </body>
+  </bodies>
+  <effects>
+  	<effect_spawner name="flashlight" object="a_effect_flashlight" effect="effects/particles/weapons/flashlight/flashlight" enabled="false" assign_parent="true"/>
+  </effects>
+  
+  <graphics>
+    <!-- Disabled vanilla game meshes -->
+    <object enabled="false" name="g_body" />
+    <object enabled="false" name="g_body_lod1" />
+    <!-- Custom -->
+    <!-- Barrels -->
+    <object enabled="false" name="g_barrel_long" />
+    <object enabled="true" name="g_barrel_medium" />
+    <object enabled="true" name="g_barrel_medium_barrel" />
+    <object enabled="false" name="g_barrel_short" />
+    <object enabled="false" name="g_barrel_short_muzzle" />
+    <object enabled="false" name="g_barrel_suppressed" />
+    <!-- Body -->
+    <object enabled="true" name="g_bipod" />
+    <object enabled="true" name="g_bipod_pin" />
+    <object enabled="true" name="g_body_bolt" />
+    <object enabled="true" name="g_body_bolt_handle" />
+    <object enabled="true" name="g_body_lower" />
+    <object enabled="true" name="g_body_pin" />
+    <object enabled="true" name="g_body_upper" />
+    <!-- Grip -->
+    <object enabled="false" name="g_grip_ergo" />
+    <object enabled="false" name="g_grip_hgrip" />
+    <object enabled="true" name="g_grip_m4_std" />
+    <object enabled="false" name="g_grip_mgrip_g_grip" />
+    <object enabled="false" name="g_grip_sniper" />
+    <!-- Magazines -->
+    <object enabled="true" name="g_mag_bullets" />
+    <object enabled="true" name="g_mag_clip" />
+    <!-- Optics -->
+    <object enabled="false" name="g_optics_flipup" />
+    <object enabled="false" name="g_optics_flipup_down" />
+    <object enabled="false" name="g_optics_flipup_up" />
+    <object enabled="false" name="g_optics_eotech" />
+    <object enabled="false" name="g_optics_eotech_gfx_lens" />
+    <object enabled="false" name="g_optics_acog" />
+    <object enabled="false" name="g_optics_acog_lens" />
+    <object enabled="false" name="g_optics_aimpoint" />
+    <object enabled="false" name="g_optics_aimpoint_glass" />
+    <object enabled="false" name="g_optics_aimpoint_preorder" />
+    <object enabled="false" name="g_optics_aimpoint_preorder_glass" />
+    <object enabled="false" name="g_optics_cmore" />
+    <object enabled="false" name="g_optics_cmore_lens" />
+    <object enabled="false" name="g_optics_cs" />
+    <object enabled="false" name="g_optics_cs_lens" />
+    <object enabled="false" name="g_optics_docter" />
+    <object enabled="false" name="g_optics_docter_lens" />
+    <object enabled="false" name="g_optics_eotech_xps" />
+    <object enabled="false" name="g_optics_eotech_xps_lens" />
+    <object enabled="false" name="g_optics_reflex" />
+    <object enabled="false" name="g_optics_reflex_lens" />
+    <object enabled="false" name="g_optics_rx01" />
+    <object enabled="false" name="g_optics_rx01_lens" />
+    <object enabled="false" name="g_optics_rx30" />
+    <object enabled="false" name="g_optics_rx30_lens" />
+    <object enabled="false" name="g_optics_specter" />
+    <object enabled="false" name="g_optics_specter_glass" />
+    <object enabled="false" name="g_optics_t1micro" />
+    <object enabled="false" name="g_optics_t1micro_glass" />
+    <object enabled="true" name="g_optics_shortdot" />
+    <object enabled="true" name="g_optics_shortdot_gfx_lens" />
+    <object enabled="true" name="g_optics_shortdot_inside" />
+    <object enabled="true" name="g_optics_shortdot_reticle" />
+    <object enabled="false" name="g_optics_leupold" />
+    <object enabled="false" name="g_optics_leupold_gfx_lens" />
+    <object enabled="false" name="g_optics_leupold_illum" />
+    <object enabled="false" name="g_optics_leupold_inside" />
+    <object enabled="false" name="g_optics_leupold_reticle" />
+    <!-- Attachments -->
+    <object enabled="false" name="g_attachment_peqbox" />
+    <object enabled="false" name="g_attachment_surefire" />
+    <object enabled="true" name="g_attachment_laser" />
+    <object enabled="false" name="g_attachment_peq" />
+  </graphics>
+  
+  <lights>
+    <light multiplier="identity" far_range="1000" name="ls_flashlight" enabled="false" type="spot|specular" />
+  </lights>  
+</dynamic_object>

@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/pd2_dlc_miami/weapons/wpn_third_smg_scorpion/wpn_third_smg_scorpion_s_standard" orientation_object="rp_wpn_fps_smg_scorpion_s_standard" />
+    <graphics>
+        <object enabled="true" name="g_stock" />
+    </graphics>
+</dynamic_object>

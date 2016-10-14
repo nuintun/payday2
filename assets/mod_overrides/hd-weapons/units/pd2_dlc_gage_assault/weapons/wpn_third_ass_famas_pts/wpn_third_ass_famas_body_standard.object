@@ -1,0 +1,18 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_ass_famas_body_standard" materials="units/pd2_dlc_gage_assault/weapons/wpn_third_ass_famas_pts/wpn_third_ass_famas_body_standard" />
+  <animations>
+		<animation_group name="reload">
+		  <object name="a_reload" enabled="false" />
+		</animation_group>
+		
+		<animation_group name="recoil">
+		  <object name="a_recoil" enabled="false" />
+		</animation_group>		
+	</animations>
+	
+    <graphics>
+        <object enabled="true" name="g_upper" />
+        <object enabled="true" name="g_lower" />
+        <object enabled="true" name="g_bolt" />
+    </graphics>
+</dynamic_object>

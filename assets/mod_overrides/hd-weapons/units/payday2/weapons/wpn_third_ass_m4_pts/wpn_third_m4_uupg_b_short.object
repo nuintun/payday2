@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_m4_uupg_b_short" materials="units/payday2/weapons/wpn_third_ass_m4_pts/wpn_third_m4_uupg_b_short" />
+  <graphics>
+        <object  name="g_barrel" enabled="true" />
+  </graphics>
+</dynamic_object>

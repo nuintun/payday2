@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_pis_1911_pts/wpn_third_pis_1911" orientation_object="rp_wpn_fps_pis_1911_g_bling"/>
+    <graphics>
+        <object enabled="true" name="g_grip" />
+    </graphics>
+</dynamic_object>

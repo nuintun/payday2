@@ -1,0 +1,9 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_hotline2/weapons/wpn_fps_smg_cobray_pts/wpn_third_smg_cobray_m_standard" orientation_object="rp_wpn_fps_smg_cobray_m_standard" />
+	<graphics>
+		<object name="g_bullet_1" enabled="true" />
+		<object name="g_bullet_2" enabled="true" />
+		<object name="g_bullet_3" enabled="true" />
+		<object name="g_mag" enabled="true" />
+	</graphics>
+</dynamic_object> 

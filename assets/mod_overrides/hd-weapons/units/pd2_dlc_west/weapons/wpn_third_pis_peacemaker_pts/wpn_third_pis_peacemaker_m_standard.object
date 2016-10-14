@@ -1,0 +1,33 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_west/weapons/wpn_third_pis_peacemaker_pts/wpn_third_pis_peacemaker_m_standard" orientation_object="rp_wpn_fps_pis_peacemaker_m_standard" />
+	<animations>
+		<animation_group name="reload_enter">
+			<object name="a_reload_enter" enabled="true" />
+		</animation_group>
+		<animation_group name="reload">
+			<object name="a_reload_insert_align_bullets" enabled="true" />
+			<object name="a_reload_insert" enabled="true" />
+			<object name="a_reload_bullet_insert_1" enabled="true" />
+			<object name="a_reload_bullet_insert_2" enabled="true" />
+			<object name="a_reload_bullet_insert_3" enabled="true" />
+			<object name="a_reload_bullet_insert_4" enabled="true" />
+			<object name="a_reload_bullet_insert_5" enabled="true" />
+			<object name="a_reload_bullet_insert_6" enabled="true" />
+			<object name="a_reload_bullet_2_insert" enabled="true" />
+		</animation_group>
+		<animation_group name="recoil">
+			<object name="a_recoil" enabled="true" />
+		</animation_group>
+	</animations>
+	<graphics>
+		<object name="g_mag" enabled="true" />
+		<object name="g_bullets_static1" enabled="true" />
+		<object name="g_bullet_1" enabled="true" />
+		<object name="g_bullet_2" enabled="true" />
+		<object name="g_bullet_3" enabled="true" />
+		<object name="g_bullet_4" enabled="true" />
+		<object name="g_bullet_5" enabled="true" />
+		<object name="g_bullet_6" enabled="true" />
+		<object name="g_bullet_7" enabled="true" />
+	</graphics>
+</dynamic_object>

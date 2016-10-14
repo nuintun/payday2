@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_upg_o_mbus_front" materials="units/pd2_dlc_gage_shot/weapons/wpn_third_upg_o_mbus/wpn_third_upg_o_mbus" />
+    <graphics>
+        <object enabled="true" name="g_front" />
+    </graphics>
+</dynamic_object>

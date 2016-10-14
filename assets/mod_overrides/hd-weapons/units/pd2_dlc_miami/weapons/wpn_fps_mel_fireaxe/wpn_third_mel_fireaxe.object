@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_mel_fireaxe" materials="units/pd2_dlc_miami/weapons/wpn_fps_mel_fireaxe/wpn_third_mel_fireaxe" />
+    <graphics>
+        <object enabled="true" name="g_axe" />
+    </graphics>
+</dynamic_object>

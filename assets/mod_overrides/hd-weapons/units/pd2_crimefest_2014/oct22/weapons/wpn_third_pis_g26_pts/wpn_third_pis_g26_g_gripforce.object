@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_pis_g26_g_gripforce" materials="units/pd2_crimefest_2014/oct22/weapons/wpn_third_pis_g26_pts/wpn_third_pis_g26_g_gripforce" />
+    <graphics>
+        <object enabled="true" name="g_gripforce" />
+    </graphics>
+</dynamic_object>

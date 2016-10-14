@@ -1,0 +1,85 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_npc_g36" materials="units/payday2/weapons/wpn_npc_g36/wpn_npc_g36" />
+	<sequence_manager file="units/payday2/weapons/wpn_npc_g36/wpn_npc_g36" />
+  <bodies>
+    <body name="body" enabled="false" template="debris" pushed_by_mover="false">
+		<object name="rp_wpn_npc_g36" />
+		<object name="c_box" collision_type="box" mass="2.5" />
+    </body>
+  </bodies>
+  <effects>
+  	<effect_spawner name="flashlight" object="a_effect_flashlight" effect="effects/particles/weapons/flashlight/flashlight" enabled="false" assign_parent="true"/>
+  </effects>
+  <graphics>
+    <!-- Disabled vanilla game meshes -->
+    <object enabled="false" name="g_body" />
+    <object enabled="false" name="g_body_lod1" />
+    <!-- Custom -->
+    <!-- Barrels -->
+    <object enabled="false" name="g_barrel_long" />
+    <object enabled="true" name="g_barrel_short" />
+    <!-- Barrel Extensions -->
+    <object enabled="false" name="g_ns_firepig" />
+    <object enabled="false" name="g_ns_jprifles" />
+    <object enabled="false" name="g_ns_medium" />
+    <object enabled="false" name="g_ns_pbs1" />
+    <object enabled="false" name="g_ns_silencer_large" />
+    <object enabled="false" name="g_ns_small" />
+    <object enabled="false" name="g_ns_stubby" />
+    <object enabled="false" name="g_ns_surefire" />
+    <object enabled="false" name="g_ns_tank" />
+    <object enabled="false" name="g_ns_linear" />
+    <!-- Body -->
+    <object enabled="true" name="g_body_bolt" />
+    <object enabled="true" name="g_body_default" />
+    <object enabled="true" name="g_body_handle" />
+    <object enabled="false" name="g_body_base_sl8" />
+    <!-- Grip -->
+    <object enabled="true" name="g_grip" />
+    <!-- Fore grip -->
+    <object enabled="false" name="g_fg_c" />
+    <object enabled="true" name="g_fg_k" />
+    <object enabled="false" name="g_fg_ksk" />
+    <!-- Vertical Grip -->
+    <object enabled="false" name="g_vg_afg" />
+    <object enabled="false" name="g_vg_standard" />
+    <object enabled="false" name="g_vg_stubby" />
+    <!-- Magazines -->
+    <object enabled="true" name="g_mag" />
+    <!-- Optics -->
+    <object enabled="false" name="g_optics_aimpoint" />
+    <object enabled="false" name="g_optics_aimpoint_glass" />
+    <object enabled="false" name="g_optics_docter" />
+    <object enabled="false" name="g_optics_eotech" />
+    <object enabled="false" name="g_optics_eotech_gfx_lens" />
+    <object enabled="true" name="g_optics_specter" />
+    <object enabled="true" name="g_optics_spectre_glass" />
+    <object enabled="false" name="g_optics_t1micro" />
+    <object enabled="false" name="g_optics_t1micro_glass" />
+    <object enabled="false" name="g_optics_cmore" />
+    <object enabled="false" name="g_optics_cmore_gfx_lens" />
+    <object enabled="false" name="g_optics_aimpoint_preorder" />
+    <object enabled="false" name="g_optics_aimpoint_preorder_glass" />
+    <object enabled="false" name="g_optics_eotech_gage" />
+    <object enabled="false" name="g_optics_eotech_gage_gfx_lens" />
+    <object enabled="false" name="g_optics_reflex" />
+    <object enabled="false" name="g_optics_reflex_gfx_lens" />
+    <object enabled="false" name="g_optics_rx01" />
+    <object enabled="false" name="g_optics_rx01_gfx_lens" />
+    <object enabled="false" name="g_optics_rx30" />
+    <object enabled="false" name="g_optics_rx30_gfx_lens" />
+    <object enabled="false" name="g_optics_aimpoint_cs" />
+    <!-- Stock -->
+    <object enabled="true" name="g_stock_kv" />
+    <object enabled="false" name="g_stock_sl8" />
+    <object enabled="false" name="g_stock_standard" />
+    <!-- Attachments -->
+    <object enabled="true" name="g_attachment_surefire" />
+    <object enabled="false" name="g_attachment_laser" />
+    <object enabled="false" name="g_attachment_peq" />
+    <object enabled="false" name="g_attachment_peqbox" />
+  </graphics>
+  <lights>
+    <light multiplier="identity" far_range="1000" name="a_effect_flashlight" enabled="false" type="spot|specular" />
+  </lights> 
+</dynamic_object>

@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_snp_m95_upper_reciever" materials="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_m95_pts/wpn_third_snp_m95_upper_reciever" />
+    <graphics>
+        <object enabled="true" name="g_upper" />
+        <object enabled="true" name="g_pin" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,28 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_west/weapons/wpn_fps_bow_plainsrider_pts/wpn_third_bow_plainsrider_body_standard" orientation_object="rp_wpn_fps_bow_plainsrider_body_standard" />
+	<animations>
+		<animation_group name="recoil">
+		</animation_group>
+		<animation_group name="reload">
+			<object name="anim_m_reload" enabled="true" />
+		</animation_group>
+		<animation_group name="charge">
+			<object name="anim_m_charge" enabled="true" />
+			<object name="a_middle" enabled="true" />
+			<object name="a_limb_1" enabled="true" />
+			<object name="a_limb_2" enabled="true" />
+			<object name="a_limb_3" enabled="true" />
+			<object name="a_limb_4" enabled="true" />
+			<object name="a_limb_1_l" enabled="true" />
+			<object name="a_limb_2_l" enabled="true" />
+			<object name="a_limb_3_l" enabled="true" />
+			<object name="a_limb_4_l" enabled="true" />
+			<object name="a_string_1" enabled="true" />
+			<object name="a_string_u" enabled="true" />
+			<object name="a_string_l" enabled="true" />
+		</animation_group>
+	</animations>
+	<graphics>
+		<object name="g_body1" enabled="true" />
+	</graphics>
+</dynamic_object>

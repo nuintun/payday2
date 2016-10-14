@@ -1,0 +1,16 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_snp_m95_magazine" materials="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_m95_pts/wpn_third_snp_m95_magazine" />
+    <animations>
+		<animation_group name="reload">
+		  <object name="anim_mag_reload" enabled="false" />
+		  <object name="anim_bullet_reload_not_empty" enabled="false" />
+		</animation_group>		
+		<animation_group name="reload_not_empty">
+		  <object name="anim_mag_reload_not_empty" enabled="false" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_bullets" />
+        <object enabled="true" name="g_clip" />
+    </graphics>
+</dynamic_object>

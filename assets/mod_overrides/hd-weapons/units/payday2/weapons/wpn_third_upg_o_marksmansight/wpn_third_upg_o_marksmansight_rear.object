@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_upg_o_marksmansight/wpn_third_upg_o_marksmansight" orientation_object="rp_wpn_upg_o_marksmansight_rear"/>
+    <graphics>
+        <object enabled="true" name="g_rear" />
+    </graphics>
+</dynamic_object>

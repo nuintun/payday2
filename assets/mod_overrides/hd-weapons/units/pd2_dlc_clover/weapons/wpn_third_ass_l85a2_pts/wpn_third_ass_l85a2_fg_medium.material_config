@@ -1,0 +1,18 @@
+<materials version="3">
+	<material name="mtr_third_foregrip" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_clover/weapons/wpn_third_ass_l85a2_pts/third_foregrip_df" />
+		<bump_normal_texture file="units/pd2_dlc_clover/weapons/wpn_third_ass_l85a2_pts/third_foregrip_nm" />
+	</material>
+	<material name="mtr_third_vg" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_clover/weapons/wpn_third_ass_l85a2_pts/third_vg_df" />
+		<bump_normal_texture file="units/pd2_dlc_clover/weapons/wpn_third_ass_l85a2_pts/third_vg_nm" />
+	</material>
+  <material name="mtr_foregrip" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_clover/weapons/wpn_fps_ass_l85a2_pts/foregrip_df" />
+		<bump_normal_texture file="units/pd2_dlc_clover/weapons/wpn_fps_ass_l85a2_pts/foregrip_nm" />
+	</material>
+	<material name="mtr_vg" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_clover/weapons/wpn_fps_ass_l85a2_pts/vg_df" />
+		<bump_normal_texture file="units/pd2_dlc_clover/weapons/wpn_fps_ass_l85a2_pts/vg_nm" />
+	</material>
+</materials>

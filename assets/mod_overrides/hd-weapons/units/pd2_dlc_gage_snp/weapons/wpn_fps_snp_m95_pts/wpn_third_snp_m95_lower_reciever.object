@@ -1,0 +1,8 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_snp_m95_lower_reciever" materials="units/pd2_dlc_gage_snp/weapons/wpn_fps_snp_m95_pts/wpn_third_snp_m95_lower_reciever" />
+    <graphics>
+        <object enabled="true" name="g_lower" />
+        <object enabled="true" name="g_bolt_handle" />
+        <object enabled="true" name="g_bolt" />
+    </graphics>
+</dynamic_object>

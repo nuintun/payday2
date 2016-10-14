@@ -1,0 +1,34 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_bbq/weapons/wpn_fps_sho_aa12_pts/wpn_third_sho_aa12_mag_drum" orientation_object="rp_wpn_fps_sho_aa12_mag_drum" />
+	<animations>
+		<animation_group name="recoil">
+			<object name="anim_recoil" enabled="false" />
+		</animation_group>
+	</animations>
+	<graphics>
+		<object name="g_back" enabled="true" />
+		<object name="g_front" enabled="true" />
+		<object name="g_rotator" enabled="true" />
+		<object name="g_bullet_1" enabled="true" />
+		<object name="g_bullet_2" enabled="true" />
+		<object name="g_bullet_3" enabled="true" />
+		<object name="g_bullet_4" enabled="true" />
+		<object name="g_bullet_5" enabled="true" />
+		<object name="g_bullet_6" enabled="true" />
+		<object name="g_bullet_7" enabled="true" />
+		<object name="g_bullet_8" enabled="true" />
+		<object name="g_bullet_9" enabled="true" />
+		<object name="g_bullet_10" enabled="true" />
+		<object name="g_bullet_11" enabled="true" />
+		<object name="g_bullet_12" enabled="true" />
+		<object name="g_bullet_13" enabled="true" />
+		<object name="g_bullet_14" enabled="true" />
+		<object name="g_bullet_15" enabled="true" />
+		<object name="g_bullet_16" enabled="true" />
+		<object name="g_bullet_17" enabled="true" />
+		<object name="g_bullet_18" enabled="true" />
+		<object name="g_bullet_19" enabled="true" />
+		<object name="g_bullet_20" enabled="true" />
+		<object name="g_bullet_21" enabled="true" />
+	</graphics>
+</dynamic_object> 

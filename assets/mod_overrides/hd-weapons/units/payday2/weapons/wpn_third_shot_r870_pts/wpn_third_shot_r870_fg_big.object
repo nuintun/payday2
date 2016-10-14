@@ -1,0 +1,17 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_shot_r870_pts/wpn_third_shot_r870" orientation_object="rp_wpn_fps_shot_r870_fg_big"/>
+    <animations>	
+    <animation_group name="recoil">
+		<object name="anim_bolt_recoil" enabled="false" />
+    </animation_group>
+    <animation_group name="recoil_zoom">
+		<object name="anim_bolt_recoil_zoom" enabled="false" />
+    </animation_group>
+    <animation_group name="reload_exit">
+    <object name="anim_bolt_reload_exit" enabled="false" />
+    </animation_group>
+</animations>
+    <graphics>
+        <object enabled="true" name="g_bigpump" />
+    </graphics>
+</dynamic_object>

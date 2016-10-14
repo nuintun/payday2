@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_sho_striker_body_standard" materials="units/pd2_dlc_gage_shot/weapons/wpn_third_sho_striker_pts/wpn_third_sho_striker_body_standard" />
+    <animations>
+		<animation_group name="reload">
+		  <object name="anim_swtich_reload" enabled="false" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_body" />
+        <object enabled="true" name="g_rail" />
+        <object enabled="true" name="g_sling" />
+        <object enabled="true" name="g_switch" />
+    </graphics>
+</dynamic_object>

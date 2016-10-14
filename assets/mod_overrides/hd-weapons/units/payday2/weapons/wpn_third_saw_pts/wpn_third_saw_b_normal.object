@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_saw_pts/wpn_third_saw_b_normal" orientation_object="rp_wpn_fps_saw_b_normal" />
+    <graphics>
+        <object enabled="true" name="g_protection" />
+    </graphics>
+</dynamic_object>

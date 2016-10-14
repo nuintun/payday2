@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_upg_fl_ass_smg_sho_surefire/wpn_third_upg_fl_ass_smg_sho_surefire" orientation_object="rp_wpn_upg_fl_ass_smg_sho_surefire" />
+    <graphics>
+        <object name="g_surefire" enabled="true" />
+        <object name="g_light" enabled="false" />
+    </graphics>
+</dynamic_object>

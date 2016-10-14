@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_mel_toothbrush_shiv" materials="units/pd2_crimefest_2014/oct27/weapons/wpn_fps_mel_toothbrush_shiv/wpn_third_mel_toothbrush_shiv" />
+    <graphics>
+        <object enabled="true" name="g_toothbrush" />
+    </graphics>
+</dynamic_object>

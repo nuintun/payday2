@@ -1,0 +1,10 @@
+<materials version="3">
+	<material name="mtr_sai_third" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_turtles/weapons/wpn_fps_mel_twin/wpn_third_mel_twin_df" />
+		<bump_normal_texture file="units/pd2_dlc_turtles/weapons/wpn_fps_mel_twin/wpn_third_mel_twin_nm" />
+	</material>
+	<material name="mtr_sai" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/pd2_dlc_turtles/weapons/wpn_fps_mel_twin/wpn_fps_mel_twin_df" />
+		<bump_normal_texture file="units/pd2_dlc_turtles/weapons/wpn_fps_mel_twin/wpn_fps_mel_twin_nm" />
+	</material>
+</materials>

@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_m4_upg_b_sd_smr" materials="units/pd2_dlc_gage_jobs/weapons/wpn_third_upg_fg_smr/wpn_third_m4_upg_b_sd_smr" />
+    <graphics>
+        <object enabled="true" name="g_barrel_sd" />
+    </graphics>
+</dynamic_object>

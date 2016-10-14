@@ -1,0 +1,10 @@
+<materials version="3">
+    <material name="a2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_ass_amcar_pts/wpn_ass_third_amcar_body_upperreciever_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_ass_amcar_pts/wpn_ass_third_amcar_body_upperreciever_nm"/>
+    </material>
+    <material name="amcar_upper" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_amcar_pts/wpn_ass_fps_amcar_body_upperreciever_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_amcar_pts/wpn_ass_fps_amcar_body_upperreciever_nm"/>
+    </material>
+</materials>

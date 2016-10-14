@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_lmg_rpk_b_standard" materials="units/pd2_dlc_gage_lmg/weapons/wpn_third_lmg_rpk_pts/wpn_third_lmg_rpk_b_standard" />
+    <graphics>
+        <object enabled="true" name="g_assembly" />
+    </graphics>
+</dynamic_object>

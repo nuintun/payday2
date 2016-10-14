@@ -1,0 +1,17 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_ass_g36_pts/wpn_third_upg_g36" orientation_object="rp_wpn_fps_ass_g36_body_sl8"/>
+    <animations>
+		<animation_group name="reload">
+			<object name="anim_bolt_reload" enabled="false" />
+			<object name="anim_handle_reload" enabled="false" />
+		</animation_group>
+		<animation_group name="recoil">
+			<object name="anim_recoil" enabled="false" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object 	name="g_base_sl8" 		enabled="true" />
+        <object  	name="g_bolt" 	enabled="true" />
+        <object  	name="g_handle" 	enabled="true" />
+    </graphics>
+</dynamic_object>

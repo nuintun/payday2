@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_pis_g18c_pts/wpn_third_pis_g18c" orientation_object="rp_frame"/>
+    <graphics>
+        <object name="g_glock_frame" enabled="true" />
+        <object name="g_barrel_18c" enabled="true" />
+    </graphics>
+</dynamic_object>

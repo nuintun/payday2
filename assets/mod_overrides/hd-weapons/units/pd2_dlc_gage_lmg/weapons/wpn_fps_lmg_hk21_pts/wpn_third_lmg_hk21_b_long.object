@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_lmg_hk21_b_long" materials="units/pd2_dlc_gage_lmg/weapons/wpn_fps_lmg_hk21_pts/wpn_third_lmg_hk21_b_long" />
+    <graphics>
+        <object enabled="true" name="g_b_short" />
+    </graphics>
+</dynamic_object>

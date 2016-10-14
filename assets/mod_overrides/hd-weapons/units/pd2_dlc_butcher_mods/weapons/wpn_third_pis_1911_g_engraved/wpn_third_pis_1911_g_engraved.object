@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_butcher_mods/weapons/wpn_third_pis_1911_g_engraved/wpn_third_pis_1911_g_engraved" orientation_object="rp_wpn_fps_pis_1911_g_engraved" />
+	<graphics>
+		<object name="g_grip" enabled="true" />
+	</graphics>
+</dynamic_object> 

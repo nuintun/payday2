@@ -1,0 +1,8 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_upg_fl_pis_laser/wpn_third_upg_fl_pis_laser" orientation_object="rp_wpn_upg_fl_pis_laser" />
+    <graphics>
+        <object name="g_pistol_laser" enabled="true" />
+        <object name="g_laser" enabled="false" />
+        <object name="g_indicator" enabled="false" />
+    </graphics> 
+</dynamic_object>

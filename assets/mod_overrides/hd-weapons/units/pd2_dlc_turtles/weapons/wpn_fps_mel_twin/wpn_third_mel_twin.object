@@ -1,0 +1,9 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_turtles/weapons/wpn_fps_mel_twin/wpn_third_mel_twin" orientation_object="rp_wpn_fps_mel_twin" />
+	<graphics>
+		<object name="g_sai_third" enabled="true" />
+	</graphics>
+	<graphics>
+		<object name="g_sai" enabled="true" />
+	</graphics>
+</dynamic_object>

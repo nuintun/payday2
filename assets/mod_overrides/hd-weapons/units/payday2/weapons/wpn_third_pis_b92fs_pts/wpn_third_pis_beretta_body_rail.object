@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_pis_b92fs_pts/wpn_third_pis_beretta" orientation_object="rp_wpn_fps_pis_beretta_body_rail"/>
+    <graphics>
+        <object enabled="true" name="g_rail" />
+    </graphics>
+</dynamic_object>

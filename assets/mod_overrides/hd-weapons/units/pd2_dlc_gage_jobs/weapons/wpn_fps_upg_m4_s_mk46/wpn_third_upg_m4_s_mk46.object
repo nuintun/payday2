@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/pd2_dlc_gage_jobs/weapons/wpn_fps_upg_m4_s_mk46/wpn_third_upg_m4_s_mk46" orientation_object="rp_wpn_fps_upg_m4_s_mk46" />
+    <graphics>
+        <object enabled="true" name="g_stock" />
+    </graphics>
+</dynamic_object>

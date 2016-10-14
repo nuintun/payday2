@@ -1,0 +1,11 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_shot_r870_pts/wpn_third_shot_r870" orientation_object="rp_wpn_fps_shot_r870_body_rack"/>
+    <graphics>
+        <object enabled="true" name="g_slug4" />
+        <object enabled="true" name="g_slug3" />
+        <object enabled="true" name="g_slug2" />
+        <object enabled="true" name="g_slug1" />
+        <object enabled="true" name="g_slug" />
+        <object enabled="true" name="g_shellrack" />
+    </graphics>
+</dynamic_object>

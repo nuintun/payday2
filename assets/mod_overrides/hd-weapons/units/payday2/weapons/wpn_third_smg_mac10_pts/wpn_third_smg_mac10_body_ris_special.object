@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_smg_mac10_pts/wpn_third_smg_mac10_body_ris" orientation_object="rp_wpn_fps_smg_mac10_body_ris_special" />
+    <graphics>
+        <object name="g_body_ris_special" enabled="true" />
+    </graphics>
+</dynamic_object>

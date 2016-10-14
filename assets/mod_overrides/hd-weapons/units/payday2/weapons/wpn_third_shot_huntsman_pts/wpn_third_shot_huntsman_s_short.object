@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_shot_huntsman_pts/wpn_third_shot_huntsman" orientation_object="rp_wpn_fps_shot_huntsman_s_short"/>
+    <graphics>
+        <object enabled="true" name="g_short_stock" />
+    </graphics>
+</dynamic_object>

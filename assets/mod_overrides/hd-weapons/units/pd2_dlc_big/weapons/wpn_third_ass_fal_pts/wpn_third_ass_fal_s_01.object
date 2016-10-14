@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_ass_fal_s_01" materials="units/pd2_dlc_big/weapons/wpn_third_ass_fal_pts/wpn_third_ass_fal_s_01" />
+    <graphics>
+        <object enabled="true" name="g_stock" />
+    </graphics>
+</dynamic_object>

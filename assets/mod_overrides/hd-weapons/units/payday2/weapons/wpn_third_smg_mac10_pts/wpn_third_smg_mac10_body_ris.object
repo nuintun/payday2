@@ -1,0 +1,16 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_smg_mac10_pts/wpn_third_smg_mac10_body_ris" orientation_object="rp_wpn_fps_smg_mac10_body_ris" />
+    <animations>
+		<animation_group name="reload" >
+			<object name="anim_bolt_reload" enabled="false" />
+		</animation_group>	
+	
+		<animation_group name="recoil">
+			<object name="anim_bolt_recoil" enabled="false" />
+		</animation_group>	
+	</animations>
+    <graphics>
+        <object name="g_body_ris_draghandle" enabled="true" />
+        <object name="g_body_ris" enabled="true" />
+    </graphics>
+</dynamic_object>

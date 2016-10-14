@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_arena/weapons/wpn_third_mel_detector/wpn_third_mel_detector" orientation_object="rp_wpn_fps_mel_detector" />
+	<graphics>
+		<object name="g_detect" enabled="true" />
+	</graphics>
+</dynamic_object>

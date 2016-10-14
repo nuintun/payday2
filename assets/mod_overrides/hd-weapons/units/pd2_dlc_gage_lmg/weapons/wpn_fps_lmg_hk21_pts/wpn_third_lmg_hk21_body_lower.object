@@ -1,0 +1,17 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_lmg_hk21_body_lower" materials="units/pd2_dlc_gage_lmg/weapons/wpn_fps_lmg_hk21_pts/wpn_third_lmg_hk21_body_lower" />
+    <animations>
+		<animation_group name="reload">
+		  <object name="anim_releaser" enabled="false" />
+		</animation_group>
+		
+		<animation_group name="reload_not_empty">
+		  <object name="anim_releaser_not_empty" enabled="false" />
+		</animation_group>
+	</animations>
+	
+	<graphics>
+        <object enabled="true" name="g_lower" />
+        <object enabled="true" name="g_releaser" />
+    </graphics>
+</dynamic_object>

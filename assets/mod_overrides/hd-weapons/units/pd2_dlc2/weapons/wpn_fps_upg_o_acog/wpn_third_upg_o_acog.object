@@ -1,0 +1,9 @@
+<dynamic_object>
+    <diesel materials="units/pd2_dlc2/weapons/wpn_fps_upg_o_acog/wpn_third_upg_o_acog" orientation_object="rp_wpn_fps_upg_o_acog" />
+    <graphics>
+        <object enabled="true" name="g_acog" />
+        <object enabled="true" name="g_gfx_lens" />
+        <object enabled="true" name="g_reddot" />
+        <object enabled="true" name="g_reticle" />
+    </graphics>
+</dynamic_object>

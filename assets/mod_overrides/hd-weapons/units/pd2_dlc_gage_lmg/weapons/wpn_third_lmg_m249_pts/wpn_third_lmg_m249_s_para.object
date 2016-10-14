@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_lmg_m249_s_para" materials="units/pd2_dlc_gage_lmg/weapons/wpn_third_lmg_m249_pts/wpn_third_lmg_m249_s_para" />
+    <graphics>
+        <object enabled="true" name="g_para" />
+        <object enabled="true" name="g_sling" />
+    </graphics>
+</dynamic_object>

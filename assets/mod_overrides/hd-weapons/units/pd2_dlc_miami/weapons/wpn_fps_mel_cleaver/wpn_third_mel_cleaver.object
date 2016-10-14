@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_mel_cleaver" materials="units/pd2_dlc_miami/weapons/wpn_fps_mel_cleaver/wpn_third_mel_cleaver" />
+    <graphics>
+        <object enabled="true" name="g_cleaver" />
+    </graphics>
+</dynamic_object>

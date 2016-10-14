@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_gre_m79_barrel_short" materials="units/pd2_dlc_gage_assault/weapons/wpn_fps_gre_m79_pts/wpn_third_gre_m79_barrel_short" />
+    <graphics>
+        <object enabled="true" name="g_bar" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,15 @@
+<dynamic_object>
+    <diesel materials="units/pd2_dlc_miami/weapons/wpn_third_smg_scorpion/wpn_third_smg_scorpion_m_standard" orientation_object="rp_wpn_fps_smg_scorpion_m_standard" />
+    <animations>		
+		<animation_group name="reload" enabled="false" >
+			<object name="a_reload" />
+		</animation_group>
+		<animation_group name="reload_not_empty" enabled="false" >
+			<object name="a_reload_not_empty" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_mag" />
+        <object enabled="true" name="g_bullet_1" />
+    </graphics>
+</dynamic_object>

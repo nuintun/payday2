@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_pis_c96_nozzle" materials="units/pd2_dlc_gage_historical/weapons/wpn_fps_pis_c96_pts/wpn_third_pis_c96_nozzle" />
+    <graphics>
+        <object enabled="true" name="g_nozzle" />
+    </graphics>
+</dynamic_object>

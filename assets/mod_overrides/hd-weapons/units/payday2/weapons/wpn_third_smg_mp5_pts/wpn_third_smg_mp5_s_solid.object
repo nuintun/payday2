@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_smg_mp5_pts/wpn_third_smg_mp5_s_solid" orientation_object="rp_wpn_fps_smg_mp5_s_solid" />
+  <graphics>
+        <object  name="g_solid" enabled="true" />
+  </graphics>
+</dynamic_object>

@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_smg_olympic_pts/wpn_third_smg_olympic_fg_olympic" orientation_object="rp_wpn_fps_smg_olympic_fg_olympic" />
+  <graphics>
+        <object  name="g_olympic" enabled="true" />
+  </graphics>
+</dynamic_object>

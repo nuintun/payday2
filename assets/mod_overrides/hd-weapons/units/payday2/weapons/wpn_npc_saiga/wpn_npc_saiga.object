@@ -1,0 +1,86 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_npc_saiga" materials="units/payday2/weapons/wpn_npc_saiga/wpn_npc_saiga" />
+	<sequence_manager file="units/payday2/weapons/wpn_npc_saiga/wpn_npc_saiga" />
+    <bodies>
+        <body name="body" enabled="false" template="debris" pushed_by_mover="false" >
+        	<object name="rp_wpn_npc_saiga" />
+            <object name="c_box" collision_type="box" mass="3" />
+        </body>
+    </bodies>
+	<effects>
+  	<effect_spawner name="flashlight" object="a_effect_flashlight" effect="effects/particles/weapons/flashlight/flashlight" enabled="false" assign_parent="true"/>
+  </effects>
+  <graphics>
+    <!-- Disabled vanilla game meshes -->
+    <object enabled="false" name="g_body" />
+    <object enabled="false" name="g_body_lod1" />
+    <!-- Custom -->
+    <!-- Barrel -->
+    <object enabled="true" name="g_barrel" />
+    <!-- Barrel Extensions -->
+    <object enabled="false" name="g_ns_king" />
+    <object enabled="false" name="g_ns_shark" />
+    <object enabled="false" name="g_ns_thick" />
+    <!-- Body -->
+    <object enabled="true" name="g_body_bolt" />
+    <object enabled="true" name="g_body_lowerreceiver" />
+    <object enabled="true" name="g_body_upperreceiver" />
+    <!-- Foregrips -->
+    <object enabled="false" name="g_fg_rail" />
+    <object enabled="true" name="g_fg_std" />
+    <!-- Grips -->
+    <object enabled="false" name="g_grip_hgrip" />
+    <object enabled="true" name="g_grip_pgrip" />
+    <object enabled="false" name="g_grip_rk3" />
+    <object enabled="false" name="g_grip_std" />
+    <object enabled="false" name="g_grip_wgrip" />
+    <!-- Magazines -->
+    <object enabled="true" name="g_mag_5rnd" />
+    <object enabled="false" name="g_mag_drum" />
+    <!-- Optics -->
+    <object enabled="false" name="g_optics_acog" />
+    <object enabled="false" name="g_optics_acog_lens" />
+    <object enabled="false" name="g_optics_aimpoint" />
+    <object enabled="false" name="g_optics_aimpoint_glass" />
+    <object enabled="false" name="g_optics_docter" />
+    <object enabled="false" name="g_optics_eotech" />
+    <object enabled="false" name="g_optics_eotech_gfx_lens" />
+    <object enabled="false" name="g_optics_specter" />
+    <object enabled="false" name="g_optics_spectre_glass" />
+    <object enabled="false" name="g_optics_t1micro" />
+    <object enabled="false" name="g_optics_t1micro_glass" />
+    <object enabled="false" name="g_optics_cmore" />
+    <object enabled="false" name="g_optics_cmore_gfx_lens" />
+    <object enabled="false" name="g_optics_aimpoint_preorder" />
+    <object enabled="false" name="g_optics_aimpoint_preorder_glass" />
+    <object enabled="false" name="g_optics_eotech_gage" />
+    <object enabled="false" name="g_optics_eotech_gage_gfx_lens" />
+    <object enabled="false" name="g_optics_reflex" />
+    <object enabled="false" name="g_optics_reflex_gfx_lens" />
+    <object enabled="false" name="g_optics_rx01" />
+    <object enabled="false" name="g_optics_rx01_gfx_lens" />
+    <object enabled="false" name="g_optics_rx30" />
+    <object enabled="false" name="g_optics_rx30_gfx_lens" />
+    <object enabled="false" name="g_optics_aimpoint_cs" />
+    <!-- Stock -->
+    <object enabled="false" name="g_stock_folding" />
+    <object enabled="false" name="g_stock_m4_crane" />
+    <object enabled="false" name="g_stock_m4_mk46" />
+    <object enabled="false" name="g_stock_m4_pts" />
+    <object enabled="false" name="g_stock_m4_std" />
+    <object enabled="false" name="g_stock_m4_ubr" />
+    <object enabled="false" name="g_stock_psl" />
+    <object enabled="false" name="g_stock_skfoldable" />
+    <object enabled="true" name="g_stock_solid" />
+    <object enabled="false" name="g_stock_adapter" />
+    
+    <!-- Attachments -->
+    <object enabled="false" name="g_attachment_laser" />
+    <object enabled="false" name="g_attachment_peq" />
+    <object enabled="false" name="g_attachment_peqbox" />
+    <object enabled="false" name="g_attachment_surefire" />
+  </graphics>
+	<lights>
+		<light multiplier="identity" far_range="1000" name="a_effect_flashlight" enabled="false" type="spot|specular" />
+  </lights>
+</dynamic_object>

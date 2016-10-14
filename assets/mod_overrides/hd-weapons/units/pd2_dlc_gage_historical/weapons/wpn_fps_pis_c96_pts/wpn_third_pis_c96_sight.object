@@ -1,0 +1,12 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_pis_c96_sight" materials="units/pd2_dlc_gage_historical/weapons/wpn_fps_pis_c96_pts/wpn_third_pis_c96_sight" />
+    <graphics>
+        <object enabled="true" name="g_reticle" />
+        <object enabled="true" name="g_gfx_lens_3" />
+        <object enabled="true" name="g_gfx_lens_2" />
+        <object enabled="true" name="g_gfx_lens" />
+        <object enabled="true" name="g_reddot" />
+        <object enabled="true" name="g_inside" />
+        <object enabled="true" name="g_shortdot" />
+    </graphics>
+</dynamic_object>

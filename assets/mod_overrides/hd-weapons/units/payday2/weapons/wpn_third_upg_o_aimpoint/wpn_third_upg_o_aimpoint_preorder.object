@@ -1,0 +1,8 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_upg_o_aimpoint/wpn_third_upg_o_aimpoint_preorder" orientation_object="rp_wpn_fps_upg_o_aimpoint_preorder" />
+    <graphics>
+        <object enabled="true" name="g_glass" />
+        <object enabled="true" name="g_gfx" />
+        <object enabled="true" name="g_aimpoint" />
+    </graphics>
+</dynamic_object>

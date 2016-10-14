@@ -1,0 +1,15 @@
+<dynamic_object>
+    <diesel materials="units/pd2_dlc1/weapons/wpn_third_ass_s552_pts/wpn_third_ass_s552_body_standard_black" orientation_object="rp_wpn_fps_ass_s552_body_standard" />
+    <animations>
+        <animation_group name="reload" >
+            <object enabled="false" name="a_reload" />
+        </animation_group>
+        <animation_group name="recoil" >
+            <object enabled="false" name="a_recoil" />
+        </animation_group>
+    </animations>
+    <graphics>
+        <object enabled="true" name="g_bolt" />
+        <object enabled="true" name="g_body" />
+    </graphics>
+</dynamic_object>

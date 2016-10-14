@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/payday2/weapons/wpn_npc_raging_bull/wpn_npc_raging_bull" orientation_object="rp_ragingbull" />
+  <sequence_manager file="units/payday2/weapons/wpn_npc_raging_bull/wpn_npc_raging_bull" />
+   <bodies>
+	<body name="body" enabled="false" template="debris" pushed_by_mover="false">
+		<object name="rp_ragingbull" />
+		<object name="c_box" collision_type="box" mass="3" />
+	</body>
+  </bodies>
+  <graphics>
+    <!-- Disabled vanilla game meshes -->
+    <object enabled="false" name="g_body" />
+    <object enabled="false" name="g_body_lod1" />
+    <!-- Custom -->
+    <!-- Barrels -->
+    <object enabled="true" name="g_barrel_long" />
+    <object enabled="false" name="g_barrel_short" />
+    <object enabled="false" name="g_barrel_standard" />
+    <object enabled="false" name="g_barrel_comp1" />
+    <object enabled="false" name="g_barrel_comp2" />
+    <!-- Barrel Extensions -->
+    <object enabled="false" name="g_ns_flash" />
+    <!-- Body -->
+    <object enabled="true" name="g_body_bullets" />
+    <object enabled="true" name="g_body_cylinder" />
+    <object enabled="true" name="g_body_hammer" />
+    <object enabled="true" name="g_body_lock" />
+    <object enabled="true" name="g_body_sight" />
+    <object enabled="true" name="g_body_std" />
+    <object enabled="false" name="g_body_cylinder_smooth" />
+    <!-- Grip -->
+    <object enabled="true" name="g_grip_std" />
+    <object enabled="false" name="g_grip_ergo" />
+    <!-- Optics -->
+    <object enabled="false" name="g_optics_adapter" />
+    <object enabled="false" name="g_optics_aimpoint" />
+    <object enabled="false" name="g_optics_aimpoint_glass" />
+    <object enabled="false" name="g_optics_docter" />
+    <object enabled="false" name="g_optics_eotech" />
+    <object enabled="false" name="g_optics_eotech_gfx_lens" />
+    <object enabled="false" name="g_optics_specter" />
+    <object enabled="false" name="g_optics_spectre_glass" />
+    <object enabled="false" name="g_optics_t1micro" />
+    <object enabled="false" name="g_optics_t1micro_glass" />
+    <object enabled="false" name="g_optics_cmore" />
+    <object enabled="false" name="g_optics_cmore_gfx_lens" />
+    <object enabled="false" name="g_optics_aimpoint_preorder" />
+    <object enabled="false" name="g_optics_aimpoint_preorder_glass" />
+    <object enabled="false" name="g_optics_eotech_gage" />
+    <object enabled="false" name="g_optics_eotech_gage_gfx_lens" />
+    <object enabled="false" name="g_optics_reflex" />
+    <object enabled="false" name="g_optics_reflex_gfx_lens" />
+    <object enabled="false" name="g_optics_rx01" />
+    <object enabled="false" name="g_optics_rx01_gfx_lens" />
+    <object enabled="false" name="g_optics_rx30" />
+    <object enabled="false" name="g_optics_rx30_gfx_lens" />
+    <object enabled="false" name="g_optics_aimpoint_cs" />
+    <!-- Attachments - none? might add some later -->
+  </graphics>
+  
+</dynamic_object>

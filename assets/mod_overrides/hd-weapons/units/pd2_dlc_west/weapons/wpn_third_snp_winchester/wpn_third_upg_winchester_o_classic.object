@@ -1,0 +1,12 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_west/weapons/wpn_third_snp_winchester/wpn_third_upg_winchester_o_classic" orientation_object="rp_wpn_fps_upg_winchester_o_classic" />
+	<graphics>
+		<object name="g_scope" inherit_bounding_volume="co_culling" enabled="true" />
+		<object name="g_scope_internals" enabled="true" />
+        <object enabled="true" name="g_reticle" />
+        <object enabled="true" name="g_gfx_lens_3" />
+        <object enabled="true" name="g_gfx_lens_2" />
+        <object enabled="true" name="g_gfx_lens" />
+        <object enabled="true" name="g_inside" />
+	</graphics>
+</dynamic_object>

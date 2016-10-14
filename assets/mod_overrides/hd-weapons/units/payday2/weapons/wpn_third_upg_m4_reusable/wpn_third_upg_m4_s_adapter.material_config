@@ -1,0 +1,10 @@
+<materials version="3">
+    <material name="adapter" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_m4_reusable/wpn_third_upg_m4_s_adapter_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_m4_reusable/wpn_third_upg_m4_s_adapter_nm"/>
+    </material>
+    <material name="stock_adapter" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_m4_reusable/wpn_fps_upg_m4_s_adapter_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_m4_reusable/wpn_fps_upg_m4_s_adapter_nm"/>
+    </material>
+</materials>

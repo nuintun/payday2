@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/payday2/weapons/wpn_npc_sawnoff_shotgun/wpn_npc_sawnoff_shotgun" orientation_object="rp_mossberg" />
+  <sequence_manager file="units/payday2/weapons/wpn_npc_sawnoff_shotgun/wpn_npc_sawnoff_shotgun" />
+  <bodies>
+	<body name="body" enabled="false" template="debris" pushed_by_mover="false">
+		<object name="rp_mossberg" />
+		<object name="c_box" collision_type="box" mass="2" />
+	</body>
+  </bodies>
+  <effects>
+  	<effect_spawner name="flashlight" object="a_effect_flashlight" effect="effects/particles/weapons/flashlight/flashlight" enabled="false" assign_parent="true"/>
+  </effects>
+  <graphics>
+    <!-- Disabled vanilla game meshes -->
+    <object enabled="false" name="g_body" />
+    <object enabled="false" name="g_body_lod1" />
+    <!-- Custom -->
+    <!-- Barrel -->
+    <object enabled="false" name="g_barrel_long" />
+    <object enabled="true" name="g_barrel_short" />
+    <!-- Body -->
+    <object enabled="true" name="g_body_lock" />
+    <object enabled="true" name="g_body_mech" />
+    <!-- Stock -->
+    <object enabled="false" name="g_stock_long" />
+    <object enabled="true" name="g_stock_short" />
+  </graphics>
+</dynamic_object>

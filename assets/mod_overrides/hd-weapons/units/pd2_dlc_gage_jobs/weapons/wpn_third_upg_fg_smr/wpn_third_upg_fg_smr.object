@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_upg_fg_smr" materials="units/pd2_dlc_gage_jobs/weapons/wpn_third_upg_fg_smr/wpn_third_upg_fg_smr" />
+    <graphics>
+        <object enabled="true" name="g_smr" />
+    </graphics>
+</dynamic_object>

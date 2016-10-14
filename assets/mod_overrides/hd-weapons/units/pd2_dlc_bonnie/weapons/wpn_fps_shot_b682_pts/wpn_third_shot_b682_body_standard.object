@@ -1,0 +1,15 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_bonnie/weapons/wpn_fps_shot_b682_pts/wpn_third_shot_b682_body_standard" orientation_object="rp_wpn_fps_shot_b682_body_standard" />
+	<animations>
+	    <animation_group name="reload">
+		    <object name="anim_barrel_lock_reload_not_empty" enabled="false" />
+	    </animation_group>
+	    <animation_group name="reload_not_empty">
+		    <object name="anim_barrel_lock_reload" enabled="false" />
+	    </animation_group>
+	</animations>
+	<graphics>
+		<object name="g_lock" enabled="true" />
+		<object name="g_mechanics" enabled="true" />
+	</graphics>
+</dynamic_object> 

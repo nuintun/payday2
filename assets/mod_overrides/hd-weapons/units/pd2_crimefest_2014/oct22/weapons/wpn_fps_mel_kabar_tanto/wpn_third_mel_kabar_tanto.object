@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_mel_kabar_tanto" materials="units/pd2_crimefest_2014/oct22/weapons/wpn_fps_mel_kabar_tanto/wpn_third_mel_kabar_tanto" />
+    <graphics>
+        <object enabled="true" name="g_kabar" />
+    </graphics>
+</dynamic_object>

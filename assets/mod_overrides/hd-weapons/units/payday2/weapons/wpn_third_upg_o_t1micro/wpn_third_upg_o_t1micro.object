@@ -1,0 +1,8 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_upg_o_t1micro/wpn_third_upg_o_t1micro" orientation_object="rp_wpn_fps_upg_o_t1micro" />
+    <graphics>
+        <object name="g_gfx" enabled="true" />
+        <object name="g_glass" enabled="true" />
+        <object name="g_t1micro" enabled="true" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,15 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_smg_tec9_m_extended" materials="units/pd2_dlc_miami/weapons/wpn_third_smg_tec9_pts/wpn_third_smg_tec9_m_extended" />
+    <animations>		
+		<animation_group name="reload" enabled="false" >
+			<object name="anim_mag_reload" />
+		</animation_group>
+		<animation_group name="reload_not_empty" enabled="false" >
+			<object name="anim_mag_reload_not_empty" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_standard_mag" />
+        <object enabled="true" name="g_bullet_1" />
+    </graphics>
+</dynamic_object>

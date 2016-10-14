@@ -1,0 +1,9 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_upg_o_specter/wpn_third_upg_o_specter" orientation_object="rp_specter" />
+    <graphics>
+        <object enabled="true" name="g_specter" />
+        <object enabled="true" name="g_glass" />
+        <object enabled="true" name="g_gfx" />
+        <object enabled="true" name="g_gfx_specter" />
+    </graphics> 
+</dynamic_object>

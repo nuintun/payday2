@@ -1,0 +1,194 @@
+<materials version="3">	
+	<material name="mag74" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/74mag_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/74mag_nm"/>
+    </material> 	
+	<material name="adapter" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/adapter_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/adapter_nm"/>
+    </material> 	
+	<material name="akmsu" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/akmsu_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/akmsu_nm"/>
+    </material> 	
+	<material name="akmsurail" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/akmsu_rail_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/akmsu_rail_nm"/>
+    </material> 	
+	<material name="akmsu_wood" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/akmsu_wood_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/akmsu_wood_nm"/>
+    </material> 	
+	<material name="barrel74" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/barrel_74_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/barrel_74_nm"/>
+    </material> 	
+	<material name="barrel_akm" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/barrel_akm_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/barrel_akm_nm"/>
+    </material>
+	<material name="combo1" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/combo1_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/combo1_nm"/>
+    </material> 	
+	<material name="combo2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/combo2_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/combo2_nm"/>
+    </material> 	
+	<material name="combo4" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/combo4_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/combo4_nm"/>
+    </material> 	
+	<material name="saiga_20rnd" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/drum_saiga_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/drum_saiga_nm"/>
+    </material> 	
+	<material name="cover74" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/dustcover_74_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/dustcover_74_nm"/>
+    </material> 	
+	<material name="coverakm" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/dustcover_akm_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/dustcover_akm_nm"/>
+    </material>	
+	<material name="grip" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/grip_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/grip_nm"/>
+    </material> 	
+	<material name="handguard_standard" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/handguard_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/handguard_nm"/>
+    </material> 	
+	<material name="saiga_handguard" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/handguard_saiga_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/handguard_saiga_nm"/>
+    </material> 	
+	<material name="receiver" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/lower_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/lower_nm"/>
+    </material> 	
+	<material name="lowerrail" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/lowerrail_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/lowerrail_nm"/>
+    </material> 	
+	<material name="magakm" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/mag_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/mag_nm"/>
+    </material> 	
+	<material name="sk" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/sk_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/sk_nm"/>
+    </material>
+    <material name="ak74_barrel" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_74_pts/wpn_fps_ass_74_b_standard_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_74_pts/wpn_fps_ass_74_b_standard_nm"/>
+    </material>
+        <material name="ak74_dustcover" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_74_pts/wpn_fps_ass_74_body_upperreceiver_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_74_pts/wpn_fps_ass_74_body_upperreceiver_nm"/>
+    </material>
+     <material name="ak74_mag" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_74_pts/wpn_74_mag_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_74_pts/wpn_74_mag_nm"/>
+    </material>
+    <material name="akm_barrel" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_akm_pts/wpn_fps_ass_akm_b_standard_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_akm_pts/wpn_fps_ass_akm_b_standard_nm"/>
+    </material>
+    <material name="cover" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_akm_pts/wpn_fps_ass_akm_body_upperreceiver_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_akm_pts/wpn_fps_ass_akm_body_upperreceiver_nm"/>
+    </material>
+    <material name="saiga_20rnd" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_shot_saiga_pts/wpn_upg_saiga_m_20rnd_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_shot_saiga_pts/wpn_upg_saiga_m_20rnd_nm"/>
+    </material>
+    <material name="saiga_barrel" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_shot_saiga_pts/wpn_fps_shot_saiga_b_standard_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_shot_saiga_pts/wpn_fps_shot_saiga_b_standard_nm"/>
+    </material>
+    <material name="saiga_5rnd" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_shot_saiga_pts/wpn_fps_shot_saiga_m_5rnd_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_shot_saiga_pts/wpn_fps_shot_saiga_m_5rnd_nm"/>
+    </material>
+    <material name="lower_rail" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_fg_lowerrail_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_fg_lowerrail_nm"/>
+    </material>
+    <material name="saiga_handguard" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_shot_saiga_pts/wpn_upg_saiga_fg_standard_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_shot_saiga_pts/wpn_upg_saiga_fg_standard_nm"/>
+    </material>
+    <material name="akmsu_barrel" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_smg_akmsu_pts/wpn_fps_smg_akmsu_b_standard_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_smg_akmsu_pts/wpn_fps_smg_akmsu_b_standard_nm"/>
+    </material>
+	<material name="no_blurr" version="2" render_template="effect:DOF_CUTTER">
+        <variable value="10" type="scalar" name="fadeout_distance"/>
+        <diffuse_texture file="units/payday2/weapons/wpn_effects_textures/wpn_effect_no_blurr_df"/>
+        <variable value="182.69010925293" type="scalar" name="falloff_exp"/>
+    </material>
+    <material name="akmsu_rail" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_smg_akmsu_pts/wpn_fps_smg_akmsu_fg_rail_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_smg_akmsu_pts/wpn_fps_smg_akmsu_fg_rail_nm"/>
+    </material>
+    <material name="akmsu_handguard" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_smg_akmsu_pts/wpn_fps_smg_akmsu_fg_standard_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_smg_akmsu_pts/wpn_fps_smg_akmsu_fg_standard_nm"/>
+		<reflection_texture type="cubemap" global_texture="current_global_texture"/>
+    </material>
+    <material name="ak_base" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_ass_akm_pts/wpn_fps_ass_ak_body_lowerreceiver_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_ass_akm_pts/wpn_fps_ass_ak_body_lowerreceiver_nm"/>
+    </material>
+    <material name="aims" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_fg_aims_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_fg_aims_nm"/>
+    </material>
+    <material name="ultimak" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_fg_ultimak_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_fg_ultimak_nm"/>
+    </material>
+    <material name="handguard_lower_wood" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_fg_lower_handguard_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_fg_lower_handguard_nm"/>
+		<reflection_texture type="cubemap" global_texture="current_global_texture"/>
+    </material>
+    <material name="handguard_upper_wood" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_fg_upper_handguard_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_fg_upper_handguard_nm"/>
+		<reflection_texture type="cubemap" global_texture="current_global_texture"/>
+    </material>
+    <material name="pistolgrip" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_grip_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_grip_nm"/>
+    </material>
+    <material name="akm_mag" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_akm_mag_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_akm_mag_nm"/>
+    </material>
+    <material name="drum" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/drum_mag_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/drum_mag_nm"/>
+    </material>
+    <material name="ak_stockadapter" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_s_adapter_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_s_adapter_nm"/>
+    </material>
+    <material name="folding" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_akm_folding_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_akm_folding_nm"/>
+    </material>
+    <material name="psl" render_template="generic:CUBE_ENVIRONMENT_MAPPING:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_ak_psl_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_ak_psl_nm"/>
+		<reflection_texture type="cubemap" global_texture="current_global_texture"/>
+    </material>
+    <material name="sk_foldable" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_ak_skfoldable_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_ak_skfoldable_nm"/>
+    </material>
+    
+    
+    
+</materials>

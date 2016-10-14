@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_smg_mac10_pts/wpn_third_smg_mac10_s_fold" orientation_object="rp_wpn_fps_smg_mac_s_fold" />
+    <graphics>
+        <object name="g_s_fold" enabled="true" />
+    </graphics>
+</dynamic_object>

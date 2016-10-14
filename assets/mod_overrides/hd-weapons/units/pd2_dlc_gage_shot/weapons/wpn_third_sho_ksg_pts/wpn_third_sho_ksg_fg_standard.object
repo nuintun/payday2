@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_sho_ksg_fg_standard" materials="units/pd2_dlc_gage_shot/weapons/wpn_third_sho_ksg_pts/wpn_third_sho_ksg_fg_standard" />
+    <<animations>
+		<animation_group name="reload_exit">
+		  <object name="anim_reload_exit" enabled="false" />
+		</animation_group>
+		<animation_group name="recoil">
+		  <object name="anim_recoil" enabled="false" />
+		</animation_group>
+	</animations>
+    <graphics>
+        <object enabled="true" name="g_pump" />
+    </graphics>
+</dynamic_object>

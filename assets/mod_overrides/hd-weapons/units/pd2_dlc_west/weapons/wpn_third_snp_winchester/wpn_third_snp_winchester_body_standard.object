@@ -1,0 +1,24 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_west/weapons/wpn_third_snp_winchester/wpn_third_snp_winchester_body_standard" orientation_object="rp_wpn_fps_snp_winchester_body_standard" />
+	<animations>
+		<animation_group name="reload_exit">
+			<object name="a_reload_hammer_exit" enabled="true" />
+			<object name="a_reload_ejector_exit" enabled="true" />
+			<object name="a_reload_bolt_exit" enabled="true" />
+			<object name="a_reload_lever_exit" enabled="true" />
+		</animation_group>
+		<animation_group name="recoil">
+			<object name="a_recoil_hammer" enabled="true" />
+			<object name="a_recoil_ejector" enabled="true" />
+			<object name="a_recoil_bolt" enabled="true" />
+			<object name="a_recoil_lever" enabled="true" />
+		</animation_group>
+	</animations>
+	<graphics>
+		<object name="g_hammer" enabled="true" />
+		<object name="g_ejector" enabled="true" />
+		<object name="g_bolt" enabled="true" />
+		<object name="g_lever" enabled="true" />
+		<object name="g_body" enabled="true" />
+	</graphics>
+</dynamic_object>

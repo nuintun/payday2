@@ -1,0 +1,19 @@
+<materials version="3">
+    <material name="mtr_tapco_third" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_jobs/weapons/wpn_third_upg_ak_fg_tapco/tapco_third_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_jobs/weapons/wpn_third_upg_ak_fg_tapco/tapco_third_nm"/>
+    </material>
+    <material name="third_ultimak" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/ultimak_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_third_upg_ak_reusable/ultimak_nm"/>
+    </material>
+    
+    <material name="mtr_tapco" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/pd2_dlc_gage_jobs/weapons/wpn_fps_upg_ak_fg_tapco/tapco_df"/>
+        <bump_normal_texture file="units/pd2_dlc_gage_jobs/weapons/wpn_fps_upg_ak_fg_tapco/tapco_nm"/>
+    </material>
+    <material name="ultimak" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_fg_ultimak_df"/>
+        <bump_normal_texture file="units/payday2/weapons/wpn_fps_upg_ak_reusable/wpn_upg_ak_fg_ultimak_nm"/>
+    </material>
+</materials>

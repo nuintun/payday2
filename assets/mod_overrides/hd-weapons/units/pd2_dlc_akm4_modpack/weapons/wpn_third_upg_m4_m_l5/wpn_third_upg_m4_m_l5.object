@@ -1,0 +1,16 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_akm4_modpack/weapons/wpn_third_upg_m4_m_l5/wpn_third_upg_m4_m_l5" orientation_object="rp_wpn_fps_upg_m4_m_l5" />
+	<animations>
+		<animation_group name="reload">
+			<object name="mag_align" enabled="false" />
+	</animation_group>  
+	
+	<animation_group name="reload_not_empty">
+			<object name="mag_align_2" enabled="false" />
+    </animation_group>
+  </animations>
+  
+	<graphics>
+		<object name="g_mag" enabled="true" />
+	</graphics>
+</dynamic_object>

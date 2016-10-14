@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_mel_rambo" materials="units/pd2_dlc_gage_lmg/weapons/wpn_third_mel_rambo/wpn_third_mel_rambo" />
+    <graphics>
+        <object enabled="true" name="g_rambo" />
+    </graphics>
+</dynamic_object>

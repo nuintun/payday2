@@ -1,0 +1,10 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_turtles/weapons/wpn_third_snp_wa2000_pts/wpn_third_snp_wa2000_b_suppressed" orientation_object="rp_wpn_fps_snp_wa2000_b_suppressed" />
+	<graphics>
+		<object name="g_b" enabled="true" />
+		<object name="g_supp" enabled="true" />
+		
+		<object enabled="true" inherit_bounding_volume="co_culling" name="g_barrel" />
+		<object enabled="true" inherit_bounding_volume="co_culling" name="g_supp" />
+	</graphics>
+</dynamic_object>

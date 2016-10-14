@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel materials="units/payday2/weapons/wpn_third_pis_deagle_pts/wpn_third_pis_deagle" orientation_object="rp_wpn_fps_pis_deagle_g_bling"/>
+    <graphics>
+        <object enabled="true" name="g_bling" />
+    </graphics>
+</dynamic_object>

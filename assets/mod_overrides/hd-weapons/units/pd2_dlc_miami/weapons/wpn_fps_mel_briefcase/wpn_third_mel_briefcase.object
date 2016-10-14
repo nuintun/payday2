@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_briefcase" materials="units/pd2_dlc_miami/weapons/wpn_fps_mel_briefcase/wpn_third_mel_briefcase" />
+    <graphics>
+        <object enabled="true" name="g_briefcase" />
+    </graphics>
+</dynamic_object>

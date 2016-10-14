@@ -1,0 +1,17 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_lmg_m249_upper_reciever" materials="units/pd2_dlc_gage_lmg/weapons/wpn_third_lmg_m249_pts/wpn_third_lmg_m249_upper_reciever" />
+    <animations>
+    <animation_group name="reload">
+      <object name="a_reload" enabled="false" />
+    </animation_group>    
+	
+	<animation_group name="reload_not_empty">
+      <object name="a_reload_not_empty" enabled="false" />
+    </animation_group>
+  </animations>
+
+  <graphics>
+        <object enabled="true" name="g_dustcover" />
+        <object enabled="true" name="g_rearsight" />
+    </graphics>
+</dynamic_object>

@@ -1,0 +1,7 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_ass_fal_fg_standard" materials="units/pd2_dlc_big/weapons/wpn_third_ass_fal_pts/wpn_third_ass_fal_fg_wood" />
+    <graphics>
+        <object enabled="true" name="g_frontgrip02" />
+        <object enabled="true" name="g_barrel" />
+    </graphics>
+</dynamic_object>

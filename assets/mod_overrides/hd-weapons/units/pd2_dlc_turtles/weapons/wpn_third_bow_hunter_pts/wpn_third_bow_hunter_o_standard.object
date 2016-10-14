@@ -1,0 +1,10 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_turtles/weapons/wpn_third_bow_hunter_pts/wpn_third_bow_hunter_o_standard" orientation_object="rp_wpn_fps_bow_dragon_o_standard" />
+	<graphics>
+		<object name="g_body" enabled="true" />
+		<object name="g_sight" enabled="true" />
+		
+		<object name="g_base" enabled="true" />
+		<object name="g_body" enabled="true" />
+	</graphics>
+</dynamic_object>

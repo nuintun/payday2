@@ -1,0 +1,14 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_west/weapons/wpn_third_snp_winchester/wpn_third_snp_winchester_m_standard" orientation_object="rp_wpn_fps_snp_winchester_m_standard" />
+	<animations>
+		<animation_group name="reload">
+			<object name="a_reload_bullet" enabled="true" />
+			<object name="a_reload" enabled="true" />
+		</animation_group>
+	</animations>
+	<graphics>
+		<object name="g_shute" enabled="true" />
+		<object name="g_bullet_1" enabled="true" />
+		<object name="g_bullet" enabled="true" />
+	</graphics>
+</dynamic_object>
