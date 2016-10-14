@@ -1,23 +1,31 @@
 --- 模组命名空间
-_G.HitMark = _G.HitMark or {}
+_G.HitMarks = _G.HitMarks or {}
 
 --- 模组路径
-HitMark.ModPath = ModPath
+HitMarks.ModPath = ModPath
 
 --- 配置
--- @field hit_texture 击中标识图标
--- @field kill_texture 击杀标识图标
+-- @field width 击中标识图标宽度
+-- @field height 击中标识图标高度
 -- @field hit 普通伤害颜色
 -- @field crit 暴击伤害颜色
 -- @field headshot 爆头伤害颜色
+-- @field kill 击杀伤害颜色
 -- @field blend_mode 颜色混合模式
-HitMark.settings = {
-  hit_texture = "guis/textures/pd2/hitconfirm",
-  kill_texture = "guis/textures/pd2/hitconfirm_crit",
+-- @field hit_texture 击中标识图标
+-- @field crit_texture 暴击标识图标
+-- @field headshot_texture 爆头标识图标
+HitMarks.settings = {
+  width: 15,
+  height: 15,
   hit = "00ffff",
   crit = "ffff00",
-  headshot = "00ff00",
-  blend_mode = "normal"
+  headshot = "ff0000",
+  kill = "00ff00",
+  blend_mode = "normal",
+  hit_texture = "guis/textures/pd2/hitconfirm",
+  crit_texture = "guis/textures/pd2/hitconfirm_crit",
+  headshot_texture = "guis/textures/pd2/hitconfirm_head"
 }
 
 --- 添加钩子文件
@@ -30,6 +38,6 @@ if RequiredScript then
   local requiredScript = RequiredScript:lower()
 
   if hook_files[requiredScript] then
-    dofile(HitMark.ModPath .. hook_files[requiredScript])
+    dofile(HitMarks.ModPath .. hook_files[requiredScript])
   end
 end

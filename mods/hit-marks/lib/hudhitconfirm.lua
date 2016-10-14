@@ -13,17 +13,17 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
   end
 
   local hms = {
-    { name = "hit_body_confirm", texture = HitMark.settings.hit_texture, color = HitMark.settings.hit },
-    { name = "hit_crit_confirm", texture = HitMark.settings.hit_texture, color = HitMark.settings.crit },
-    { name = "hit_head_confirm", texture = HitMark.settings.hit_texture, color = HitMark.settings.headshot },
-    { name = "kill_body_confirm", texture = HitMark.settings.kill_texture, color = HitMark.settings.hit },
-    { name = "kill_crit_confirm", texture = HitMark.settings.kill_texture, color = HitMark.settings.crit },
-    { name = "kill_head_confirm", texture = HitMark.settings.kill_texture, color = HitMark.settings.headshot }
+    { name = "hit_confirm", texture = HitMarks.settings.hit_texture, color = HitMarks.settings.hit },
+    { name = "crit_confirm", texture = HitMarks.settings.crit_texture, color = HitMarks.settings.crit },
+    { name = "headshot_confirm", texture = HitMarks.settings.headshot_texture, color = HitMarks.settings.headshot },
+    { name = "body_kill_confirm", texture = HitMarks.settings.hit_texture, color = HitMarks.settings.kill },
+    { name = "crit_kill_confirm", texture = HitMarks.settings.crit_texture, color = HitMarks.settings.kill },
+    { name = "headshot_kill_confirm", texture = HitMarks.settings.headshot_texture, color = HitMarks.settings.kill }
   }
   local hp = self._hud_panel
   local x = hp:w() / 2
   local y = hp:h() / 2
-  local blend_mode = HitMark.settings.blend_mode
+  local blend_mode = HitMarks.settings.blend_mode
 
   self.hitmark_bitmaps = {}
 
@@ -63,15 +63,15 @@ end
 -- @param death
 -- @param headshot
 function HUDHitConfirm:on_damage_confirmed(death, headshot)
-  local index = (death and 4 or 1) + (HitMark.critshot and 1 or (headshot and 2 or 0))
+  local index = (death and 4 or 1) + (HitMarks.critshot and 1 or (headshot and 2 or 0))
 
   AnimateToggle(self, self.hitmark_bitmaps[index])
 end
 
 --- 击中回调
 function HUDHitConfirm:on_hit_confirmed()
-  if HitMark.hooked then
-    HitMark.direct_hit = true
+  if HitMarks.hooked then
+    HitMarks.direct_hit = true
   else
     AnimateToggle(self, self.hitmark_bitmaps[1])
   end
@@ -79,9 +79,9 @@ end
 
 --- 暴击回调
 function HUDHitConfirm:on_crit_confirmed()
-  if HitMark.hooked then
-    HitMark.direct_hit = true
-    HitMark.critshot = true
+  if HitMarks.hooked then
+    HitMarks.direct_hit = true
+    HitMarks.critshot = true
   else
     AnimateToggle(self, self.hitmark_bitmaps[2])
   end
@@ -89,8 +89,8 @@ end
 
 --- 爆头回调
 function HUDHitConfirm:on_headshot_confirmed()
-  if HitMark.hooked then
-    HitMark.direct_hit = true
+  if HitMarks.hooked then
+    HitMarks.direct_hit = true
   else
     AnimateToggle(self, self.hitmark_bitmaps[3])
   end
