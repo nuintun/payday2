@@ -4,6 +4,13 @@
   "author": "TdlQ & Malo & russian translation by chrom[K]a & korean translation by Yakumo Yukari & Undeadsewer & nuintun",
   "contact": "http://paydaymods.com/mods/42/enh_hmrk",
   "version": "2.4.0",
+  "libraries": [
+    {
+      "display_name": "BeardLib",
+      "identifier": "beardlib",
+      "optional": false
+    }
+  ],
   "hooks": [
     {
       "hook_id": "lib/units/enemies/cop/copdamage",
