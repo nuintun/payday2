@@ -16,9 +16,9 @@ Hooks:PostHook(HUDHitConfirm, "init", "hitmark_hudhitconfirm_init", function(sel
     { name = "hit_confirm", texture = HitMark.settings.hit_texture, color = HitMark.settings.hit },
     { name = "crit_confirm", texture = HitMark.settings.crit_texture, color = HitMark.settings.crit },
     { name = "headshot_confirm", texture = HitMark.settings.headshot_texture, color = HitMark.settings.headshot },
-    { name = "body_kill_confirm", texture = HitMark.settings.hit_texture, color = HitMark.settings.kill },
-    { name = "crit_kill_confirm", texture = HitMark.settings.crit_texture, color = HitMark.settings.kill },
-    { name = "headshot_kill_confirm", texture = HitMark.settings.headshot_texture, color = HitMark.settings.kill }
+    { name = "body_kill_confirm", texture = HitMark.settings.hit_texture, color = HitMark.settings.hit },
+    { name = "crit_kill_confirm", texture = HitMark.settings.crit_texture, color = HitMark.settings.crit },
+    { name = "headshot_kill_confirm", texture = HitMark.settings.headshot_texture, color = HitMark.settings.headshot }
   }
   local hp = self._hud_panel
   local x = hp:w() / 2
