@@ -1,5 +1,5 @@
 {
-  "name": "hit marks",
+  "name": "hit mark",
   "description": "击杀标志增强",
   "author": "TdlQ & Malo & russian translation by chrom[K]a & korean translation by Yakumo Yukari & Undeadsewer & nuintun",
   "contact": "http://paydaymods.com/mods/42/enh_hmrk",

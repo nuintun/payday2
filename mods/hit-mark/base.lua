@@ -1,8 +1,8 @@
 --- 模组命名空间
-_G.HitMarks = _G.HitMarks or {}
+_G.HitMark = _G.HitMark or {}
 
 --- 模组路径
-HitMarks.ModPath = ModPath
+HitMark.ModPath = ModPath
 
 --- 配置
 -- @field width 击中标识图标宽度
@@ -15,9 +15,9 @@ HitMarks.ModPath = ModPath
 -- @field hit_texture 击中标识图标
 -- @field crit_texture 暴击标识图标
 -- @field headshot_texture 爆头标识图标
-HitMarks.settings = {
-  width: 15,
-  height: 15,
+HitMark.settings = {
+  width = 16,
+  height = 16,
   hit = "00ffff",
   crit = "ffff00",
   headshot = "ff0000",
@@ -38,6 +38,6 @@ if RequiredScript then
   local requiredScript = RequiredScript:lower()
 
   if hook_files[requiredScript] then
-    dofile(HitMarks.ModPath .. hook_files[requiredScript])
+    dofile(HitMark.ModPath .. hook_files[requiredScript])
   end
 end
