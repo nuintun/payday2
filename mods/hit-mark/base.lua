@@ -25,7 +25,7 @@ HitMark.settings = {
   blend_mode = "normal",
   hit_texture = "guis/textures/pd2/hitconfirm",
   crit_texture = "guis/textures/pd2/hitconfirm_crit",
-  headshot_texture = "guis/textures/pd2/hitconfirm_head"
+  headshot_texture = "guis/textures/pd2/hitconfirm_headshot"
 }
 
 --- 添加钩子文件
