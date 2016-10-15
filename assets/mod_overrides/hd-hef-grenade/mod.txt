@@ -1,0 +1,7 @@
+{
+  "name": "hd hef grenade",
+  "description": "高清高能手雷",
+  "author": "Zdann",
+  "contact": "http://lastbullet.net/mydownloads.php?action=view_down&did=16389",
+  "version": "2016.06.02"
+}
