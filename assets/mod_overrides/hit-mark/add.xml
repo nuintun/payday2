@@ -1,3 +1,4 @@
 <table>
   <texture path="guis/textures/pd2/hitconfirm_headshot" force="true"/>
+  <texture path="guis/textures/pd2/hitconfirm_killed" force="true"/>
 </table>

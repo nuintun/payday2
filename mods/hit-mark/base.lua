@@ -10,22 +10,22 @@ HitMark.ModPath = ModPath
 -- @field hit 普通伤害颜色
 -- @field crit 暴击伤害颜色
 -- @field headshot 爆头伤害颜色
--- @field kill 击杀伤害颜色
 -- @field blend_mode 颜色混合模式
 -- @field hit_texture 击中标识图标
 -- @field crit_texture 暴击标识图标
 -- @field headshot_texture 爆头标识图标
+-- @field headshot_texture 击杀标识图标
 HitMark.settings = {
   width = 16,
   height = 16,
-  hit = "ff6666",
+  hit = "ffcccc",
   crit = "ffff00",
   headshot = "00ff00",
-  kill = "ff00ff",
   blend_mode = "normal",
   hit_texture = "guis/textures/pd2/hitconfirm",
   crit_texture = "guis/textures/pd2/hitconfirm_crit",
-  headshot_texture = "guis/textures/pd2/hitconfirm_headshot"
+  headshot_texture = "guis/textures/pd2/hitconfirm_headshot",
+  killed_texture = "guis/textures/pd2/hitconfirm_killed"
 }
 
 --- 添加钩子文件
