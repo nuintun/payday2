@@ -2,6 +2,6 @@
   "name": "cn mods",
   "author": "PDLG汉化组",
   "contact": "http://tieba.baidu.com/p/4814090149",
-  "version": "2016.10.16",
+  "version": "2016.10.20",
   "description": "收获日2简体中文汉化模组"
 }
